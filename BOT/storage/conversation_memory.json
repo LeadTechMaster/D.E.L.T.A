@@ -1,0 +1,2406 @@
+{
+  "conversations": {
+    "test_advanced_ai": [
+      {
+        "turn_id": "2c8463fd-d790-4f90-8aa7-6a41705cd927",
+        "timestamp": "2025-10-02 00:23:06.192512",
+        "user_message": "I want to open a coffee shop in Seattle, what do you think?",
+        "bot_response": "Welcome to D.E.L.T.A Franchise Intelligence! I'm here to help you make data-driven business decisions. What would you like to explore?\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Coffee Shop in Seattle**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 No competitors found or analysis in progress\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Seattle's Best Coffee Franchise Cost & Opportunities 2025**\n   \ud83d\udcdd Liquid capital required. $125,000 ; Net worth required. $1,000,000 ; Investment. $181,835 - $445,035...\n   \ud83d\udd17 [Learn More](https://www.franchisehelp.com/franchises/seattles-best-coffee/)\n2. **Coffee Shops and Cafes For Sale in Seattle Metro Area, WA**\n   \ud83d\udcdd Browse 34 Coffee Shops and Cafes currently for sale in Seattle Metro Area on BizBuySell. Find a sell...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/washington/seattle-metro-area/coffee-shops-and-cafes-for-sale/)\n3. **Seattle's Best Coffee - Franchise Direct**\n   \ud83d\udcdd This is one of Seattle's original coffeehouses. Seattle's Best is the franchise that brought the ide...\n   \ud83d\udd17 [Learn More](https://www.franchisedirect.com/coffeefranchises/seattles-best-coffee-franchise-06707/)\n\n\n\ud83d\udcc8 **Market Trend Analysis:**\n\u2022 Trend: Growing (5.0% growth)\n\u2022 Confidence: 80%\n\u2022 Risk Level: Low\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.5/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.5/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 80% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "coffee shop",
+          "location": "seattle",
+          "timestamp": "2025-10-02T00:23:04.829246",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 47.603243,
+            "longitude": -122.330286
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 47.603243,
+              "lng": -122.330286
+            },
+            "radius_miles": 10.0,
+            "business_type": "coffee shop",
+            "competitor_count": 20,
+            "average_rating": 3.91,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Seattle",
+                "address": "Seattle",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 47.6061389,
+                  "longitude": -122.3328481
+                },
+                "place_id": "ChIJVTPokywQkFQRmtVEaUZlJRA"
+              },
+              {
+                "name": "Fairmont Olympic Hotel, Seattle",
+                "address": "411 University Street, Seattle",
+                "rating": 4.6,
+                "user_ratings_total": 4191,
+                "price_level": 4,
+                "types": [
+                  "bar",
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6080126,
+                  "longitude": -122.3338701
+                },
+                "place_id": "ChIJf3uV-rNqkFQRmkmlotz3KN0"
+              },
+              {
+                "name": "Renaissance Seattle Hotel",
+                "address": "515 Madison Street, Seattle",
+                "rating": 4.3,
+                "user_ratings_total": 3791,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6066675,
+                  "longitude": -122.3306848
+                },
+                "place_id": "ChIJmZ0LzrZqkFQRvUd2Te2zZOA"
+              },
+              {
+                "name": "Hotel 1000, LXR Hotels & Resorts",
+                "address": "1000 1st Avenue, Seattle",
+                "rating": 4.5,
+                "user_ratings_total": 1360,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.60505329999999,
+                  "longitude": -122.3361194
+                },
+                "place_id": "ChIJvYvFsLFqkFQRPF48-leg-gc"
+              },
+              {
+                "name": "Executive Hotel Pacific",
+                "address": "400 Spring Street, Seattle",
+                "rating": 3.5,
+                "user_ratings_total": 1837,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6070892,
+                  "longitude": -122.333406
+                },
+                "place_id": "ChIJYdpET7FqkFQRG7EKuXswzmg"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State seattle",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Seattle's Best Coffee Franchise Cost & Opportunities 2025",
+              "link": "https://www.franchisehelp.com/franchises/seattles-best-coffee/",
+              "snippet": "Liquid capital required. $125,000 ; Net worth required. $1,000,000 ; Investment. $181,835 - $445,035 ; Franchise fee. $25,000 - $30,000 ; Units in operation. 77.",
+              "position": 1
+            },
+            {
+              "title": "Coffee Shops and Cafes For Sale in Seattle Metro Area, WA",
+              "link": "https://www.bizbuysell.com/washington/seattle-metro-area/coffee-shops-and-cafes-for-sale/",
+              "snippet": "Browse 34 Coffee Shops and Cafes currently for sale in Seattle Metro Area on BizBuySell. Find a seller financed Seattle Metro Area Coffee Shop and ...",
+              "position": 2
+            },
+            {
+              "title": "Seattle's Best Coffee - Franchise Direct",
+              "link": "https://www.franchisedirect.com/coffeefranchises/seattles-best-coffee-franchise-06707/",
+              "snippet": "This is one of Seattle's original coffeehouses. Seattle's Best is the franchise that brought the idea of 'Seattle coffee' to the world.",
+              "position": 3
+            },
+            {
+              "title": "Seattle's Best Coffee Franchise Cost, Fees, Opportunities ...",
+              "link": "https://www.franchisegator.com/franchises/seattles-best-coffee/",
+              "snippet": "A Seattle's Best Coffee franchise requires $125,000 liquid capital, $1,000,000 net worth, and a total investment of $181,835 - $445,035. The franchise fee is $ ...",
+              "position": 4
+            },
+            {
+              "title": "Coffee stands like in Seattle : r/smallbusiness",
+              "link": "https://www.reddit.com/r/smallbusiness/comments/1g56arm/coffee_stands_like_in_seattle/",
+              "snippet": "Drive-through coffee stands can be a great business model! To get started, here are some resources and considerations.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_sentiment_analysis": [
+      {
+        "turn_id": "a85f5adb-f2a6-4b8e-b526-04667321f505",
+        "timestamp": "2025-10-02 00:23:15.031914",
+        "user_message": "I am really excited about opening a gym in Miami! This is going to be amazing!",
+        "bot_response": "Welcome to D.E.L.T.A Franchise Intelligence! I'm here to help you make data-driven business decisions. What would you like to explore? I'll make sure to give you detailed, actionable insights.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Fitness in Miami**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 No competitors found or analysis in progress\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Best Fitness Franchise: Key Considerations for Investing in ...**\n   \ud83d\udcdd Choosing to invest in a fitness franchise can be a lucrative business opportunity, particularly in t...\n   \ud83d\udd17 [Learn More](https://discoverstrengthfranchise.com/best-fitness-franchise-key-considerations-for-investing-in-miami-fl/)\n2. **Own a JETSET Pilates Studio | Boutique Fitness Franchise ...**\n   \ud83d\udcdd Start your own JETSET Pilates\u00ae studio. Explore franchise opportunities in premium reformer Pilates w...\n   \ud83d\udd17 [Learn More](https://jetsetpilates.com/franchise/)\n3. **franchise**\n   \ud83d\udcdd A low-barrier to entry, a recurring revenue model, truly exceptional margins and the confidence in o...\n   \ud83d\udd17 [Learn More](https://www.makeittremble.com/franchise)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "fitness",
+          "location": "miami",
+          "timestamp": "2025-10-02T00:23:10.076013",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 25.773357,
+            "longitude": -80.1919
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 25.773357,
+              "lng": -80.1919
+            },
+            "radius_miles": 10.0,
+            "business_type": "fitness",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Miami",
+                "address": "Miami",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 25.7616798,
+                  "longitude": -80.1917902
+                },
+                "place_id": "ChIJEcHIDqKw2YgRZU-t3XHylv8"
+              },
+              {
+                "name": "Courtyard by Marriott Miami Downtown/Brickell Area",
+                "address": "200 Southeast 2nd Avenue, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 2083,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7722558,
+                  "longitude": -80.1905867
+                },
+                "place_id": "ChIJtaz9UZy22YgRkAWAhHwoXEo"
+              },
+              {
+                "name": "Hyatt Regency Miami",
+                "address": "400 Southeast 2nd Street, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 5421,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.770728,
+                  "longitude": -80.19062989999999
+                },
+                "place_id": "ChIJlZUqA5222YgRzjtasuQFBNg"
+              },
+              {
+                "name": "JW Marriott Marquis Miami",
+                "address": "255 Biscayne Boulevard Way, Miami",
+                "rating": 4.4,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.771089,
+                  "longitude": -80.1894477
+                },
+                "place_id": "ChIJx0AED5222YgRnR0KdP4FJ0I"
+              },
+              {
+                "name": "Miami Sun Hotel- Downtown/Port of Miami",
+                "address": "Sun Hotel, 226 Northeast 1st Avenue, Miami",
+                "rating": 2.9,
+                "user_ratings_total": 502,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7766559,
+                  "longitude": -80.19217569999999
+                },
+                "place_id": "ChIJZ3mBxJ622YgRV6Q18glytxc"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State miami",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Best Fitness Franchise: Key Considerations for Investing in ...",
+              "link": "https://discoverstrengthfranchise.com/best-fitness-franchise-key-considerations-for-investing-in-miami-fl/",
+              "snippet": "Choosing to invest in a fitness franchise can be a lucrative business opportunity, particularly in the thriving city of Miami, FL.",
+              "position": 1
+            },
+            {
+              "title": "Own a JETSET Pilates Studio | Boutique Fitness Franchise ...",
+              "link": "https://jetsetpilates.com/franchise/",
+              "snippet": "Start your own JETSET Pilates\u00ae studio. Explore franchise opportunities in premium reformer Pilates with a proven model, brand recognition, and support.",
+              "position": 2
+            },
+            {
+              "title": "franchise",
+              "link": "https://www.makeittremble.com/franchise",
+              "snippet": "A low-barrier to entry, a recurring revenue model, truly exceptional margins and the confidence in our team that has more than decades of experience in fitness.",
+              "position": 3
+            },
+            {
+              "title": "MaxStrength Fitness Franchise available in Miami, Fitness ...",
+              "link": "https://us.businessesforsale.com/us/franchises/opportunities/maxstrength?location=miami",
+              "snippet": "Discover a hot new fitness franchise that aligns with your values, has nothing to do with bootcamps, and has everything to do with changing lives. We understand ...",
+              "position": 4
+            },
+            {
+              "title": "Fitness & Gym Franchise Opportunities in Florida",
+              "link": "https://franchisefame.com/us/florida/fitness-and-gym-franchises/",
+              "snippet": "Venture into the vibrant and dynamic world of Florida gym franchises, where a kaleidoscope of opportunities awaits entrepreneurs passionate about fitness and ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "dashboard_session_1759379008796": [
+      {
+        "turn_id": "bb4daaed-dcc5-490e-9ef6-3c719811bce6",
+        "timestamp": "2025-10-02 00:23:53.388864",
+        "user_message": "i want to open a hair saloon in las vegas, where shuold i?",
+        "bot_response": "I'll analyze the beauty market in las vegas for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Beauty in Las Vegas**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 No competitors found or analysis in progress\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Beauty and Personal Care Businesses For Sale in Las ...**\n   \ud83d\udcdd Browse 33 Las Vegas, NV Beauty and Personal Care Businesses for sale on BizBuySell. Find seller fina...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/nevada/las-vegas/beauty-and-personal-care-businesses-for-sale/)\n2. **Health & Beauty Businesses For Sale In Las Vegas, NV**\n   \ud83d\udcdd Interested in the wellness sector? Browse our extensive listings of Health and Beauty Businesses For...\n   \ud83d\udd17 [Learn More](https://us.businessesforsale.com/us/search/health-and-beauty-businesses-for-sale-in-las-vegas)\n3. **Other Beauty and Personal Care Businesses For Sale in ...**\n   \ud83d\udcdd Browse 16 Other Beauty and Personal Care Businesses currently for sale in Las Vegas, NV on BizBuySel...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/nevada/las-vegas/other-beauty-and-personal-care-businesses-for-sale/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "beauty",
+          "location": "las vegas",
+          "timestamp": "2025-10-02T00:23:50.175472",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 36.169213,
+            "longitude": -115.14062
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 36.169213,
+              "lng": -115.14062
+            },
+            "radius_miles": 10.0,
+            "business_type": "beauty",
+            "competitor_count": 20,
+            "average_rating": 3.76,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Las Vegas",
+                "address": "Las Vegas",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 36.171563,
+                  "longitude": -115.1391009
+                },
+                "place_id": "ChIJ0X31pIK3voARo3mz1ebVzDo"
+              },
+              {
+                "name": "Plaza Hotel & Casino",
+                "address": "1 North Main Street, Las Vegas",
+                "rating": 4,
+                "user_ratings_total": 17656,
+                "price_level": 0,
+                "types": [
+                  "casino",
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.171784,
+                  "longitude": -115.146861
+                },
+                "place_id": "ChIJP_YNmqHDyIARtqyg5oGF5xw"
+              },
+              {
+                "name": "Downtown Grand Hotel & Casino",
+                "address": "206 North 3rd Street, Las Vegas",
+                "rating": 4.2,
+                "user_ratings_total": 12443,
+                "price_level": 0,
+                "types": [
+                  "casino",
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.1716389,
+                  "longitude": -115.1416128
+                },
+                "place_id": "ChIJI9tTB6DDyIARBYf7r_X-rdE"
+              },
+              {
+                "name": "Fremont Hotel & Casino",
+                "address": "200 Fremont Street, Las Vegas",
+                "rating": 4.3,
+                "user_ratings_total": 15531,
+                "price_level": 0,
+                "types": [
+                  "casino",
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.17079539999999,
+                  "longitude": -115.1432647
+                },
+                "place_id": "ChIJFTJhO6DDyIARYs7dJsDxK2Y"
+              },
+              {
+                "name": "Golden Nugget Las Vegas Hotel & Casino",
+                "address": "129 East Fremont Street, Las Vegas",
+                "rating": 4.3,
+                "user_ratings_total": 52986,
+                "price_level": 2,
+                "types": [
+                  "aquarium",
+                  "casino",
+                  "lodging",
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.16996710000001,
+                  "longitude": -115.1448235
+                },
+                "place_id": "ChIJM5pPyaHDyIARi2GWubblECA"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State las vegas",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Beauty and Personal Care Businesses For Sale in Las ...",
+              "link": "https://www.bizbuysell.com/nevada/las-vegas/beauty-and-personal-care-businesses-for-sale/",
+              "snippet": "Browse 33 Las Vegas, NV Beauty and Personal Care Businesses for sale on BizBuySell. Find seller financed Hair Salons & Barber Shops, ...",
+              "position": 1
+            },
+            {
+              "title": "Health & Beauty Businesses For Sale In Las Vegas, NV",
+              "link": "https://us.businessesforsale.com/us/search/health-and-beauty-businesses-for-sale-in-las-vegas",
+              "snippet": "Interested in the wellness sector? Browse our extensive listings of Health and Beauty Businesses For Sale in Las Vegas, NV.",
+              "position": 2
+            },
+            {
+              "title": "Other Beauty and Personal Care Businesses For Sale in ...",
+              "link": "https://www.bizbuysell.com/nevada/las-vegas/other-beauty-and-personal-care-businesses-for-sale/",
+              "snippet": "Browse 16 Other Beauty and Personal Care Businesses currently for sale in Las Vegas, NV on BizBuySell. Find a seller financed Las Vegas, NV Other ...",
+              "position": 3
+            },
+            {
+              "title": "Las Vegas, Nevada Hair and Beauty Businesses For Sale",
+              "link": "https://www.bizquest.com/hair-and-beauty-businesses-for-sale-in-las-vegas-nv/",
+              "snippet": "Browse 30 Las Vegas, NV Hair and Beauty businesses for sale on BizQuest. Buy or sell your Hair and Beauty business with BizQuest, the Original Business for ...",
+              "position": 4
+            },
+            {
+              "title": "Mother-Daughter Duo to Open Three Blo Blow Dry Bars",
+              "link": "https://www.franchisewire.com/mother-daughter-duo-to-open-three-blo-blow-dry-bars-in-las-vegas/",
+              "snippet": "Bailee Read (right) and her mother, Azure White (left), are opening three Blo Blow Dry Bar franchise locations in the greater Las Vegas area.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_competition_fix": [
+      {
+        "turn_id": "66acd334-5a4f-4314-9ac3-f03966a0aab9",
+        "timestamp": "2025-10-02 00:25:51.761813",
+        "user_message": "I want to open a restaurant in Las Vegas",
+        "bot_response": "I'll analyze the restaurant market in las vegas for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Restaurant in Las Vegas**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Golden Nugget Las Vegas Hotel & Casino** - 4.3/5 \u2b50 (52986 reviews)\n   \ud83d\udccd 129 East Fremont Street, Las Vegas\n2. **Silver Sevens Hotel & Casino** - 3.6/5 \u2b50 (9226 reviews)\n   \ud83d\udccd 4100 Paradise Road, Las Vegas\n3. **Hash House A Go Go West Sahara** - 4.6/5 \u2b50 (6643 reviews)\n   \ud83d\udccd 6800 West Sahara Avenue, Las Vegas\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Restaurants and Food Businesses For Sale in Las Vegas, NV**\n   \ud83d\udcdd Browse 107 Las Vegas, NV Restaurants and Food Businesses for sale on BizBuySell. Find seller finance...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/nevada/las-vegas/restaurants-and-food-businesses-for-sale/)\n2. **Las Vegas Restaurants and Food Businesses For Sale**\n   \ud83d\udcdd View 108 Las Vegas, Nevada Restaurants and Food businesses for sale on LoopNet.com. Search LoopNet f...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/nevada/las-vegas/restaurants-and-food-businesses-for-sale/)\n3. **The Hottest Restaurant Franchise Opportunities in Nevada**\n   \ud83d\udcdd Discover the Best Restaurant Franchise Opportunities in Nevada! Join The Red Chickz - A Spicy Succes...\n   \ud83d\udd17 [Learn More](https://theredchickzfranchise.com/restaurant-franchise-opportunities-in-nevada/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.4/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.4/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "restaurant",
+          "location": "las vegas",
+          "timestamp": "2025-10-02T00:25:49.073361",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 36.169213,
+            "longitude": -115.14062
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 36.169213,
+              "lng": -115.14062
+            },
+            "radius_miles": 10.0,
+            "business_type": "restaurant",
+            "competitor_count": 20,
+            "average_rating": 4.29,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Golden Nugget Las Vegas Hotel & Casino",
+                "address": "129 East Fremont Street, Las Vegas",
+                "rating": 4.3,
+                "user_ratings_total": 52986,
+                "price_level": 2,
+                "types": [
+                  "aquarium",
+                  "casino",
+                  "lodging",
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.16996710000001,
+                  "longitude": -115.1448235
+                },
+                "place_id": "ChIJM5pPyaHDyIARi2GWubblECA"
+              },
+              {
+                "name": "Silver Sevens Hotel & Casino",
+                "address": "4100 Paradise Road, Las Vegas",
+                "rating": 3.6,
+                "user_ratings_total": 9226,
+                "price_level": 0,
+                "types": [
+                  "convenience_store",
+                  "casino",
+                  "lodging",
+                  "bar",
+                  "cafe",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "store",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.1137617,
+                  "longitude": -115.1526489
+                },
+                "place_id": "ChIJqwVx6VHEyIARfYnBVXjCGYU"
+              },
+              {
+                "name": "Hash House A Go Go West Sahara",
+                "address": "6800 West Sahara Avenue, Las Vegas",
+                "rating": 4.6,
+                "user_ratings_total": 6643,
+                "price_level": 2,
+                "types": [
+                  "meal_takeaway",
+                  "cafe",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "store",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.1446914,
+                  "longitude": -115.2400567
+                },
+                "place_id": "ChIJD4Xfwt7AyIARS6jWVkRWPxA"
+              },
+              {
+                "name": "Ojos Locos Sports Cantina y Casino",
+                "address": "3227 Civic Center Drive, North Las Vegas",
+                "rating": 3.9,
+                "user_ratings_total": 5147,
+                "price_level": 0,
+                "types": [
+                  "casino",
+                  "night_club",
+                  "lodging",
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.218636,
+                  "longitude": -115.121003
+                },
+                "place_id": "ChIJsZDyWJTCyIAR9IiwGIUJ3h8"
+              },
+              {
+                "name": "Eiffel Tower Restaurant",
+                "address": "3655 South Las Vegas Boulevard, Las Vegas",
+                "rating": 4.6,
+                "user_ratings_total": 6078,
+                "price_level": 4,
+                "types": [
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 36.1124662,
+                  "longitude": -115.1721916
+                },
+                "place_id": "ChIJvUdRyzDEyIARI1pF9okesXg"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State las vegas",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Restaurants and Food Businesses For Sale in Las Vegas, NV",
+              "link": "https://www.bizbuysell.com/nevada/las-vegas/restaurants-and-food-businesses-for-sale/",
+              "snippet": "Browse 107 Las Vegas, NV Restaurants and Food Businesses for sale on BizBuySell. Find seller financed Indian Restaurants, Breweries, or other Las ...",
+              "position": 1
+            },
+            {
+              "title": "Las Vegas Restaurants and Food Businesses For Sale",
+              "link": "https://www.loopnet.com/biz/nevada/las-vegas/restaurants-and-food-businesses-for-sale/",
+              "snippet": "View 108 Las Vegas, Nevada Restaurants and Food businesses for sale on LoopNet.com. Search LoopNet for Restaurants and Food businesses for sale in Las Vegas ...",
+              "position": 2
+            },
+            {
+              "title": "The Hottest Restaurant Franchise Opportunities in Nevada",
+              "link": "https://theredchickzfranchise.com/restaurant-franchise-opportunities-in-nevada/",
+              "snippet": "Discover the Best Restaurant Franchise Opportunities in Nevada! Join The Red Chickz - A Spicy Success Story in the Heart of Las Vegas.",
+              "position": 3
+            },
+            {
+              "title": "Franchise Administration",
+              "link": "https://www.lasvegasnevada.gov/Government/Departments/Strategic-Services/Franchise-Administration",
+              "snippet": "The Office of Strategic Services, through its Franchise Administration Unit, is responsible for the administration of franchise and other agreements.",
+              "position": 4
+            },
+            {
+              "title": "Hawaiian Bros Franchise Opens in Las Vegas",
+              "link": "https://www.thefranchiseking.com/hawaiian-bros-franchise-las-vegas",
+              "snippet": "Hawaiian Bros opened its first Las Vegas location on September 26 at 6071 W. Craig Road. The grand opening strategy demonstrates smart franchise ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "dashboard_session_1759379824909": [
+      {
+        "turn_id": "90465a6a-6002-4c91-8310-27cdfa664c87",
+        "timestamp": "2025-10-02 00:37:25.929741",
+        "user_message": "i want to start a pizza stant in miami, where shuold i?",
+        "bot_response": "Perfect! Let me help you explore business opportunities. What type of business are you thinking about?\n\nPerfect! I'll provide thorough analysis so you can make the best decision.",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "location": "miami"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_smart_pizza": [
+      {
+        "turn_id": "7f1c5726-b63f-43cd-92e9-574d813cd93f",
+        "timestamp": "2025-10-02 00:38:50.337671",
+        "user_message": "i want to start a pizza stant in miami, where shuold i?",
+        "bot_response": "I'll analyze the pizza market in miami for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Pizza in Miami**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Miami** - \ud83d\udccd Miami\n2. **Courtyard by Marriott Miami Downtown/Brickell Area** - 4.2/5 \u2b50 (2083 reviews)\n   \ud83d\udccd 200 Southeast 2nd Avenue, Miami\n3. **Hyatt Regency Miami** - 4.2/5 \u2b50 (5421 reviews)\n   \ud83d\udccd 400 Southeast 2nd Street, Miami\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Franchise | Spris Pizza in Miami, FL**\n   \ud83d\udcdd Spris franchise benefits include built-in customers, proven model, free training, and support. Franc...\n   \ud83d\udd17 [Learn More](https://www.sprispizza.com/franchise/)\n2. **Own a Pizza Franchise in Miami - Russo's New York Pizzeria**\n   \ud83d\udcdd Miami entrepreneurs can invest in a Russo's NY Pizzeria restaurant franchise & benefit from a pizza ...\n   \ud83d\udd17 [Learn More](https://www.russosfranchise.com/florida/miami)\n3. **Franchise**\n   \ud83d\udcdd Become Part of The P.Pole Pizza Family. Easy + Efficient P.POLE Franchise Program. We are recognized...\n   \ud83d\udd17 [Learn More](https://ppolepizza.com/franchise/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "pizza",
+          "location": "miami",
+          "timestamp": "2025-10-02T00:38:45.866298",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 25.773357,
+            "longitude": -80.1919
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 25.773357,
+              "lng": -80.1919
+            },
+            "radius_miles": 10.0,
+            "business_type": "pizza",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Miami",
+                "address": "Miami",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 25.7616798,
+                  "longitude": -80.1917902
+                },
+                "place_id": "ChIJEcHIDqKw2YgRZU-t3XHylv8"
+              },
+              {
+                "name": "Courtyard by Marriott Miami Downtown/Brickell Area",
+                "address": "200 Southeast 2nd Avenue, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 2083,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7722558,
+                  "longitude": -80.1905867
+                },
+                "place_id": "ChIJtaz9UZy22YgRkAWAhHwoXEo"
+              },
+              {
+                "name": "Hyatt Regency Miami",
+                "address": "400 Southeast 2nd Street, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 5421,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.770728,
+                  "longitude": -80.19062989999999
+                },
+                "place_id": "ChIJlZUqA5222YgRzjtasuQFBNg"
+              },
+              {
+                "name": "JW Marriott Marquis Miami",
+                "address": "255 Biscayne Boulevard Way, Miami",
+                "rating": 4.4,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.771089,
+                  "longitude": -80.1894477
+                },
+                "place_id": "ChIJx0AED5222YgRnR0KdP4FJ0I"
+              },
+              {
+                "name": "Miami Sun Hotel- Downtown/Port of Miami",
+                "address": "Sun Hotel, 226 Northeast 1st Avenue, Miami",
+                "rating": 2.9,
+                "user_ratings_total": 502,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7766559,
+                  "longitude": -80.19217569999999
+                },
+                "place_id": "ChIJZ3mBxJ622YgRV6Q18glytxc"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State miami",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Franchise | Spris Pizza in Miami, FL",
+              "link": "https://www.sprispizza.com/franchise/",
+              "snippet": "Spris franchise benefits include built-in customers, proven model, free training, and support. Franchisees need passion, management ability, and $200,000 cash ...",
+              "position": 1
+            },
+            {
+              "title": "Own a Pizza Franchise in Miami - Russo's New York Pizzeria",
+              "link": "https://www.russosfranchise.com/florida/miami",
+              "snippet": "Miami entrepreneurs can invest in a Russo's NY Pizzeria restaurant franchise & benefit from a pizza franchise with affordable entry costs.",
+              "position": 2
+            },
+            {
+              "title": "Franchise",
+              "link": "https://ppolepizza.com/franchise/",
+              "snippet": "Become Part of The P.Pole Pizza Family. Easy + Efficient P.POLE Franchise Program. We are recognized for being innovative and passionate for what we do!",
+              "position": 3
+            },
+            {
+              "title": "Pizza Franchise Opportunity Miami | Italian Restaurant ...",
+              "link": "https://nypizzeria.com/florida-miami/",
+              "snippet": "Russo's franchise offers $1.111M AUV, 19.2% average net income, lower labor costs, 1200-3500 sqft units, $295K-$750K startup, and no prior experience needed.",
+              "position": 4
+            },
+            {
+              "title": "Franchisee Application",
+              "link": "http://www.piola.it/pages/franchise",
+              "snippet": "Thank you for your interest in Piola! If you wish to be considered for Piola franchisee, we kindly ask you to carefully complete the following application ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_enhanced_logic": [
+      {
+        "turn_id": "d34f6076-64ba-4cf0-a61a-9553dbbb275e",
+        "timestamp": "2025-10-02 00:50:03.339777",
+        "user_message": "i want to start a pizza stand in miami, what do you think?",
+        "bot_response": "Sorry, I encountered an error: name 'session_id' is not defined",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": null,
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "d76954ca-0ca7-4eca-9966-30f6bac022f7",
+        "timestamp": "2025-10-02 00:50:46.038858",
+        "user_message": "i want to start a pizza stand in miami, what do you think?",
+        "bot_response": "Welcome to D.E.L.T.A Franchise Intelligence! I'm here to help you make data-driven business decisions. What would you like to explore?\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Pizza in Miami**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Miami** - \ud83d\udccd Miami\n2. **Courtyard by Marriott Miami Downtown/Brickell Area** - 4.2/5 \u2b50 (2083 reviews)\n   \ud83d\udccd 200 Southeast 2nd Avenue, Miami\n3. **Hyatt Regency Miami** - 4.2/5 \u2b50 (5421 reviews)\n   \ud83d\udccd 400 Southeast 2nd Street, Miami\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Franchise | Spris Pizza in Miami, FL**\n   \ud83d\udcdd Spris franchise benefits include built-in customers, proven model, free training, and support. Franc...\n   \ud83d\udd17 [Learn More](https://www.sprispizza.com/franchise/)\n2. **Own a Pizza Franchise in Miami - Russo's New York Pizzeria**\n   \ud83d\udcdd Miami entrepreneurs can invest in a Russo's NY Pizzeria restaurant franchise & benefit from a pizza ...\n   \ud83d\udd17 [Learn More](https://www.russosfranchise.com/florida/miami)\n3. **Franchise**\n   \ud83d\udcdd Become Part of The P.Pole Pizza Family. Easy + Efficient P.POLE Franchise Program. We are recognized...\n   \ud83d\udd17 [Learn More](https://ppolepizza.com/franchise/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "pizza",
+          "location": "miami",
+          "timestamp": "2025-10-02T00:50:44.805961",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 25.773357,
+            "longitude": -80.1919
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 25.773357,
+              "lng": -80.1919
+            },
+            "radius_miles": 10.0,
+            "business_type": "pizza",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Miami",
+                "address": "Miami",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 25.7616798,
+                  "longitude": -80.1917902
+                },
+                "place_id": "ChIJEcHIDqKw2YgRZU-t3XHylv8"
+              },
+              {
+                "name": "Courtyard by Marriott Miami Downtown/Brickell Area",
+                "address": "200 Southeast 2nd Avenue, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 2083,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7722558,
+                  "longitude": -80.1905867
+                },
+                "place_id": "ChIJtaz9UZy22YgRkAWAhHwoXEo"
+              },
+              {
+                "name": "Hyatt Regency Miami",
+                "address": "400 Southeast 2nd Street, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 5421,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.770728,
+                  "longitude": -80.19062989999999
+                },
+                "place_id": "ChIJlZUqA5222YgRzjtasuQFBNg"
+              },
+              {
+                "name": "JW Marriott Marquis Miami",
+                "address": "255 Biscayne Boulevard Way, Miami",
+                "rating": 4.4,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.771089,
+                  "longitude": -80.1894477
+                },
+                "place_id": "ChIJx0AED5222YgRnR0KdP4FJ0I"
+              },
+              {
+                "name": "Miami Sun Hotel- Downtown/Port of Miami",
+                "address": "Sun Hotel, 226 Northeast 1st Avenue, Miami",
+                "rating": 2.9,
+                "user_ratings_total": 502,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7766559,
+                  "longitude": -80.19217569999999
+                },
+                "place_id": "ChIJZ3mBxJ622YgRV6Q18glytxc"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State miami",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Franchise | Spris Pizza in Miami, FL",
+              "link": "https://www.sprispizza.com/franchise/",
+              "snippet": "Spris franchise benefits include built-in customers, proven model, free training, and support. Franchisees need passion, management ability, and $200,000 cash ...",
+              "position": 1
+            },
+            {
+              "title": "Own a Pizza Franchise in Miami - Russo's New York Pizzeria",
+              "link": "https://www.russosfranchise.com/florida/miami",
+              "snippet": "Miami entrepreneurs can invest in a Russo's NY Pizzeria restaurant franchise & benefit from a pizza franchise with affordable entry costs.",
+              "position": 2
+            },
+            {
+              "title": "Franchise",
+              "link": "https://ppolepizza.com/franchise/",
+              "snippet": "Become Part of The P.Pole Pizza Family. Easy + Efficient P.POLE Franchise Program. We are recognized for being innovative and passionate for what we do!",
+              "position": 3
+            },
+            {
+              "title": "Pizza Franchise Opportunity Miami | Italian Restaurant ...",
+              "link": "https://nypizzeria.com/florida-miami/",
+              "snippet": "Russo's franchise offers $1.111M AUV, 19.2% average net income, lower labor costs, 1200-3500 sqft units, $295K-$750K startup, and no prior experience needed.",
+              "position": 4
+            },
+            {
+              "title": "Franchisee Application",
+              "link": "http://www.piola.it/pages/franchise",
+              "snippet": "Thank you for your interest in Piola! If you wish to be considered for Piola franchisee, we kindly ask you to carefully complete the following application ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_real_data_comprehensive": [
+      {
+        "turn_id": "1cbf801e-ea05-408b-8b81-5f6ce15ac24e",
+        "timestamp": "2025-10-02 00:52:40.362693",
+        "user_message": "test all real data systems - pizza shop in new york",
+        "bot_response": "I'm not sure how to help with that. Could you tell me what type of business you want to open and where?",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": null,
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_real_data_pizza": [
+      {
+        "turn_id": "f29e686a-cccd-4e61-af5e-26e3045a57a1",
+        "timestamp": "2025-10-02 00:52:47.526800",
+        "user_message": "I want to open a pizza restaurant in New York City",
+        "bot_response": "I'll analyze the pizza market in new york for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Pizza in New York**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **New York** - \ud83d\udccd New York\n2. **Duane Street Hotel Tribeca, Sonder** - 4.1/5 \u2b50 (405 reviews)\n   \ud83d\udccd 130 Duane Street, New York\n3. **Smyth Tribeca** - 4.2/5 \u2b50 (472 reviews)\n   \ud83d\udccd 85 West Broadway, New York\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Pizza Franchise Opportunities, Russo's New York Pizzeria**\n   \ud83d\udcdd Russo's NY Pizzeria is one of the best franchises to consider. Run & own your own business with a lo...\n   \ud83d\udd17 [Learn More](https://www.russosfranchise.com/)\n2. **NY PIZZA**\n   \ud83d\udcdd Franchise Fee: $30,000 \u00b7 Minimal Initial Investment: $135,000 \u00b7 Royalty Fee: 6% of gross sale \u00b7 Excl...\n   \ud83d\udd17 [Learn More](https://nypizzapiefranchising.com/)\n3. **Franchising | Johnny's New York Style ...**\n   \ud83d\udcdd Opening a Johnny's franchise is an opportunity to invest in a proven business model, an established ...\n   \ud83d\udd17 [Learn More](https://johnnyspizza.com/franchising/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "pizza",
+          "location": "new york",
+          "timestamp": "2025-10-02T00:52:43.912106",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 40.712749,
+            "longitude": -74.005994
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 40.712749,
+              "lng": -74.005994
+            },
+            "radius_miles": 10.0,
+            "business_type": "pizza",
+            "competitor_count": 20,
+            "average_rating": 3.74,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "New York",
+                "address": "New York",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 40.7127753,
+                  "longitude": -74.0059728
+                },
+                "place_id": "ChIJOwg_06VPwokRYv534QaPC8g"
+              },
+              {
+                "name": "Duane Street Hotel Tribeca, Sonder",
+                "address": "130 Duane Street, New York",
+                "rating": 4.1,
+                "user_ratings_total": 405,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7159471,
+                  "longitude": -74.0073669
+                },
+                "place_id": "ChIJ7UBKbh9awokRsLNXAfxLoHs"
+              },
+              {
+                "name": "Smyth Tribeca",
+                "address": "85 West Broadway, New York",
+                "rating": 4.2,
+                "user_ratings_total": 472,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7152566,
+                  "longitude": -74.0091255
+                },
+                "place_id": "ChIJ_1qwJx9awokRl0bFrNhhRBs"
+              },
+              {
+                "name": "M Social Hotel New York Downtown (formerly Millennium Downtown New York)",
+                "address": "55 Church Street, New York",
+                "rating": 3.8,
+                "user_ratings_total": 5039,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7113987,
+                  "longitude": -74.01022569999999
+                },
+                "place_id": "ChIJh-L3uxlawokRDwLmkKwLIvY"
+              },
+              {
+                "name": "The Frederick Hotel",
+                "address": "95 West Broadway, New York",
+                "rating": 4.2,
+                "user_ratings_total": 1017,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "bar",
+                  "restaurant",
+                  "point_of_interest",
+                  "food",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7156143,
+                  "longitude": -74.00896709999999
+                },
+                "place_id": "ChIJYSjtGB9awokRvtwfGw4UEpc"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State new york",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Pizza Franchise Opportunities, Russo's New York Pizzeria",
+              "link": "https://www.russosfranchise.com/",
+              "snippet": "Russo's NY Pizzeria is one of the best franchises to consider. Run & own your own business with a lot potential growth! A well supported brand & variety of ...",
+              "position": 1
+            },
+            {
+              "title": "NY PIZZA",
+              "link": "https://nypizzapiefranchising.com/",
+              "snippet": "Franchise Fee: $30,000 \u00b7 Minimal Initial Investment: $135,000 \u00b7 Royalty Fee: 6% of gross sale \u00b7 Exclusive Territory Promise: 30,000-50,000 population, or 5-mile ...",
+              "position": 2
+            },
+            {
+              "title": "Franchising | Johnny's New York Style ...",
+              "link": "https://johnnyspizza.com/franchising/",
+              "snippet": "Opening a Johnny's franchise is an opportunity to invest in a proven business model, an established brand, and a team that knows how to scale operations.",
+              "position": 3
+            },
+            {
+              "title": "Pizza Franchise opportunities in New York City",
+              "link": "https://russosfranchise.com/pizza-franchise-opportunities-in-new-york-city/",
+              "snippet": "The initial investment for a Russo's New York Pizzeria Italian Kitchen ranges from $395,000 to $950,000, considering factors like location, franchise size, ...",
+              "position": 4
+            },
+            {
+              "title": "Johnnie's NY Pizza Franchise Information",
+              "link": "https://www.johnniesnypizza.com/franchise_info/franchise_info.html",
+              "snippet": "Now you can bring classic New York style pizza to your neighborhood with the franchise support and skill of Kahala.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_real_data_coffee": [
+      {
+        "turn_id": "c7d7bcdb-ee10-46b5-8811-388842cfab36",
+        "timestamp": "2025-10-02 00:52:51.777917",
+        "user_message": "I want to open a coffee shop in Seattle",
+        "bot_response": "I'll analyze the coffee shop market in seattle for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Coffee Shop in Seattle**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Seattle** - \ud83d\udccd Seattle\n2. **Fairmont Olympic Hotel, Seattle** - 4.6/5 \u2b50 (4191 reviews)\n   \ud83d\udccd 411 University Street, Seattle\n3. **Renaissance Seattle Hotel** - 4.3/5 \u2b50 (3791 reviews)\n   \ud83d\udccd 515 Madison Street, Seattle\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Seattle's Best Coffee Franchise Cost & Opportunities 2025**\n   \ud83d\udcdd Liquid capital required. $125,000 ; Net worth required. $1,000,000 ; Investment. $181,835 - $445,035...\n   \ud83d\udd17 [Learn More](https://www.franchisehelp.com/franchises/seattles-best-coffee/)\n2. **Coffee Shops and Cafes For Sale in Seattle Metro Area, WA**\n   \ud83d\udcdd Browse 34 Coffee Shops and Cafes currently for sale in Seattle Metro Area on BizBuySell. Find a sell...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/washington/seattle-metro-area/coffee-shops-and-cafes-for-sale/)\n3. **Seattle's Best Coffee - Franchise Direct**\n   \ud83d\udcdd This is one of Seattle's original coffeehouses. Seattle's Best is the franchise that brought the ide...\n   \ud83d\udd17 [Learn More](https://www.franchisedirect.com/coffeefranchises/seattles-best-coffee-franchise-06707/)\n\n\n\ud83d\udcc8 **Market Trend Analysis:**\n\u2022 Trend: Growing (5.0% growth)\n\u2022 Confidence: 80%\n\u2022 Risk Level: Low\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.5/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.5/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 80% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "coffee shop",
+          "location": "seattle",
+          "timestamp": "2025-10-02T00:52:50.486172",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 47.603243,
+            "longitude": -122.330286
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 47.603243,
+              "lng": -122.330286
+            },
+            "radius_miles": 10.0,
+            "business_type": "coffee shop",
+            "competitor_count": 20,
+            "average_rating": 3.91,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Seattle",
+                "address": "Seattle",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 47.6061389,
+                  "longitude": -122.3328481
+                },
+                "place_id": "ChIJVTPokywQkFQRmtVEaUZlJRA"
+              },
+              {
+                "name": "Fairmont Olympic Hotel, Seattle",
+                "address": "411 University Street, Seattle",
+                "rating": 4.6,
+                "user_ratings_total": 4191,
+                "price_level": 4,
+                "types": [
+                  "bar",
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6080126,
+                  "longitude": -122.3338701
+                },
+                "place_id": "ChIJf3uV-rNqkFQRmkmlotz3KN0"
+              },
+              {
+                "name": "Renaissance Seattle Hotel",
+                "address": "515 Madison Street, Seattle",
+                "rating": 4.3,
+                "user_ratings_total": 3791,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6066675,
+                  "longitude": -122.3306848
+                },
+                "place_id": "ChIJmZ0LzrZqkFQRvUd2Te2zZOA"
+              },
+              {
+                "name": "Hotel 1000, LXR Hotels & Resorts",
+                "address": "1000 1st Avenue, Seattle",
+                "rating": 4.5,
+                "user_ratings_total": 1360,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.60505329999999,
+                  "longitude": -122.3361194
+                },
+                "place_id": "ChIJvYvFsLFqkFQRPF48-leg-gc"
+              },
+              {
+                "name": "Executive Hotel Pacific",
+                "address": "400 Spring Street, Seattle",
+                "rating": 3.5,
+                "user_ratings_total": 1837,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6070892,
+                  "longitude": -122.333406
+                },
+                "place_id": "ChIJYdpET7FqkFQRG7EKuXswzmg"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State seattle",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Seattle's Best Coffee Franchise Cost & Opportunities 2025",
+              "link": "https://www.franchisehelp.com/franchises/seattles-best-coffee/",
+              "snippet": "Liquid capital required. $125,000 ; Net worth required. $1,000,000 ; Investment. $181,835 - $445,035 ; Franchise fee. $25,000 - $30,000 ; Units in operation. 77.",
+              "position": 1
+            },
+            {
+              "title": "Coffee Shops and Cafes For Sale in Seattle Metro Area, WA",
+              "link": "https://www.bizbuysell.com/washington/seattle-metro-area/coffee-shops-and-cafes-for-sale/",
+              "snippet": "Browse 34 Coffee Shops and Cafes currently for sale in Seattle Metro Area on BizBuySell. Find a seller financed Seattle Metro Area Coffee Shop and ...",
+              "position": 2
+            },
+            {
+              "title": "Seattle's Best Coffee - Franchise Direct",
+              "link": "https://www.franchisedirect.com/coffeefranchises/seattles-best-coffee-franchise-06707/",
+              "snippet": "This is one of Seattle's original coffeehouses. Seattle's Best is the franchise that brought the idea of 'Seattle coffee' to the world.",
+              "position": 3
+            },
+            {
+              "title": "Seattle's Best Coffee Franchise Cost, Fees, Opportunities ...",
+              "link": "https://www.franchisegator.com/franchises/seattles-best-coffee/",
+              "snippet": "A Seattle's Best Coffee franchise requires $125,000 liquid capital, $1,000,000 net worth, and a total investment of $181,835 - $445,035. The franchise fee is $ ...",
+              "position": 4
+            },
+            {
+              "title": "Coffee stands like in Seattle : r/smallbusiness",
+              "link": "https://www.reddit.com/r/smallbusiness/comments/1g56arm/coffee_stands_like_in_seattle/",
+              "snippet": "Drive-through coffee stands can be a great business model! To get started, here are some resources and considerations.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_real_data_fitness": [
+      {
+        "turn_id": "0452b9dc-0793-47ef-bbbf-fe55d6a7409f",
+        "timestamp": "2025-10-02 00:52:59.805925",
+        "user_message": "I want to open a gym in Los Angeles",
+        "bot_response": "I'll analyze the fitness market in los angeles for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Fitness in Los Angeles**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Los Angeles** - \ud83d\udccd Los Angeles\n2. **Los Angeles Athletic Club** - 4.5/5 \u2b50 (1281 reviews)\n   \ud83d\udccd 431 West 7th Street, Los Angeles\n3. **Hilton Checkers Los Angeles** - 4/5 \u2b50 (1618 reviews)\n   \ud83d\udccd 535 South Grand Avenue, Los Angeles\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Gyms and Fitness Centers For Sale in Los Angeles County ...**\n   \ud83d\udcdd Gyms and Fitness Centers For Sale in Los Angeles County, CA ; Boutique Fitness Franchise \u00b7 $100,000....\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/california/los-angeles-county/gyms-and-fitness-centers-for-sale/)\n2. **Los Angeles County Gyms and Fitness Centers For Sale**\n   \ud83d\udcdd Boutique Fitness Franchise. Los Angeles, CA. Upscale boutique fitness franchise in excellent locatio...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/california/los-angeles-county/gyms-and-fitness-centers-for-sale/)\n3. **The Best Gym Franchise Opportunities in California**\n   \ud83d\udcdd Explore the best gym franchise opportunities in California. Find out how much to open a gym in Calif...\n   \ud83d\udd17 [Learn More](https://www.burnbootcampfranchise.com/available-markets/california/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "fitness",
+          "location": "los angeles",
+          "timestamp": "2025-10-02T00:52:54.984157",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 34.048051,
+            "longitude": -118.254187
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 34.048051,
+              "lng": -118.254187
+            },
+            "radius_miles": 10.0,
+            "business_type": "fitness",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Los Angeles",
+                "address": "Los Angeles",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 34.0549076,
+                  "longitude": -118.242643
+                },
+                "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I"
+              },
+              {
+                "name": "Los Angeles Athletic Club",
+                "address": "431 West 7th Street, Los Angeles",
+                "rating": 4.5,
+                "user_ratings_total": 1281,
+                "price_level": 0,
+                "types": [
+                  "spa",
+                  "gym",
+                  "lodging",
+                  "point_of_interest",
+                  "health",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0469169,
+                  "longitude": -118.2550353
+                },
+                "place_id": "ChIJ-_RdD7XHwoARN0-Zc_fk4ZA"
+              },
+              {
+                "name": "Hilton Checkers Los Angeles",
+                "address": "535 South Grand Avenue, Los Angeles",
+                "rating": 4,
+                "user_ratings_total": 1618,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0496146,
+                  "longitude": -118.2549957
+                },
+                "place_id": "ChIJU9oTm7THwoARF9dZF0pdn0U"
+              },
+              {
+                "name": "Standard",
+                "address": "550 Flower Street, Los Angeles",
+                "rating": 4.2,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0501865,
+                  "longitude": -118.2571724
+                },
+                "place_id": "ChIJ71dGk7PHwoARHWr_QGbZIGU"
+              },
+              {
+                "name": "Sheraton Grand Los Angeles",
+                "address": "711 South Hope Street, Los Angeles",
+                "rating": 4.4,
+                "user_ratings_total": 2706,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0478628,
+                  "longitude": -118.2583756
+                },
+                "place_id": "ChIJmRr_HrTHwoARjigvltPYgzo"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State los angeles",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Gyms and Fitness Centers For Sale in Los Angeles County ...",
+              "link": "https://www.bizbuysell.com/california/los-angeles-county/gyms-and-fitness-centers-for-sale/",
+              "snippet": "Gyms and Fitness Centers For Sale in Los Angeles County, CA ; Boutique Fitness Franchise \u00b7 $100,000. $100,000 ; Reduced - Established Fitness Business In ...",
+              "position": 1
+            },
+            {
+              "title": "Los Angeles County Gyms and Fitness Centers For Sale",
+              "link": "https://www.loopnet.com/biz/california/los-angeles-county/gyms-and-fitness-centers-for-sale/",
+              "snippet": "Boutique Fitness Franchise. Los Angeles, CA. Upscale boutique fitness franchise in excellent location in Granada Hills shopping... $100,000. listing-image.",
+              "position": 2
+            },
+            {
+              "title": "The Best Gym Franchise Opportunities in California",
+              "link": "https://www.burnbootcampfranchise.com/available-markets/california/",
+              "snippet": "Explore the best gym franchise opportunities in California. Find out how much to open a gym in California and more. Start a fitness business today!",
+              "position": 3
+            },
+            {
+              "title": "Health And Fitness Clubs For Sale In Los Angeles, California",
+              "link": "https://us.businessesforsale.com/us/search/health-and-fitness-clubs-for-sale-in-los-angeles",
+              "snippet": "From local gyms and yoga studios to profitable franchises and specialized wellness centers, find your ideal business and get ready to work out ...",
+              "position": 4
+            },
+            {
+              "title": "Mayweather Boxing + Fitness Franchise | Own The Winning ...",
+              "link": "http://mayweatherfranchise.com/",
+              "snippet": "The Mayweather Boxing + Fitness Franchise is an elite fitness opportunity ready for the right entrepreneurs. Learn more today!",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_real_data_retail": [
+      {
+        "turn_id": "886c6a1e-1ad4-409b-a63d-f1b0c25dad1a",
+        "timestamp": "2025-10-02 00:53:09.755245",
+        "user_message": "I want to open a retail store in Chicago",
+        "bot_response": "Welcome to D.E.L.T.A Franchise Intelligence! I'm here to help you make data-driven business decisions. What would you like to explore?\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Retail in Chicago**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Chicago** - \ud83d\udccd Chicago\n2. **La Quinta Inn & Suites by Wyndham Chicago Downtown** - 4.1/5 \u2b50 (2367 reviews)\n   \ud83d\udccd 1 South Franklin Street, Chicago\n3. **THE MIDLAND HOTEL, Chicago, a Tribute Portfolio Hotel** - 3.9/5 \u2b50 (2113 reviews)\n   \ud83d\udccd 172 West Adams Street, Chicago\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Top Franchises for Sale in Illinois**\n   \ud83d\udcdd Our research has revealed some of the best IL franchise opportunities currently looking to grow in C...\n   \ud83d\udd17 [Learn More](https://franchisebusinessreview.com/lists/top-franchises-illinois/)\n2. **Franchise Opportunities in Chicago, IL | The UPS Store**\n   \ud83d\udcdd The UPS Store has an excellent franchise opportunity located in a growing area in the Southwest Subu...\n   \ud83d\udd17 [Learn More](https://www.theupsstorefranchise.com/ups-store-for-sale/chicago-il)\n3. **Retail Businesses For Sale in Chicago Metro Area, IL**\n   \ud83d\udcdd Browse 184 Chicago Metro Area Retail businesses available for sale on BizBuySell. Find your ideal Bi...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/illinois/chicago-metro-area/retail-businesses-for-sale/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (1.9% growth)\n\u2022 Confidence: 74%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.9/1.0\n\u2022 Growth Potential: 0.4/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\u2022 Limited growth potential - consider market expansion\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 74% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "retail",
+          "location": "chicago",
+          "timestamp": "2025-10-02T00:53:03.788354",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 41.881953,
+            "longitude": -87.632362
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 41.881953,
+              "lng": -87.632362
+            },
+            "radius_miles": 10.0,
+            "business_type": "retail",
+            "competitor_count": 20,
+            "average_rating": 3.9,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Chicago",
+                "address": "Chicago",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 41.88325,
+                  "longitude": -87.6323879
+                },
+                "place_id": "ChIJ7cv00DwsDogRAMDACa2m4K8"
+              },
+              {
+                "name": "La Quinta Inn & Suites by Wyndham Chicago Downtown",
+                "address": "1 South Franklin Street, Chicago",
+                "rating": 4.1,
+                "user_ratings_total": 2367,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 41.88162629999999,
+                  "longitude": -87.63503449999999
+                },
+                "place_id": "ChIJYyVhF7ksDogRV4XlQid6GsE"
+              },
+              {
+                "name": "THE MIDLAND HOTEL, Chicago, a Tribute Portfolio Hotel",
+                "address": "172 West Adams Street, Chicago",
+                "rating": 3.9,
+                "user_ratings_total": 2113,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 41.8795207,
+                  "longitude": -87.6332144
+                },
+                "place_id": "ChIJYYPnG7wsDogR8KApuOJNQw4"
+              },
+              {
+                "name": "The Allegro Royal Sonesta Hotel Chicago Loop",
+                "address": "171 West Randolph Street, Chicago",
+                "rating": 4.2,
+                "user_ratings_total": 2916,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 41.88439379999999,
+                  "longitude": -87.6334083
+                },
+                "place_id": "ChIJqWzZ9bksDogRMhdu6qnb4cg"
+              },
+              {
+                "name": "JW Marriott Chicago",
+                "address": "151 West Adams Street, Chicago",
+                "rating": 4.5,
+                "user_ratings_total": 3054,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 41.8793371,
+                  "longitude": -87.6328322
+                },
+                "place_id": "ChIJESf9FrwsDogRg9RZOPtiZp8"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State chicago",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Top Franchises for Sale in Illinois",
+              "link": "https://franchisebusinessreview.com/lists/top-franchises-illinois/",
+              "snippet": "Our research has revealed some of the best IL franchise opportunities currently looking to grow in Chicago and and throughout the state. This list includes only ...",
+              "position": 1
+            },
+            {
+              "title": "Franchise Opportunities in Chicago, IL | The UPS Store",
+              "link": "https://www.theupsstorefranchise.com/ups-store-for-sale/chicago-il",
+              "snippet": "The UPS Store has an excellent franchise opportunity located in a growing area in the Southwest Suburbs of Chicago. Open a franchise and join the largest ...",
+              "position": 2
+            },
+            {
+              "title": "Retail Businesses For Sale in Chicago Metro Area, IL",
+              "link": "https://www.bizbuysell.com/illinois/chicago-metro-area/retail-businesses-for-sale/",
+              "snippet": "Browse 184 Chicago Metro Area Retail businesses available for sale on BizBuySell. Find your ideal Bike Shops, Grocery Stores & Supermarkets, ...",
+              "position": 3
+            },
+            {
+              "title": "Franchise Opportunities Near You Chicago, Illinois",
+              "link": "https://www.franchiseopportunities.com/near-me/chicago-illinois",
+              "snippet": "Maximize Chicago's dynamic market with our carefully selected franchises and businesses for sale. Your journey to success begins here!",
+              "position": 4
+            },
+            {
+              "title": "Retail Businesses For Sale in Chicago Metro Area, Illinois",
+              "link": "https://www.loopnet.com/biz/illinois/chicago-metro-area/retail-businesses-for-sale/",
+              "snippet": "View 171 Chicago Metro Area, Illinois Retail businesses for sale on LoopNet.com. Search LoopNet for Retail businesses for sale in Chicago Metro Area, ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_session_1": [
+      {
+        "turn_id": "6cc5996a-e07d-4007-908e-5b43d170b7b5",
+        "timestamp": "2025-10-02 00:57:50.841045",
+        "user_message": "I want to open a pizza restaurant in New York",
+        "bot_response": "I'll analyze the pizza market in new york for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Pizza in New York**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **New York** - \ud83d\udccd New York\n2. **Duane Street Hotel Tribeca, Sonder** - 4.1/5 \u2b50 (405 reviews)\n   \ud83d\udccd 130 Duane Street, New York\n3. **Smyth Tribeca** - 4.2/5 \u2b50 (472 reviews)\n   \ud83d\udccd 85 West Broadway, New York\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Pizza Franchise Opportunities, Russo's New York Pizzeria**\n   \ud83d\udcdd Russo's NY Pizzeria is one of the best franchises to consider. Run & own your own business with a lo...\n   \ud83d\udd17 [Learn More](https://www.russosfranchise.com/)\n2. **NY PIZZA**\n   \ud83d\udcdd Franchise Fee: $30,000 \u00b7 Minimal Initial Investment: $135,000 \u00b7 Royalty Fee: 6% of gross sale \u00b7 Excl...\n   \ud83d\udd17 [Learn More](https://nypizzapiefranchising.com/)\n3. **Franchising | Johnny's New York Style ...**\n   \ud83d\udcdd Opening a Johnny's franchise is an opportunity to invest in a proven business model, an established ...\n   \ud83d\udd17 [Learn More](https://johnnyspizza.com/franchising/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "pizza",
+          "location": "new york",
+          "timestamp": "2025-10-02T00:57:50.079915",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 40.712749,
+            "longitude": -74.005994
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 40.712749,
+              "lng": -74.005994
+            },
+            "radius_miles": 10.0,
+            "business_type": "pizza",
+            "competitor_count": 20,
+            "average_rating": 3.74,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "New York",
+                "address": "New York",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 40.7127753,
+                  "longitude": -74.0059728
+                },
+                "place_id": "ChIJOwg_06VPwokRYv534QaPC8g"
+              },
+              {
+                "name": "Duane Street Hotel Tribeca, Sonder",
+                "address": "130 Duane Street, New York",
+                "rating": 4.1,
+                "user_ratings_total": 405,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7159471,
+                  "longitude": -74.0073669
+                },
+                "place_id": "ChIJ7UBKbh9awokRsLNXAfxLoHs"
+              },
+              {
+                "name": "Smyth Tribeca",
+                "address": "85 West Broadway, New York",
+                "rating": 4.2,
+                "user_ratings_total": 472,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7152566,
+                  "longitude": -74.0091255
+                },
+                "place_id": "ChIJ_1qwJx9awokRl0bFrNhhRBs"
+              },
+              {
+                "name": "M Social Hotel New York Downtown (formerly Millennium Downtown New York)",
+                "address": "55 Church Street, New York",
+                "rating": 3.8,
+                "user_ratings_total": 5039,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7113987,
+                  "longitude": -74.01022569999999
+                },
+                "place_id": "ChIJh-L3uxlawokRDwLmkKwLIvY"
+              },
+              {
+                "name": "The Frederick Hotel",
+                "address": "95 West Broadway, New York",
+                "rating": 4.2,
+                "user_ratings_total": 1017,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.7156143,
+                  "longitude": -74.00896709999999
+                },
+                "place_id": "ChIJYSjtGB9awokRvtwfGw4UEpc"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State new york",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Pizza Franchise Opportunities, Russo's New York Pizzeria",
+              "link": "https://www.russosfranchise.com/",
+              "snippet": "Russo's NY Pizzeria is one of the best franchises to consider. Run & own your own business with a lot potential growth! A well supported brand & variety of ...",
+              "position": 1
+            },
+            {
+              "title": "NY PIZZA",
+              "link": "https://nypizzapiefranchising.com/",
+              "snippet": "Franchise Fee: $30,000 \u00b7 Minimal Initial Investment: $135,000 \u00b7 Royalty Fee: 6% of gross sale \u00b7 Exclusive Territory Promise: 30,000-50,000 population, or 5-mile ...",
+              "position": 2
+            },
+            {
+              "title": "Franchising | Johnny's New York Style ...",
+              "link": "https://johnnyspizza.com/franchising/",
+              "snippet": "Opening a Johnny's franchise is an opportunity to invest in a proven business model, an established brand, and a team that knows how to scale operations.",
+              "position": 3
+            },
+            {
+              "title": "Pizza Franchise opportunities in New York City",
+              "link": "https://russosfranchise.com/pizza-franchise-opportunities-in-new-york-city/",
+              "snippet": "The initial investment for a Russo's New York Pizzeria Italian Kitchen ranges from $395,000 to $950,000, considering factors like location, franchise size, ...",
+              "position": 4
+            },
+            {
+              "title": "Johnnie's NY Pizza Franchise Information",
+              "link": "https://www.johnniesnypizza.com/franchise_info/franchise_info.html",
+              "snippet": "Now you can bring classic New York style pizza to your neighborhood with the franchise support and skill of Kahala.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_session_2": [
+      {
+        "turn_id": "069afad7-5832-409d-b955-b8b9a6ed87a5",
+        "timestamp": "2025-10-02 00:57:54.217144",
+        "user_message": "I want to open a coffee shop in Seattle",
+        "bot_response": "I'll analyze the coffee shop market in seattle for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Coffee Shop in Seattle**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Seattle** - \ud83d\udccd Seattle\n2. **Fairmont Olympic Hotel, Seattle** - 4.6/5 \u2b50 (4191 reviews)\n   \ud83d\udccd 411 University Street, Seattle\n3. **Renaissance Seattle Hotel** - 4.3/5 \u2b50 (3791 reviews)\n   \ud83d\udccd 515 Madison Street, Seattle\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Seattle's Best Coffee Franchise Cost & Opportunities 2025**\n   \ud83d\udcdd Liquid capital required. $125,000 ; Net worth required. $1,000,000 ; Investment. $181,835 - $445,035...\n   \ud83d\udd17 [Learn More](https://www.franchisehelp.com/franchises/seattles-best-coffee/)\n2. **Coffee Shops and Cafes For Sale in Seattle Metro Area, WA**\n   \ud83d\udcdd Browse 34 Coffee Shops and Cafes currently for sale in Seattle Metro Area on BizBuySell. Find a sell...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/washington/seattle-metro-area/coffee-shops-and-cafes-for-sale/)\n3. **Seattle's Best Coffee - Franchise Direct**\n   \ud83d\udcdd This is one of Seattle's original coffeehouses. Seattle's Best is the franchise that brought the ide...\n   \ud83d\udd17 [Learn More](https://www.franchisedirect.com/coffeefranchises/seattles-best-coffee-franchise-06707/)\n\n\n\ud83d\udcc8 **Market Trend Analysis:**\n\u2022 Trend: Growing (5.0% growth)\n\u2022 Confidence: 80%\n\u2022 Risk Level: Low\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.5/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.5/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 80% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "coffee shop",
+          "location": "seattle",
+          "timestamp": "2025-10-02T00:57:53.059220",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 47.603243,
+            "longitude": -122.330286
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 47.603243,
+              "lng": -122.330286
+            },
+            "radius_miles": 10.0,
+            "business_type": "coffee shop",
+            "competitor_count": 20,
+            "average_rating": 3.91,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Seattle",
+                "address": "Seattle",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 47.6061389,
+                  "longitude": -122.3328481
+                },
+                "place_id": "ChIJVTPokywQkFQRmtVEaUZlJRA"
+              },
+              {
+                "name": "Fairmont Olympic Hotel, Seattle",
+                "address": "411 University Street, Seattle",
+                "rating": 4.6,
+                "user_ratings_total": 4191,
+                "price_level": 4,
+                "types": [
+                  "lodging",
+                  "bar",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6080126,
+                  "longitude": -122.3338701
+                },
+                "place_id": "ChIJf3uV-rNqkFQRmkmlotz3KN0"
+              },
+              {
+                "name": "Renaissance Seattle Hotel",
+                "address": "515 Madison Street, Seattle",
+                "rating": 4.3,
+                "user_ratings_total": 3791,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6066675,
+                  "longitude": -122.3306848
+                },
+                "place_id": "ChIJmZ0LzrZqkFQRvUd2Te2zZOA"
+              },
+              {
+                "name": "Hotel 1000, LXR Hotels & Resorts",
+                "address": "1000 1st Avenue, Seattle",
+                "rating": 4.5,
+                "user_ratings_total": 1360,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.60505329999999,
+                  "longitude": -122.3361194
+                },
+                "place_id": "ChIJvYvFsLFqkFQRPF48-leg-gc"
+              },
+              {
+                "name": "Executive Hotel Pacific",
+                "address": "400 Spring Street, Seattle",
+                "rating": 3.5,
+                "user_ratings_total": 1837,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.6070892,
+                  "longitude": -122.333406
+                },
+                "place_id": "ChIJYdpET7FqkFQRG7EKuXswzmg"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State seattle",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Seattle's Best Coffee Franchise Cost & Opportunities 2025",
+              "link": "https://www.franchisehelp.com/franchises/seattles-best-coffee/",
+              "snippet": "Liquid capital required. $125,000 ; Net worth required. $1,000,000 ; Investment. $181,835 - $445,035 ; Franchise fee. $25,000 - $30,000 ; Units in operation. 77.",
+              "position": 1
+            },
+            {
+              "title": "Coffee Shops and Cafes For Sale in Seattle Metro Area, WA",
+              "link": "https://www.bizbuysell.com/washington/seattle-metro-area/coffee-shops-and-cafes-for-sale/",
+              "snippet": "Browse 34 Coffee Shops and Cafes currently for sale in Seattle Metro Area on BizBuySell. Find a seller financed Seattle Metro Area Coffee Shop and ...",
+              "position": 2
+            },
+            {
+              "title": "Seattle's Best Coffee - Franchise Direct",
+              "link": "https://www.franchisedirect.com/coffeefranchises/seattles-best-coffee-franchise-06707/",
+              "snippet": "This is one of Seattle's original coffeehouses. Seattle's Best is the franchise that brought the idea of 'Seattle coffee' to the world.",
+              "position": 3
+            },
+            {
+              "title": "Seattle's Best Coffee Franchise Cost, Fees, Opportunities ...",
+              "link": "https://www.franchisegator.com/franchises/seattles-best-coffee/",
+              "snippet": "A Seattle's Best Coffee franchise requires $125,000 liquid capital, $1,000,000 net worth, and a total investment of $181,835 - $445,035. The franchise fee is $ ...",
+              "position": 4
+            },
+            {
+              "title": "Coffee stands like in Seattle : r/smallbusiness",
+              "link": "https://www.reddit.com/r/smallbusiness/comments/1g56arm/coffee_stands_like_in_seattle/",
+              "snippet": "Drive-through coffee stands can be a great business model! To get started, here are some resources and considerations.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_session_3": [
+      {
+        "turn_id": "a1ed54c4-2e5e-40d7-a904-fb36172c8a17",
+        "timestamp": "2025-10-02 00:57:57.057345",
+        "user_message": "I want to open a gym in Los Angeles",
+        "bot_response": "I'll analyze the fitness market in los angeles for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Fitness in Los Angeles**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Los Angeles** - \ud83d\udccd Los Angeles\n2. **Los Angeles Athletic Club** - 4.5/5 \u2b50 (1281 reviews)\n   \ud83d\udccd 431 West 7th Street, Los Angeles\n3. **Hilton Checkers Los Angeles** - 4/5 \u2b50 (1618 reviews)\n   \ud83d\udccd 535 South Grand Avenue, Los Angeles\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Gyms and Fitness Centers For Sale in Los Angeles County ...**\n   \ud83d\udcdd Gyms and Fitness Centers For Sale in Los Angeles County, CA ; Boutique Fitness Franchise \u00b7 $100,000....\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/california/los-angeles-county/gyms-and-fitness-centers-for-sale/)\n2. **Los Angeles County Gyms and Fitness Centers For Sale**\n   \ud83d\udcdd Boutique Fitness Franchise. Los Angeles, CA. Upscale boutique fitness franchise in excellent locatio...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/california/los-angeles-county/gyms-and-fitness-centers-for-sale/)\n3. **The Best Gym Franchise Opportunities in California**\n   \ud83d\udcdd Explore the best gym franchise opportunities in California. Find out how much to open a gym in Calif...\n   \ud83d\udd17 [Learn More](https://www.burnbootcampfranchise.com/available-markets/california/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "fitness",
+          "location": "los angeles",
+          "timestamp": "2025-10-02T00:57:56.225640",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 34.048051,
+            "longitude": -118.254187
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 34.048051,
+              "lng": -118.254187
+            },
+            "radius_miles": 10.0,
+            "business_type": "fitness",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Los Angeles",
+                "address": "Los Angeles",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 34.0549076,
+                  "longitude": -118.242643
+                },
+                "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I"
+              },
+              {
+                "name": "Los Angeles Athletic Club",
+                "address": "431 West 7th Street, Los Angeles",
+                "rating": 4.5,
+                "user_ratings_total": 1281,
+                "price_level": 0,
+                "types": [
+                  "gym",
+                  "health",
+                  "lodging",
+                  "point_of_interest",
+                  "spa",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0469169,
+                  "longitude": -118.2550353
+                },
+                "place_id": "ChIJ-_RdD7XHwoARN0-Zc_fk4ZA"
+              },
+              {
+                "name": "Hilton Checkers Los Angeles",
+                "address": "535 South Grand Avenue, Los Angeles",
+                "rating": 4,
+                "user_ratings_total": 1618,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0496146,
+                  "longitude": -118.2549957
+                },
+                "place_id": "ChIJU9oTm7THwoARF9dZF0pdn0U"
+              },
+              {
+                "name": "Standard",
+                "address": "550 Flower Street, Los Angeles",
+                "rating": 4.2,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0501865,
+                  "longitude": -118.2571724
+                },
+                "place_id": "ChIJ71dGk7PHwoARHWr_QGbZIGU"
+              },
+              {
+                "name": "Sheraton Grand Los Angeles",
+                "address": "711 South Hope Street, Los Angeles",
+                "rating": 4.4,
+                "user_ratings_total": 2706,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0478628,
+                  "longitude": -118.2583756
+                },
+                "place_id": "ChIJmRr_HrTHwoARjigvltPYgzo"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State los angeles",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Gyms and Fitness Centers For Sale in Los Angeles County ...",
+              "link": "https://www.bizbuysell.com/california/los-angeles-county/gyms-and-fitness-centers-for-sale/",
+              "snippet": "Gyms and Fitness Centers For Sale in Los Angeles County, CA ; Boutique Fitness Franchise \u00b7 $100,000. $100,000 ; Reduced - Established Fitness Business In ...",
+              "position": 1
+            },
+            {
+              "title": "Los Angeles County Gyms and Fitness Centers For Sale",
+              "link": "https://www.loopnet.com/biz/california/los-angeles-county/gyms-and-fitness-centers-for-sale/",
+              "snippet": "Boutique Fitness Franchise. Los Angeles, CA. Upscale boutique fitness franchise in excellent location in Granada Hills shopping... $100,000. listing-image.",
+              "position": 2
+            },
+            {
+              "title": "The Best Gym Franchise Opportunities in California",
+              "link": "https://www.burnbootcampfranchise.com/available-markets/california/",
+              "snippet": "Explore the best gym franchise opportunities in California. Find out how much to open a gym in California and more. Start a fitness business today!",
+              "position": 3
+            },
+            {
+              "title": "Health And Fitness Clubs For Sale In Los Angeles, California",
+              "link": "https://us.businessesforsale.com/us/search/health-and-fitness-clubs-for-sale-in-los-angeles",
+              "snippet": "From local gyms and yoga studios to profitable franchises and specialized wellness centers, find your ideal business and get ready to work out ...",
+              "position": 4
+            },
+            {
+              "title": "Mayweather Boxing + Fitness Franchise | Own The Winning ...",
+              "link": "http://mayweatherfranchise.com/",
+              "snippet": "The Mayweather Boxing + Fitness Franchise is an elite fitness opportunity ready for the right entrepreneurs. Learn more today!",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ]
+  },
+  "user_profiles": {
+    "test_advanced_ai": {
+      "user_id": "test_advanced_ai",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:23:06.192521"
+    },
+    "test_sentiment_analysis": {
+      "user_id": "test_sentiment_analysis",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:23:15.031925"
+    },
+    "dashboard_session_1759379008796": {
+      "user_id": "dashboard_session_1759379008796",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:23:53.388869"
+    },
+    "test_competition_fix": {
+      "user_id": "test_competition_fix",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:25:51.761819"
+    },
+    "dashboard_session_1759379824909": {
+      "user_id": "dashboard_session_1759379824909",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:37:25.929747"
+    },
+    "test_smart_pizza": {
+      "user_id": "test_smart_pizza",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:38:50.337679"
+    },
+    "test_enhanced_logic": {
+      "user_id": "test_enhanced_logic",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:50:46.038864"
+    },
+    "test_real_data_comprehensive": {
+      "user_id": "test_real_data_comprehensive",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:52:40.362703"
+    },
+    "test_real_data_pizza": {
+      "user_id": "test_real_data_pizza",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:52:47.526806"
+    },
+    "test_real_data_coffee": {
+      "user_id": "test_real_data_coffee",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:52:51.777923"
+    },
+    "test_real_data_fitness": {
+      "user_id": "test_real_data_fitness",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:52:59.805932"
+    },
+    "test_real_data_retail": {
+      "user_id": "test_real_data_retail",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:53:09.755252"
+    },
+    "test_session_1": {
+      "user_id": "test_session_1",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:57:50.841051"
+    },
+    "test_session_2": {
+      "user_id": "test_session_2",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:57:54.217150"
+    },
+    "test_session_3": {
+      "user_id": "test_session_3",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 00:57:57.057350"
+    }
+  },
+  "global_insights": {
+    "common_patterns": {
+      "unknown_False_False": 16
+    }
+  },
+  "last_updated": "2025-10-02T00:57:57.057691"
+}

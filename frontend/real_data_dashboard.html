@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 D.E.L.T.A Real Data Franchise Intelligence Platform</title>
+
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+    <!-- Mapbox GL JS Draw -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.js"></script>
+
+    <!-- Mapbox Geocoder -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-bottom: 2px solid #00ff88;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #00ff88;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #00ff88;
+        }
+        
+        .header p {
+            color: #cccccc;
+            font-size: 1.2em;
+        }
+        
+        .data-policy {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .data-policy h2 {
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .panel h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #cccccc;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 14px;
+        }
+        
+        .form-group input::placeholder {
+            color: #888;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #00ff88, #00cc66);
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+        }
+        
+        .btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .results {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+        
+        .results h4 {
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        
+        .results pre {
+            color: #ffffff;
+            font-size: 12px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .loading {
+            color: #00ff88;
+            font-style: italic;
+        }
+        
+        .error {
+            color: #ff4444;
+            background: rgba(255, 68, 68, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ff4444;
+        }
+        
+        .success {
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #00ff88;
+        }
+        
+        .map-container {
+            grid-column: 1 / -1;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #00ff88;
+            margin: 20px 0;
+        }
+        
+        .map-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .map-controls button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px 12px;
+            background: #00ff88;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* CLI Interface Styles - Compact Professional */
+        
+        .cli-container {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            border-radius: 12px;
+            margin: 15px 0;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        .cli-header {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 255, 136, 0.08));
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cli-header:hover {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 136, 0.12));
+        }
+        
+        .cli-header h3 {
+            color: #00ff88;
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .cli-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85em;
+        }
+        
+        .status-indicator.online {
+            background: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+        
+        .status-indicator.offline {
+            background: rgba(255, 0, 0, 0.15);
+            color: #ff4444;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+        
+        #toggleBotBtn {
+            background: rgba(0, 255, 136, 0.12);
+            color: #00ff88;
+            border: 1px solid #00ff88;
+            padding: 6px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        #toggleBotBtn:hover {
+            background: rgba(0, 255, 136, 0.22);
+            transform: scale(1.05);
+        }
+        
+        .cli-content {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            max-height: 500px;
+            transition: all 0.3s ease;
+        }
+        
+        .cli-content.collapsed {
+            max-height: 0;
+            overflow: hidden;
+        }
+        /* Collapsible Arrow */
+        
+        .cli-header::after {
+            content: '▼';
+            color: #00ff88;
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+        
+        .cli-header.collapsed::after {
+            transform: rotate(-90deg);
+        }
+        /* Chat Interface - Compact */
+        
+        .chat-interface {
+            border-right: 1px solid rgba(0, 255, 136, 0.2);
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 12px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.2);
+            max-height: 350px;
+        }
+        
+        .bot-message,
+        .user-message {
+            margin-bottom: 8px;
+            padding: 8px 10px;
+            border-radius: 6px;
+            max-width: 95%;
+            font-size: 0.9em;
+            line-height: 1.3;
+        }
+        
+        .bot-message {
+            background: rgba(0, 255, 136, 0.08);
+            border-left: 2px solid #00ff88;
+        }
+        
+        .user-message {
+            background: rgba(0, 136, 255, 0.08);
+            border-left: 2px solid #0088ff;
+            margin-left: auto;
+        }
+        
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+            font-size: 0.75em;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+        
+        .bot-avatar {
+            font-size: 1em;
+        }
+        
+        .message-content {
+            line-height: 1.3;
+            color: #e8e8e8;
+        }
+        
+        .message-content code {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #00ff88;
+        }
+        /* Chat Input - Compact */
+        
+        .chat-input-container {
+            padding: 10px 12px;
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .input-wrapper {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        #chatInput {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            outline: none;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+        
+        #chatInput:focus {
+            border-color: #00ff88;
+            box-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        #sendBtn {
+            background: linear-gradient(45deg, #00ff88, #00cc66);
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.85em;
+        }
+        
+        #sendBtn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+        }
+        
+        .quick-commands {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        
+        .quick-btn {
+            background: rgba(0, 136, 255, 0.12);
+            color: #0088ff;
+            border: 1px solid #0088ff;
+            padding: 4px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.7em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .quick-btn:hover {
+            background: rgba(0, 136, 255, 0.22);
+            transform: scale(1.05);
+        }
+        /* Logs Panel - Compact */
+        
+        .logs-panel {
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        .logs-header {
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .logs-header:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .logs-header h4 {
+            color: #00ff88;
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .logs-controls {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        
+        .clear-btn,
+        #toggleLogsBtn {
+            background: rgba(255, 0, 0, 0.15);
+            color: #ff4444;
+            border: 1px solid #ff4444;
+            padding: 3px 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.7em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .clear-btn:hover,
+        #toggleLogsBtn:hover {
+            background: rgba(255, 0, 0, 0.25);
+            transform: scale(1.05);
+        }
+        
+        .auto-scroll-toggle {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.7em;
+            color: #888;
+        }
+        
+        .logs-content {
+            flex: 1;
+            padding: 8px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            line-height: 1.2;
+            max-height: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .logs-content.collapsed {
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .log-entry {
+            margin-bottom: 4px;
+            padding: 3px 6px;
+            border-radius: 3px;
+            border-left: 2px solid;
+            font-size: 0.75em;
+        }
+        
+        .log-entry.info {
+            background: rgba(0, 255, 136, 0.08);
+            border-left-color: #00ff88;
+        }
+        
+        .log-entry.error {
+            background: rgba(255, 0, 0, 0.08);
+            border-left-color: #ff4444;
+        }
+        
+        .log-entry.warning {
+            background: rgba(255, 165, 0, 0.08);
+            border-left-color: #ffaa00;
+        }
+        
+        .log-entry.success {
+            background: rgba(0, 255, 136, 0.12);
+            border-left-color: #00ff88;
+        }
+        
+        .log-entry .timestamp {
+            color: #666;
+            margin-right: 6px;
+            font-size: 0.7em;
+        }
+        /* Collapsible Arrow for Logs */
+        
+        .logs-header::after {
+            content: '▼';
+            color: #00ff88;
+            font-size: 0.7em;
+            transition: transform 0.3s ease;
+        }
+        
+        .logs-header.collapsed::after {
+            transform: rotate(-90deg);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .status-active {
+            background: #00ff88;
+            box-shadow: 0 0 10px #00ff88;
+        }
+        
+        .status-inactive {
+            background: #ff4444;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            .map-container {
+                height: 300px;
+            }
+            .cli-content {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .chat-interface {
+                border-right: none;
+                border-bottom: 1px solid #333;
+                min-height: 300px;
+            }
+            .logs-panel {
+                min-height: 200px;
+            }
+            .cli-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .quick-commands {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🚀 D.E.L.T.A Real Data Franchise Intelligence Platform</h1>
+        <p>Advanced AI-Powered Territory Analysis, 3D Visualizations & Franchise Intelligence</p>
+    </div>
+
+    <div class="data-policy">
+        <h2>🚫 REAL DATA ONLY POLICY</h2>
+        <p>✅ Real Data Only | 🚫 No Mock Data | 🚫 No Demo Data | 🚫 No Fallback Data | 🚫 No Hardcoded Data</p>
+    </div>
+
+    <!-- Interactive Map -->
+    <div class="map-container" id="map"></div>
+    <div class="map-controls">
+        <button onclick="clearMap()">🗑️ Clear Map</button>
+        <button onclick="fitToBounds()">🔍 Fit to Data</button>
+        <button onclick="toggleHeatmap()">🔥 Toggle Heatmap</button>
+    </div>
+
+    <!-- CLI Interface -->
+    <div class="cli-container">
+        <div class="cli-header" onclick="toggleCLIContent()">
+            <h3>🤖 D.E.L.T.A Franchise Intelligence Bot CLI</h3>
+            <div class="cli-status">
+                <span id="botStatus" class="status-indicator">🔴 Offline</span>
+                <button onclick="toggleBotStatus()" id="toggleBotBtn">Start Bot</button>
+            </div>
+        </div>
+
+        <div class="cli-content" id="cliContent">
+            <!-- Chat Interface -->
+            <div class="chat-interface">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="bot-message">
+                        <div class="message-header">
+                            <span class="bot-avatar">🤖</span>
+                            <span class="timestamp">System</span>
+                        </div>
+                        <div class="message-content">
+                            Welcome to D.E.L.T.A Franchise Intelligence Bot!<br> Type <code>/help</code> for commands or just tell me what business you want to open and where.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="chatInput" placeholder="Type your message or command (e.g., /help, /address miami, I want to open a coffee shop in Miami)" autocomplete="off">
+                        <button onclick="sendMessage()" id="sendBtn">Send</button>
+                    </div>
+                    <div class="quick-commands">
+                        <button onclick="insertCommand('/help')" class="quick-btn">/help</button>
+                        <button onclick="insertCommand('/address miami')" class="quick-btn">/address miami</button>
+                        <button onclick="insertCommand('/business coffee')" class="quick-btn">/business coffee</button>
+                        <button onclick="insertCommand('/status')" class="quick-btn">/status</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logs Panel -->
+            <div class="logs-panel">
+                <div class="logs-header" onclick="toggleLogsContent()">
+                    <h4>📋 Real-time Logs & Results</h4>
+                    <div class="logs-controls">
+                        <button onclick="clearLogs()" class="clear-btn">Clear</button>
+                        <button onclick="toggleLogs()" id="toggleLogsBtn">Hide</button>
+                        <label class="auto-scroll-toggle">
+                            <input type="checkbox" id="autoScroll" checked>
+                            Auto-scroll
+                        </label>
+                    </div>
+                </div>
+
+                <div class="logs-content" id="logsContent">
+                    <div class="log-entry info">
+                        <span class="timestamp">[System]</span>
+                        <span class="message">CLI interface initialized. Ready to connect to bot.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Mapbox Geocoding -->
+        <div class="panel">
+            <h3>🗺️ Mapbox Real Data Analysis</h3>
+            <div class="form-group">
+                <label for="geocodeLocation">Location (City, Address, ZIP)</label>
+                <input type="text" id="geocodeLocation" placeholder="e.g., Seattle, WA or 98101">
+            </div>
+            <div class="form-group">
+                <label for="businessType">Business Type</label>
+                <select id="businessType">
+                    <option value="coffee shops">☕ Coffee Shops</option>
+                    <option value="restaurants">🍽️ Restaurants</option>
+                    <option value="fast food">🍔 Fast Food</option>
+                    <option value="fitness centers">💪 Fitness Centers</option>
+                    <option value="retail stores">🛍️ Retail Stores</option>
+                    <option value="gas stations">⛽ Gas Stations</option>
+                    <option value="banks">🏦 Banks</option>
+                    <option value="pharmacies">💊 Pharmacies</option>
+                    <option value="auto repair">🔧 Auto Repair</option>
+                    <option value="beauty salons">💄 Beauty Salons</option>
+                    <option value="hotels">🏨 Hotels</option>
+                    <option value="real estate">🏠 Real Estate</option>
+                    <option value="dentists">🦷 Dentists</option>
+                    <option value="veterinarians">🐕 Veterinarians</option>
+                    <option value="laundry">🧺 Laundry Services</option>
+                    <option value="pizza">🍕 Pizza</option>
+                    <option value="ice cream">🍦 Ice Cream</option>
+                    <option value="grocery stores">🛒 Grocery Stores</option>
+                    <option value="convenience stores">🏪 Convenience Stores</option>
+                    <option value="liquor stores">🍷 Liquor Stores</option>
+                    <option value="nail salons">💅 Nail Salons</option>
+                    <option value="barbershops">✂️ Barbershops</option>
+                    <option value="dry cleaning">👔 Dry Cleaning</option>
+                    <option value="pet grooming">🐩 Pet Grooming</option>
+                    <option value="tutoring">📚 Tutoring Centers</option>
+                </select>
+            </div>
+            <button class="btn" onclick="geocodeLocation()">📍 Geocode Location</button>
+            <button class="btn" onclick="getAutocomplete()">🔍 Get Autocomplete</button>
+            <button class="btn" onclick="enhancedLocationAnalysis()">🚀 Enhanced Analysis</button>
+            <div id="mapboxResults" class="results"></div>
+        </div>
+
+        <!-- Territory Analysis -->
+        <div class="panel">
+            <h3>🎯 Territory Analysis</h3>
+            <div class="form-group">
+                <label for="territoryLocation">Location</label>
+                <input type="text" id="territoryLocation" placeholder="e.g., Miami, FL">
+            </div>
+            <div class="form-group">
+                <label for="territoryRadius">Radius (miles)</label>
+                <input type="number" id="territoryRadius" value="10" min="1" max="50">
+            </div>
+            <div class="form-group">
+                <label for="territoryBusinessType">Business Type</label>
+                <select id="territoryBusinessType">
+                    <option value="coffee shops">☕ Coffee Shops</option>
+                    <option value="restaurants">🍽️ Restaurants</option>
+                    <option value="fast food">🍔 Fast Food</option>
+                    <option value="fitness centers">💪 Fitness Centers</option>
+                    <option value="retail stores">🛍️ Retail Stores</option>
+                    <option value="gas stations">⛽ Gas Stations</option>
+                    <option value="banks">🏦 Banks</option>
+                    <option value="pharmacies">💊 Pharmacies</option>
+                    <option value="auto repair">🔧 Auto Repair</option>
+                    <option value="beauty salons">💄 Beauty Salons</option>
+                    <option value="hotels">🏨 Hotels</option>
+                    <option value="real estate">🏠 Real Estate</option>
+                    <option value="dentists">🦷 Dentists</option>
+                    <option value="veterinarians">🐕 Veterinarians</option>
+                    <option value="laundry">🧺 Laundry Services</option>
+                    <option value="pizza">🍕 Pizza</option>
+                    <option value="ice cream">🍦 Ice Cream</option>
+                    <option value="grocery stores">🛒 Grocery Stores</option>
+                    <option value="convenience stores">🏪 Convenience Stores</option>
+                    <option value="liquor stores">🍷 Liquor Stores</option>
+                    <option value="nail salons">💅 Nail Salons</option>
+                    <option value="barbershops">✂️ Barbershops</option>
+                    <option value="dry cleaning">👔 Dry Cleaning</option>
+                    <option value="pet grooming">🐩 Pet Grooming</option>
+                    <option value="tutoring">📚 Tutoring Centers</option>
+                </select>
+            </div>
+            <button class="btn" onclick="analyzeTerritory()">🎯 Analyze Territory</button>
+            <button class="btn" onclick="optimizeTerritory()">⚡ Optimize Territory</button>
+            <div id="territoryResults" class="results"></div>
+        </div>
+
+        <!-- Google Places Search -->
+        <div class="panel">
+            <h3>🏢 Google Places Real Data</h3>
+            <div class="form-group">
+                <label for="placesQuery">Search Query</label>
+                <input type="text" id="placesQuery" placeholder="e.g., coffee shops, restaurants">
+            </div>
+            <div class="form-group">
+                <label for="placesLocation">Location</label>
+                <input type="text" id="placesLocation" placeholder="e.g., Seattle, WA">
+            </div>
+            <button class="btn" onclick="searchGooglePlaces()">🏢 Search Places</button>
+            <div id="placesResults" class="results"></div>
+        </div>
+
+        <!-- SerpAPI Search -->
+        <div class="panel">
+            <h3>🔍 SerpAPI Real Data</h3>
+            <div class="form-group">
+                <label for="serpQuery">Search Query</label>
+                <input type="text" id="serpQuery" placeholder="e.g., franchise opportunities">
+            </div>
+            <div class="form-group">
+                <label for="serpLocation">Location</label>
+                <input type="text" id="serpLocation" placeholder="e.g., Seattle, WA">
+            </div>
+            <button class="btn" onclick="searchSerpAPI()">🔍 Search SerpAPI</button>
+            <div id="serpResults" class="results"></div>
+        </div>
+
+        <!-- Census Demographics -->
+        <div class="panel">
+            <h3>👥 Census Real Data</h3>
+            <div class="form-group">
+                <label for="censusState">State (FIPS Code)</label>
+                <select id="censusState">
+                    <option value="53">Washington (53)</option>
+                    <option value="06">California (06)</option>
+                    <option value="36">New York (36)</option>
+                    <option value="48">Texas (48)</option>
+                    <option value="12">Florida (12)</option>
+                </select>
+            </div>
+            <button class="btn" onclick="getCensusDemographics()">👥 Get Demographics</button>
+            <div id="censusResults" class="results"></div>
+        </div>
+
+        <!-- API Status -->
+        <div class="panel">
+            <h3>🔧 Real API Status & Health</h3>
+            <button class="btn" onclick="checkAllAPIs()">🔍 Check All APIs</button>
+            <button class="btn" onclick="testAllAPIs()">🧪 Test All 72 Endpoints</button>
+            <div id="apiStatus" class="results"></div>
+        </div>
+
+        <!-- Comprehensive Demo -->
+        <div class="panel full-width">
+            <h3>🚀 Comprehensive Real Data Demo</h3>
+            <p>Run a complete franchise intelligence analysis using real data from all APIs</p>
+            <button class="btn" onclick="runComprehensiveDemo()">🚀 Run Complete Real Data Analysis</button>
+            <div id="demoResults" class="results"></div>
+        </div>
+    </div>
+
+    <script>
+        // Mapbox configuration
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3VwcG9ydG1vdmVkaW4iLCJhIjoiY21kZmdxdHh6MGQ2aDJqcHE2YTIwbTFrMiJ9.I1xkq82JXLMlgB02xT8LMw';
+
+        // Initialize map
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/dark-v10',
+            center: [-122.3321, 47.6062], // Seattle
+            zoom: 10
+        });
+
+        // Add navigation controls
+        map.addControl(new mapboxgl.NavigationControl());
+
+        // Add draw controls
+        const draw = new MapboxDraw({
+            displayControlsDefault: false,
+            controls: {
+                polygon: true,
+                trash: true
+            }
+        });
+        map.addControl(draw);
+
+        // Store for map data
+        let mapData = {
+            markers: [],
+            heatmapData: []
+        };
+
+        // API Base URL
+        const API_BASE = 'http://localhost:8001/api/v1';
+
+        // Utility functions
+        function showStatus(elementId, message, type = 'loading') {
+            const element = document.getElementById(elementId);
+            element.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+
+        function showResults(elementId, data, title) {
+            const element = document.getElementById(elementId);
+            element.innerHTML = `
+                <h4>${title}</h4>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+        }
+
+        function showError(elementId, error, title) {
+            const element = document.getElementById(elementId);
+            element.innerHTML = `
+                <h4>${title}</h4>
+                <div class="error">${error}</div>
+            `;
+        }
+
+        async function callAPI(endpoint, params = {}) {
+            try {
+                const url = new URL(`${API_BASE}${endpoint}`);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('API Error:', error);
+                throw error;
+            }
+        }
+
+        function addMarkerToMap(coordinates, title, color = '#00ff88') {
+            const marker = new mapboxgl.Marker({
+                    color
+                })
+                .setLngLat(coordinates)
+                .setPopup(new mapboxgl.Popup().setHTML(`<strong>${title}</strong>`))
+                .addTo(map);
+
+            mapData.markers.push(marker);
+            return marker;
+        }
+
+        // Enhanced marker function for bot analysis data with detailed popups
+        function addMarker(lat, lng, title, type, color = '#00ff88', data = null) {
+            let popupContent = `
+                <div style="padding: 12px; max-width: 300px;">
+                    <strong style="color: #333; font-size: 16px;">${title}</strong>
+                    <br><span style="color: #666; font-size: 12px;">Type: ${type}</span>`;
+
+            if (data) {
+                if (data.rating) {
+                    popupContent += `<br><span style="color: #ff6b35;">⭐ ${data.rating}/5 (${data.reviews || 0} reviews)</span>`;
+                }
+                if (data.address) {
+                    popupContent += `<br><span style="color: #555;">📍 ${data.address}</span>`;
+                }
+                if (data.phone) {
+                    popupContent += `<br><span style="color: #007bff;">📞 ${data.phone}</span>`;
+                }
+                if (data.website) {
+                    popupContent += `<br><span style="color: #28a745;"><a href="${data.website}" target="_blank">🌐 Website</a></span>`;
+                }
+                if (data.price_level) {
+                    popupContent += `<br><span style="color: #6c757d;">💰 Price Level: ${data.price_level}/4</span>`;
+                }
+                if (data.hours) {
+                    popupContent += `<br><span style="color: #17a2b8;">🕒 ${data.hours}</span>`;
+                }
+            }
+
+            popupContent += `</div>`;
+
+            const marker = new mapboxgl.Marker({
+                    color
+                })
+                .setLngLat([lng, lat])
+                .setPopup(new mapboxgl.Popup({
+                    maxWidth: '350px'
+                }).setHTML(popupContent))
+                .addTo(map);
+
+            mapData.markers.push(marker);
+            return marker;
+        }
+
+        function clearMap() {
+            mapData.markers.forEach(marker => marker.remove());
+            mapData.markers = [];
+            mapData.heatmapData = [];
+
+            // Also clear territory visualization
+            if (map.getSource('territory-analysis')) {
+                map.removeLayer('territory-analysis');
+                map.removeSource('territory-analysis');
+            }
+        }
+
+        function clearAllMarkers() {
+            mapData.markers.forEach(marker => marker.remove());
+            mapData.markers = [];
+        }
+
+        function fitToBounds() {
+            if (mapData.markers.length > 0) {
+                const bounds = new mapboxgl.LngLatBounds();
+                mapData.markers.forEach(marker => bounds.extend(marker.getLngLat()));
+                map.fitBounds(bounds, {
+                    padding: 50
+                });
+            }
+        }
+
+        // API Functions
+        async function geocodeLocation() {
+            const location = document.getElementById('geocodeLocation').value;
+            if (!location) {
+                alert('Please enter a location');
+                return;
+            }
+
+            showStatus('mapboxResults', 'Geocoding location with real Mapbox API...', 'loading');
+
+            try {
+                const result = await callAPI('/mapbox/geocode', {
+                    location
+                });
+                showResults('mapboxResults', result, 'Real Mapbox Geocoding Results');
+
+                // Add marker to map
+                const coords = [result.coordinates.longitude, result.coordinates.latitude];
+                addMarkerToMap(coords, `${location} (${result.place_name})`);
+
+                // Center map on location
+                map.setCenter(coords);
+                map.setZoom(12);
+
+            } catch (error) {
+                showError('mapboxResults', error.message, 'Mapbox Geocoding Error');
+            }
+        }
+
+        async function getAutocomplete() {
+            const location = document.getElementById('geocodeLocation').value;
+            if (!location) {
+                alert('Please enter a search query');
+                return;
+            }
+
+            showStatus('mapboxResults', 'Getting autocomplete suggestions from real Mapbox API...', 'loading');
+
+            try {
+                const result = await callAPI('/mapbox/autocomplete', {
+                    query: location
+                });
+                showResults('mapboxResults', result, 'Real Mapbox Autocomplete Results');
+
+                // Add markers for suggestions
+                result.suggestions.forEach((suggestion, index) => {
+                    const coords = [suggestion.coordinates[0], suggestion.coordinates[1]];
+                    addMarkerToMap(coords, suggestion.text, '#ff8800');
+                });
+
+            } catch (error) {
+                showError('mapboxResults', error.message, 'Mapbox Autocomplete Error');
+            }
+        }
+
+        async function enhancedLocationAnalysis() {
+            const location = document.getElementById('geocodeLocation').value;
+            const businessType = document.getElementById('businessType').value;
+
+            if (!location) {
+                alert('Please enter a location');
+                return;
+            }
+
+            showStatus('mapboxResults', 'Running enhanced location analysis with real data...', 'loading');
+
+            try {
+                // Get geocoding
+                const geocodeResult = await callAPI('/mapbox/geocode', {
+                    location
+                });
+
+                // Get places data
+                const placesResult = await callAPI('/google-places/search', {
+                    query: businessType,
+                    location: location
+                });
+
+                // Get territory analysis
+                const territoryResult = await callAPI('/territory/analyze', {
+                    center_lat: geocodeResult.coordinates.latitude,
+                    center_lng: geocodeResult.coordinates.longitude,
+                    radius_miles: 10,
+                    business_type: businessType
+                });
+
+                const combinedResult = {
+                    geocoding: geocodeResult,
+                    places: placesResult,
+                    territory: territoryResult,
+                    timestamp: new Date().toISOString()
+                };
+
+                showResults('mapboxResults', combinedResult, 'Real Enhanced Location Analysis Results');
+
+                // Add markers for businesses
+                placesResult.businesses.forEach(business => {
+                    const coords = [business.coordinates.longitude, business.coordinates.latitude];
+                    addMarkerToMap(coords, business.name, '#0088ff');
+                });
+
+                // Center map on main location
+                const mainCoords = [geocodeResult.coordinates.longitude, geocodeResult.coordinates.latitude];
+                addMarkerToMap(mainCoords, `${location} (Main Location)`, '#00ff88');
+                map.setCenter(mainCoords);
+                map.setZoom(12);
+
+            } catch (error) {
+                showError('mapboxResults', error.message, 'Enhanced Analysis Error');
+            }
+        }
+
+        async function analyzeTerritory() {
+            const location = document.getElementById('territoryLocation').value;
+            const radius = document.getElementById('territoryRadius').value;
+            const businessType = document.getElementById('territoryBusinessType').value;
+
+            if (!location) {
+                alert('Please enter a location');
+                return;
+            }
+
+            showStatus('territoryResults', 'Analyzing territory with real data...', 'loading');
+
+            try {
+                // First geocode the location
+                const geocodeResult = await callAPI('/mapbox/geocode', {
+                    location
+                });
+
+                // Then analyze territory
+                const result = await callAPI('/territory/analyze', {
+                    center_lat: geocodeResult.coordinates.latitude,
+                    center_lng: geocodeResult.coordinates.longitude,
+                    radius_miles: radius,
+                    business_type: businessType
+                });
+
+                showResults('territoryResults', result, 'Real Territory Analysis Results');
+
+                // Add markers for territory analysis
+                const coords = [geocodeResult.coordinates.longitude, geocodeResult.coordinates.latitude];
+                addMarkerToMap(coords, `${location} Territory Analysis`, '#ff00ff');
+
+                // Add competitors
+                if (result.territory_analysis.top_competitors) {
+                    result.territory_analysis.top_competitors.forEach(competitor => {
+                        const compCoords = [competitor.coordinates.longitude, competitor.coordinates.latitude];
+                        addMarkerToMap(compCoords, competitor.name, '#ff4444');
+                    });
+                }
+
+                // Center map
+                map.setCenter(coords);
+                map.setZoom(11);
+
+            } catch (error) {
+                showError('territoryResults', error.message, 'Territory Analysis Error');
+            }
+        }
+
+        async function optimizeTerritory() {
+            showStatus('territoryResults', 'Territory optimization not yet implemented with real data...', 'loading');
+            // This would require more complex algorithms - placeholder for now
+        }
+
+        async function searchGooglePlaces() {
+            const query = document.getElementById('placesQuery').value;
+            const location = document.getElementById('placesLocation').value;
+
+            if (!query || !location) {
+                alert('Please enter both query and location');
+                return;
+            }
+
+            showStatus('placesResults', 'Searching Google Places with real API...', 'loading');
+
+            try {
+                const result = await callAPI('/google-places/search', {
+                    query: query,
+                    location: location
+                });
+
+                showResults('placesResults', result, 'Real Google Places Results');
+
+                // Add markers for all businesses
+                result.businesses.forEach(business => {
+                    const coords = [business.coordinates.longitude, business.coordinates.latitude];
+                    addMarkerToMap(coords, `${business.name} (${business.rating}★)`, '#00ffff');
+                });
+
+                // Center map on first result if available
+                if (result.businesses.length > 0) {
+                    const firstBusiness = result.businesses[0];
+                    const coords = [firstBusiness.coordinates.longitude, firstBusiness.coordinates.latitude];
+                    map.setCenter(coords);
+                    map.setZoom(12);
+                }
+
+            } catch (error) {
+                showError('placesResults', error.message, 'Google Places Error');
+            }
+        }
+
+        async function searchSerpAPI() {
+            const query = document.getElementById('serpQuery').value;
+            const location = document.getElementById('serpLocation').value;
+
+            if (!query) {
+                alert('Please enter a search query');
+                return;
+            }
+
+            showStatus('serpResults', 'Searching with real SerpAPI...', 'loading');
+
+            try {
+                const result = await callAPI('/serpapi/search', {
+                    query: query,
+                    location: location
+                });
+
+                showResults('serpResults', result, 'Real SerpAPI Results');
+
+            } catch (error) {
+                showError('serpResults', error.message, 'SerpAPI Error');
+            }
+        }
+
+        async function getCensusDemographics() {
+            const state = document.getElementById('censusState').value;
+
+            showStatus('censusResults', 'Getting real Census demographics...', 'loading');
+
+            try {
+                const result = await callAPI('/census/demographics', {
+                    state: state
+                });
+
+                showResults('censusResults', result, 'Real Census Demographics Results');
+
+            } catch (error) {
+                showError('censusResults', error.message, 'Census Demographics Error');
+            }
+        }
+
+        async function checkAllAPIs() {
+            showStatus('apiStatus', 'Checking all API services...', 'loading');
+
+            try {
+                const result = await callAPI('/status');
+                showResults('apiStatus', result, 'Real API Status Results');
+
+                // Update status indicators
+                Object.keys(result.services).forEach(service => {
+                    const status = result.services[service];
+                    console.log(`${service}: ${status}`);
+                });
+
+            } catch (error) {
+                showError('apiStatus', error.message, 'API Status Error');
+            }
+        }
+
+        async function testAllAPIs() {
+            showStatus('apiStatus', 'Testing all APIs with real data...', 'loading');
+
+            try {
+                const result = await callAPI('/test-all-apis');
+                showResults('apiStatus', result, 'Real API Test Results');
+
+            } catch (error) {
+                showError('apiStatus', error.message, 'API Test Error');
+            }
+        }
+
+        async function runComprehensiveDemo() {
+            showStatus('demoResults', 'Running comprehensive real data analysis...', 'loading');
+
+            try {
+                // Run multiple API calls in sequence
+                const results = {};
+
+                // 1. Geocode Seattle
+                results.location = await callAPI('/mapbox/geocode', {
+                    location: 'Seattle,WA'
+                });
+
+                // 2. Search for coffee shops
+                results.places = await callAPI('/google-places/search', {
+                    query: 'coffee shops',
+                    location: 'Seattle,WA'
+                });
+
+                // 3. SerpAPI search
+                results.search = await callAPI('/serpapi/search', {
+                    query: 'franchise opportunities',
+                    location: 'Seattle,WA'
+                });
+
+                // 4. Census demographics
+                results.demographics = await callAPI('/census/demographics', {
+                    state: '53'
+                });
+
+                // 5. Territory analysis (use Seattle coordinates as fallback)
+                const seattleCoords = results.location.coordinates || {
+                    latitude: 47.6062,
+                    longitude: -122.3321
+                };
+                results.territory = await callAPI('/territory/analyze', {
+                    center_lat: seattleCoords.latitude,
+                    center_lng: seattleCoords.longitude,
+                    radius_miles: 10,
+                    business_type: 'coffee shops'
+                });
+
+                const comprehensiveResult = {
+                    timestamp: new Date().toISOString(),
+                    analysis: results,
+                    status: 'success',
+                    message: 'Comprehensive real data analysis completed successfully'
+                };
+
+                showResults('demoResults', comprehensiveResult, 'Comprehensive Real Data Analysis Results');
+
+                // Add all data to map
+                const coords = [results.location.coordinates.longitude, results.location.coordinates.latitude];
+                addMarkerToMap(coords, 'Seattle Analysis Center', '#00ff88');
+
+                results.places.businesses.forEach(business => {
+                    const businessCoords = [business.coordinates.longitude, business.coordinates.latitude];
+                    addMarkerToMap(businessCoords, business.name, '#0088ff');
+                });
+
+                map.setCenter(coords);
+                map.setZoom(11);
+
+            } catch (error) {
+                showError('demoResults', error.message, 'Comprehensive Demo Error');
+            }
+        }
+
+        // Initialize map when loaded
+        map.on('load', function() {
+            console.log('🗺️ Map loaded successfully');
+
+            // Add initial marker for Seattle
+            addMarkerToMap([-122.3321, 47.6062], 'Seattle, WA', '#00ff88');
+        });
+
+        // Initialize Mapbox autocomplete for location inputs
+        function initializeAutocomplete() {
+            const autocompleteConfig = {
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl,
+                countries: 'us',
+                types: 'place,locality,neighborhood,address,poi',
+                limit: 5,
+                placeholder: 'Enter location...'
+            };
+
+            // Initialize autocomplete for geocode location input
+            const geocodeContainer = document.getElementById('geocodeLocation');
+            if (geocodeContainer && typeof MapboxGeocoder !== 'undefined') {
+                const geocodeAutocomplete = new MapboxGeocoder(autocompleteConfig);
+                geocodeAutocomplete.addTo('#geocodeLocation');
+
+                geocodeAutocomplete.on('result', function(e) {
+                    console.log('Geocode result:', e.result);
+                    // Auto-fill the input with the selected result
+                    document.getElementById('geocodeLocation').value = e.result.place_name;
+                });
+            }
+
+            // Initialize autocomplete for territory location input
+            const territoryContainer = document.getElementById('territoryLocation');
+            if (territoryContainer && typeof MapboxGeocoder !== 'undefined') {
+                const territoryAutocomplete = new MapboxGeocoder(autocompleteConfig);
+                territoryAutocomplete.addTo('#territoryLocation');
+
+                territoryAutocomplete.on('result', function(e) {
+                    console.log('Territory result:', e.result);
+                    document.getElementById('territoryLocation').value = e.result.place_name;
+                });
+            }
+
+            // Initialize autocomplete for places location input
+            const placesContainer = document.getElementById('placesLocation');
+            if (placesContainer && typeof MapboxGeocoder !== 'undefined') {
+                const placesAutocomplete = new MapboxGeocoder(autocompleteConfig);
+                placesAutocomplete.addTo('#placesLocation');
+
+                placesAutocomplete.on('result', function(e) {
+                    console.log('Places result:', e.result);
+                    document.getElementById('placesLocation').value = e.result.place_name;
+                });
+            }
+
+            // Initialize autocomplete for SerpAPI location input
+            const serpContainer = document.getElementById('serpLocation');
+            if (serpContainer && typeof MapboxGeocoder !== 'undefined') {
+                const serpAutocomplete = new MapboxGeocoder(autocompleteConfig);
+                serpAutocomplete.addTo('#serpLocation');
+
+                serpAutocomplete.on('result', function(e) {
+                    console.log('SerpAPI result:', e.result);
+                    document.getElementById('serpLocation').value = e.result.place_name;
+                });
+            }
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 D.E.L.T.A Real Data Dashboard initialized');
+            checkAllAPIs(); // Check API status on load
+
+            // Initialize autocomplete after a short delay to ensure Mapbox is loaded
+            setTimeout(initializeAutocomplete, 1000);
+        });
+
+        // CLI Interface JavaScript
+        let botSessionId = null;
+        let botConnected = false;
+        let currentSessionId = 'dashboard_session_' + Date.now();
+
+        // Initialize CLI
+        function initializeCLI() {
+            addLogEntry('info', 'CLI interface initialized. Ready to connect to bot.');
+            checkBotStatus();
+
+            // Set up chat input event listeners
+            const chatInput = document.getElementById('chatInput');
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        }
+
+        // Collapsible functionality
+        function toggleCLIContent() {
+            const content = document.getElementById('cliContent');
+            const header = document.querySelector('.cli-header');
+
+            content.classList.toggle('collapsed');
+            header.classList.toggle('collapsed');
+        }
+
+        function toggleLogsContent() {
+            const content = document.getElementById('logsContent');
+            const header = document.querySelector('.logs-header');
+
+            content.classList.toggle('collapsed');
+            header.classList.toggle('collapsed');
+        }
+
+        // Check bot status
+        async function checkBotStatus() {
+            try {
+                const response = await fetch('http://localhost:8002/status');
+                if (response.ok) {
+                    updateBotStatus(true);
+                    addLogEntry('success', 'Bot server is online and ready');
+                } else {
+                    updateBotStatus(false);
+                    addLogEntry('warning', 'Bot server responded with error: ' + response.status);
+                }
+            } catch (error) {
+                updateBotStatus(false);
+                addLogEntry('error', 'Cannot connect to bot server: ' + error.message);
+            }
+        }
+
+        // Update bot status indicator
+        function updateBotStatus(online) {
+            const statusIndicator = document.getElementById('botStatus');
+            const toggleBtn = document.getElementById('toggleBotBtn');
+
+            if (online) {
+                statusIndicator.textContent = '🟢 Online';
+                statusIndicator.className = 'status-indicator online';
+                toggleBtn.textContent = 'Stop Bot';
+                toggleBtn.onclick = stopBot;
+                botConnected = true;
+            } else {
+                statusIndicator.textContent = '🔴 Offline';
+                statusIndicator.className = 'status-indicator offline';
+                toggleBtn.textContent = 'Start Bot';
+                toggleBtn.onclick = startBot;
+                botConnected = false;
+            }
+        }
+
+        // Toggle bot status
+        function toggleBotStatus() {
+            if (botConnected) {
+                stopBot();
+            } else {
+                startBot();
+            }
+        }
+
+        // Start bot
+        async function startBot() {
+            addLogEntry('info', 'Attempting to start bot server...');
+            try {
+                const response = await fetch('http://localhost:8002/status');
+                if (response.ok) {
+                    updateBotStatus(true);
+                    addLogEntry('success', 'Bot server started successfully');
+                } else {
+                    addLogEntry('error', 'Bot server failed to start');
+                }
+            } catch (error) {
+                addLogEntry('error', 'Failed to start bot: ' + error.message);
+            }
+        }
+
+        // Stop bot
+        async function stopBot() {
+            addLogEntry('warning', 'Bot server stopped');
+            updateBotStatus(false);
+        }
+
+        // Send message to bot
+        async function sendMessage() {
+            const chatInput = document.getElementById('chatInput');
+            const message = chatInput.value.trim();
+
+            if (!message) return;
+
+            if (!botConnected) {
+                addLogEntry('error', 'Bot is offline. Please start the bot first.');
+                return;
+            }
+
+            // Add user message to chat
+            addChatMessage('user', message);
+            chatInput.value = '';
+
+            // Add to logs
+            addLogEntry('info', `User: ${message}`);
+
+            try {
+                const response = await fetch('http://localhost:8002/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        session_id: currentSessionId
+                    })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    // Add bot response to chat
+                    addChatMessage('bot', data.response);
+
+                    // Add to logs
+                    addLogEntry('success', `Bot: ${data.response.substring(0, 100)}...`);
+
+                    // Handle analysis data if present
+                    if (data.analysis_data) {
+                        handleAnalysisData(data.analysis_data);
+                    }
+
+                } else {
+                    const errorText = await response.text();
+                    addChatMessage('bot', `❌ Error: ${response.status} - ${errorText}`);
+                    addLogEntry('error', `Bot API error: ${response.status} - ${errorText}`);
+                }
+            } catch (error) {
+                addChatMessage('bot', `❌ Connection error: ${error.message}`);
+                addLogEntry('error', `Connection error: ${error.message}`);
+            }
+        }
+
+        // Add chat message
+        function addChatMessage(sender, message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = sender === 'user' ? 'user-message' : 'bot-message';
+
+            const timestamp = new Date().toLocaleTimeString();
+
+            messageDiv.innerHTML = `
+                <div class="message-header">
+                    <span class="bot-avatar">${sender === 'user' ? '👤' : '🤖'}</span>
+                    <span class="timestamp">${timestamp}</span>
+                </div>
+                <div class="message-content">${formatMessage(message)}</div>
+            `;
+
+            chatMessages.appendChild(messageDiv);
+
+            // Force scroll to bottom with delay to ensure DOM is updated
+            setTimeout(() => {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                const autoScrollToggle = document.getElementById('autoScrollToggle');
+                const autoScrollEnabled = autoScrollToggle ? autoScrollToggle.checked : true;
+                if (autoScrollEnabled) {
+                    chatMessages.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'end'
+                    });
+                }
+            }, 100);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Format message with proper line breaks and styling
+        function formatMessage(message) {
+            return message
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/`(.*?)`/g, '<code>$1</code>');
+        }
+
+        // Add log entry
+        function addLogEntry(type, message) {
+            const logsContent = document.getElementById('logsContent');
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry ${type}`;
+
+            const timestamp = new Date().toLocaleTimeString();
+            logEntry.innerHTML = `
+                <span class="timestamp">[${timestamp}]</span>
+                <span class="message">${message}</span>
+            `;
+
+            logsContent.appendChild(logEntry);
+
+            // Auto-scroll if enabled
+            if (document.getElementById('autoScroll').checked) {
+                logsContent.scrollTop = logsContent.scrollHeight;
+            }
+        }
+
+        // Handle analysis data from bot
+        function handleAnalysisData(analysisData) {
+            addLogEntry('info', 'Processing analysis data...');
+
+            if (analysisData && analysisData.coordinates) {
+                const coords = analysisData.coordinates;
+
+                // Clear existing markers first
+                clearAllMarkers();
+
+                // Add main location marker
+                addMarker(coords.latitude, coords.longitude,
+                    `📊 ${analysisData.business_type} Analysis - ${analysisData.location}`,
+                    'analysis-marker', '#00ff88');
+
+                // Add competitor markers if available with detailed data
+                if (analysisData.territory_analysis && analysisData.territory_analysis.top_competitors) {
+                    analysisData.territory_analysis.top_competitors.forEach((competitor, index) => {
+                        if (competitor.coordinates && competitor.coordinates.latitude) {
+                            addMarker(
+                                competitor.coordinates.latitude,
+                                competitor.coordinates.longitude,
+                                `🏢 ${competitor.name}`,
+                                'competitor-marker',
+                                '#ff6b6b', {
+                                    rating: competitor.rating,
+                                    reviews: competitor.user_ratings_total,
+                                    address: competitor.formatted_address,
+                                    phone: competitor.formatted_phone_number,
+                                    website: competitor.website,
+                                    price_level: competitor.price_level,
+                                    hours: competitor.opening_hours ? 'Open Now' : 'Hours Available'
+                                }
+                            );
+                        }
+                    });
+                }
+
+                // Add franchise opportunity markers if available
+                if (analysisData.franchise_opportunities && analysisData.franchise_opportunities.length > 0) {
+                    // For franchise opportunities, we'll add markers around the main location
+                    // since we don't have exact coordinates for each opportunity
+                    analysisData.franchise_opportunities.slice(0, 3).forEach((opportunity, index) => {
+                        const offsetLat = coords.latitude + (Math.random() - 0.5) * 0.01;
+                        const offsetLng = coords.longitude + (Math.random() - 0.5) * 0.01;
+
+                        addMarker(
+                            offsetLat,
+                            offsetLng,
+                            `💼 ${opportunity.title.substring(0, 30)}...`,
+                            'franchise-marker',
+                            '#4ecdc4'
+                        );
+                    });
+                }
+
+                // Update map view to focus on the location with appropriate zoom
+                map.flyTo({
+                    center: [coords.longitude, coords.latitude],
+                    zoom: 13
+                });
+
+                // Add territory analysis visualization
+                if (analysisData.territory_analysis) {
+                    addTerritoryVisualization(coords, analysisData.territory_analysis);
+                }
+
+                addLogEntry('success', `🗺️ Map updated with analysis for ${analysisData.location}`, 'map-update');
+                addLogEntry('info', `📍 Found ${analysisData.territory_analysis?.competitor_count || 0} competitors`, 'analysis');
+                addLogEntry('info', `💼 Found ${analysisData.franchise_opportunities?.length || 0} franchise opportunities`, 'analysis');
+            }
+
+            // Legacy support for location suggestions
+            if (analysisData.location_suggestions) {
+                addLogEntry('success', `Found ${analysisData.location_suggestions.length} location suggestions`);
+
+                analysisData.location_suggestions.forEach((location, index) => {
+                    if (location.coordinates && location.coordinates.length === 2) {
+                        const coords = [location.coordinates[0], location.coordinates[1]];
+                        addMarkerToMap(coords, location.text, '#00ff88');
+                        addLogEntry('info', `Added marker for: ${location.text}`);
+                    }
+                });
+            }
+
+            // If business suggestions are available
+            if (analysisData.business_suggestions) {
+                addLogEntry('success', `Found business suggestions: ${analysisData.business_suggestions.join(', ')}`);
+            }
+        }
+
+        // Add territory visualization
+        function addTerritoryVisualization(coords, territoryData) {
+            if (!territoryData || !territoryData.radius_miles) return;
+
+            // Convert miles to meters for Mapbox
+            const radiusMeters = territoryData.radius_miles * 1609.34;
+
+            // Create a circle around the analysis center
+            if (map.getSource('territory-analysis')) {
+                map.removeLayer('territory-analysis');
+                map.removeSource('territory-analysis');
+            }
+
+            map.addSource('territory-analysis', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'Feature',
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [coords.longitude, coords.latitude]
+                    }
+                }
+            });
+
+            map.addLayer({
+                'id': 'territory-analysis',
+                'type': 'circle',
+                'source': 'territory-analysis',
+                'paint': {
+                    'circle-radius': {
+                        'stops': [
+                            [0, 0],
+                            [20, radiusMeters / 2]
+                        ],
+                        'base': 2
+                    },
+                    'circle-color': '#00ff88',
+                    'circle-opacity': 0.1,
+                    'circle-stroke-width': 2,
+                    'circle-stroke-color': '#00ff88',
+                    'circle-stroke-opacity': 0.8
+                }
+            });
+
+            addLogEntry('info', `🎯 Territory analysis zone added (${territoryData.radius_miles} mile radius)`, 'map-update');
+        }
+
+        // Quick command buttons
+        function insertCommand(command) {
+            const chatInput = document.getElementById('chatInput');
+            chatInput.value = command;
+            chatInput.focus();
+        }
+
+        // Logs panel controls
+        function clearLogs() {
+            const logsContent = document.getElementById('logsContent');
+            logsContent.innerHTML = '';
+            addLogEntry('info', 'Logs cleared');
+        }
+
+        function toggleLogs() {
+            const logsPanel = document.querySelector('.logs-panel');
+            const toggleBtn = document.getElementById('toggleLogsBtn');
+
+            if (logsPanel.style.display === 'none') {
+                logsPanel.style.display = 'flex';
+                toggleBtn.textContent = 'Hide';
+            } else {
+                logsPanel.style.display = 'none';
+                toggleBtn.textContent = 'Show';
+            }
+        }
+
+        // Initialize CLI when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCLI();
+
+            // Check bot status every 30 seconds
+            setInterval(checkBotStatus, 30000);
+        });
+    </script>
+</body>
+
+</html>

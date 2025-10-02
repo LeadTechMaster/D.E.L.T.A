@@ -1,0 +1,2 @@
+# Database uses SQLite - built into Python
+# No additional requirements needed

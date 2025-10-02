@@ -1,0 +1,2 @@
+# Frontend uses Python HTTP server - no additional requirements needed
+# The frontend is pure HTML/CSS/JavaScript with Mapbox GL JS
