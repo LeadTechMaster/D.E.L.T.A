@@ -11,11 +11,23 @@ services:
         value: 3.11.0
       - key: MAPBOX_ACCESS_TOKEN
         sync: false
+      - key: NEXT_PUBLIC_MAPBOX_TOKEN
+        sync: false
       - key: GOOGLE_PLACES_API_KEY
         sync: false
       - key: SERPAPI_API_KEY
         sync: false
       - key: CENSUS_API_KEY
+        sync: false
+      - key: META_ADS_ACCESS_TOKEN
+        sync: false
+      - key: META_ADS_APP_TOKEN
+        sync: false
+      - key: BRIGHTLOCAL_API_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
         sync: false
     healthCheckPath: /status
     autoDeploy: true
@@ -29,4 +41,8 @@ services:
     envVars:
       - key: REACT_APP_API_URL
         value: https://delta-backend-api.onrender.com
+      - key: NEXT_PUBLIC_MAPBOX_TOKEN
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
     autoDeploy: true
