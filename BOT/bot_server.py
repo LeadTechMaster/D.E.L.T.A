@@ -23,9 +23,7 @@ from predictive_analytics import predictive_analytics, MarketTrend, OpportunityS
 from advanced_nlp import advanced_nlp, ContextAnalysis as NLPContextAnalysis
 from smart_conversation_flow import smart_conversation_flow, ConversationContext
 from intelligent_comparison_engine import intelligent_comparison_engine, SmartRecommendation
-from quantum_ai_engine import quantum_ai_engine, QuantumInsight, NeuralPrediction
-from voice_interface import voice_interface, VoiceInput, VoiceOutput, VoiceSession
-from ar_visualization import ar_visualization_engine, ARVisualization, ARSession
+# Removed non-existent imports: quantum_ai_engine, voice_interface, ar_visualization
 
 # Setup logging
 logging.basicConfig(
@@ -145,7 +143,7 @@ class FranchiseBot:
             logger.info(f"🔍 Parsed message: {parsed}")
             
             # Step 2: Determine response based on current step
-            response_data = await self.generate_response(parsed, session)
+            response_data = await self.generate_response(parsed, session, session_id)
             logger.info(f"🤖 Generated response: {response_data['response'][:100]}...")
             
             # Step 3: Update session state
@@ -304,7 +302,7 @@ class FranchiseBot:
                 "command": "unknown"
             }
     
-    async def generate_response(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+    async def generate_response(self, parsed: Dict[str, Any], session: Dict[str, Any], session_id: str) -> Dict[str, Any]:
         """Generate bot response based on parsed message and session state"""
         current_step = session["current_step"]
         intent = parsed["intent"]

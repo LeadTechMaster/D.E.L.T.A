@@ -2243,6 +2243,1567 @@
         "user_satisfaction": null,
         "follow_up_needed": false
       }
+    ],
+    "test_session_fix": [
+      {
+        "turn_id": "a0e74e24-35cd-4e39-8233-89817fa5f615",
+        "timestamp": "2025-10-02 01:32:04.767314",
+        "user_message": "I want to open a pizza stand in Miami",
+        "bot_response": "I'll analyze the pizza market in miami for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Pizza in Miami**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Miami** - \ud83d\udccd Miami\n2. **Courtyard by Marriott Miami Downtown/Brickell Area** - 4.2/5 \u2b50 (2083 reviews)\n   \ud83d\udccd 200 Southeast 2nd Avenue, Miami\n3. **Hyatt Regency Miami** - 4.2/5 \u2b50 (5421 reviews)\n   \ud83d\udccd 400 Southeast 2nd Street, Miami\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Franchise | Spris Pizza in Miami, FL**\n   \ud83d\udcdd Spris franchise benefits include built-in customers, proven model, free training, and support. Franc...\n   \ud83d\udd17 [Learn More](https://www.sprispizza.com/franchise/)\n2. **Own a Pizza Franchise in Miami - Russo's New York Pizzeria**\n   \ud83d\udcdd Miami entrepreneurs can invest in a Russo's NY Pizzeria restaurant franchise & benefit from a pizza ...\n   \ud83d\udd17 [Learn More](https://www.russosfranchise.com/florida/miami)\n3. **Franchise**\n   \ud83d\udcdd Become Part of The P.Pole Pizza Family. Easy + Efficient P.POLE Franchise Program. We are recognized...\n   \ud83d\udd17 [Learn More](https://ppolepizza.com/franchise/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "pizza",
+          "location": "miami",
+          "timestamp": "2025-10-02T01:32:03.501478",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 25.773357,
+            "longitude": -80.1919
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 25.773357,
+              "lng": -80.1919
+            },
+            "radius_miles": 10.0,
+            "business_type": "pizza",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Miami",
+                "address": "Miami",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 25.7616798,
+                  "longitude": -80.1917902
+                },
+                "place_id": "ChIJEcHIDqKw2YgRZU-t3XHylv8"
+              },
+              {
+                "name": "Courtyard by Marriott Miami Downtown/Brickell Area",
+                "address": "200 Southeast 2nd Avenue, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 2083,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7722558,
+                  "longitude": -80.1905867
+                },
+                "place_id": "ChIJtaz9UZy22YgRkAWAhHwoXEo"
+              },
+              {
+                "name": "Hyatt Regency Miami",
+                "address": "400 Southeast 2nd Street, Miami",
+                "rating": 4.2,
+                "user_ratings_total": 5421,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.770728,
+                  "longitude": -80.19062989999999
+                },
+                "place_id": "ChIJlZUqA5222YgRzjtasuQFBNg"
+              },
+              {
+                "name": "JW Marriott Marquis Miami",
+                "address": "255 Biscayne Boulevard Way, Miami",
+                "rating": 4.4,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.771089,
+                  "longitude": -80.1894477
+                },
+                "place_id": "ChIJx0AED5222YgRnR0KdP4FJ0I"
+              },
+              {
+                "name": "Miami Sun Hotel- Downtown/Port of Miami",
+                "address": "Sun Hotel, 226 Northeast 1st Avenue, Miami",
+                "rating": 2.9,
+                "user_ratings_total": 502,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 25.7766559,
+                  "longitude": -80.19217569999999
+                },
+                "place_id": "ChIJZ3mBxJ622YgRV6Q18glytxc"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State miami",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Franchise | Spris Pizza in Miami, FL",
+              "link": "https://www.sprispizza.com/franchise/",
+              "snippet": "Spris franchise benefits include built-in customers, proven model, free training, and support. Franchisees need passion, management ability, and $200,000 cash ...",
+              "position": 1
+            },
+            {
+              "title": "Own a Pizza Franchise in Miami - Russo's New York Pizzeria",
+              "link": "https://www.russosfranchise.com/florida/miami",
+              "snippet": "Miami entrepreneurs can invest in a Russo's NY Pizzeria restaurant franchise & benefit from a pizza franchise with affordable entry costs.",
+              "position": 2
+            },
+            {
+              "title": "Franchise",
+              "link": "https://ppolepizza.com/franchise/",
+              "snippet": "Become Part of The P.Pole Pizza Family. Easy + Efficient P.POLE Franchise Program. We are recognized for being innovative and passionate for what we do!",
+              "position": 3
+            },
+            {
+              "title": "Pizza Franchise Opportunity Miami | Italian Restaurant ...",
+              "link": "https://nypizzeria.com/florida-miami/",
+              "snippet": "Russo's franchise offers $1.111M AUV, 19.2% average net income, lower labor costs, 1200-3500 sqft units, $295K-$750K startup, and no prior experience needed.",
+              "position": 4
+            },
+            {
+              "title": "Franchisee Application",
+              "link": "http://www.piola.it/pages/franchise",
+              "snippet": "Thank you for your interest in Piola! If you wish to be considered for Piola franchisee, we kindly ask you to carefully complete the following application ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_nail_salon": [
+      {
+        "turn_id": "58c324fa-badc-4e02-b30c-640be10c500e",
+        "timestamp": "2025-10-02 01:32:13.466995",
+        "user_message": "I want to open a nail salon in Dallas",
+        "bot_response": "I'll analyze the beauty market in dallas for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Beauty in Dallas**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Dallas** - \ud83d\udccd Dallas\n2. **Magnolia Dallas Downtown** - 3.9/5 \u2b50 (2782 reviews)\n   \ud83d\udccd 1401 Commerce Street, Dallas\n3. **The Joule** - 4.5/5 \u2b50 (1734 reviews)\n   \ud83d\udccd 1530 Main Street STE 100, Dallas\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Beauty and Personal Care Businesses For Sale in Dallas ...**\n   \ud83d\udcdd Browse 63 Dallas-Fort Worth Metroplex Beauty and Personal Care businesses available for sale on BizB...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/texas/dallas-fort-worth-metroplex/beauty-and-personal-care-businesses-for-sale/)\n2. **Franchise Opportunities**\n   \ud83d\udcdd Join the revolution in Esthiology education and entrepreneurship with our prestigious Beauty Academy...\n   \ud83d\udd17 [Learn More](https://dallasskininstitute.com/franchise/)\n3. **Dallas Beauty and Personal Care Businesses For Sale**\n   \ud83d\udcdd View 15 Dallas, Texas Beauty and Personal Care businesses for sale on LoopNet.com. Search LoopNet fo...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/texas/dallas/beauty-and-personal-care-businesses-for-sale/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "beauty",
+          "location": "dallas",
+          "timestamp": "2025-10-02T01:32:10.455321",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 32.781339,
+            "longitude": -96.799759
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 32.781339,
+              "lng": -96.799759
+            },
+            "radius_miles": 10.0,
+            "business_type": "beauty",
+            "competitor_count": 20,
+            "average_rating": 3.8,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Dallas",
+                "address": "Dallas",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 32.7766642,
+                  "longitude": -96.79698789999999
+                },
+                "place_id": "ChIJS5dFe_cZTIYRj2dH9qSb7Lk"
+              },
+              {
+                "name": "Magnolia Dallas Downtown",
+                "address": "1401 Commerce Street, Dallas",
+                "rating": 3.9,
+                "user_ratings_total": 2782,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.7801591,
+                  "longitude": -96.7991098
+                },
+                "place_id": "ChIJEceT6RiZToYRamCabf48B6k"
+              },
+              {
+                "name": "The Joule",
+                "address": "1530 Main Street STE 100, Dallas",
+                "rating": 4.5,
+                "user_ratings_total": 1734,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.7805917,
+                  "longitude": -96.79847219999999
+                },
+                "place_id": "ChIJn8aFxxiZToYR1tuZ71sZKeI"
+              },
+              {
+                "name": "The Adolphus, Autograph Collection",
+                "address": "1321 Commerce Street, Dallas",
+                "rating": 4.5,
+                "user_ratings_total": 3098,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.7798001,
+                  "longitude": -96.8001537
+                },
+                "place_id": "ChIJSf4EURiZToYR0KhpmIHWXpQ"
+              },
+              {
+                "name": "Crowne Plaza Dallas Downtown by IHG",
+                "address": "1015 Elm Street, Dallas",
+                "rating": 2.9,
+                "user_ratings_total": 330,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.7808613,
+                  "longitude": -96.8035776
+                },
+                "place_id": "ChIJmczW8xeZToYRLT1AzM0hrrg"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State dallas",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Beauty and Personal Care Businesses For Sale in Dallas ...",
+              "link": "https://www.bizbuysell.com/texas/dallas-fort-worth-metroplex/beauty-and-personal-care-businesses-for-sale/",
+              "snippet": "Browse 63 Dallas-Fort Worth Metroplex Beauty and Personal Care businesses available for sale on BizBuySell. Find your ideal Hair Salons & Barber ...",
+              "position": 1
+            },
+            {
+              "title": "Franchise Opportunities",
+              "link": "https://dallasskininstitute.com/franchise/",
+              "snippet": "Join the revolution in Esthiology education and entrepreneurship with our prestigious Beauty Academy franchise. Dive into a world of innovation.",
+              "position": 2
+            },
+            {
+              "title": "Dallas Beauty and Personal Care Businesses For Sale",
+              "link": "https://www.loopnet.com/biz/texas/dallas/beauty-and-personal-care-businesses-for-sale/",
+              "snippet": "View 15 Dallas, Texas Beauty and Personal Care businesses for sale on LoopNet.com. Search LoopNet for Beauty and Personal Care businesses for sale in Dallas ...",
+              "position": 3
+            },
+            {
+              "title": "Affordable Franchises in Dallas, TX",
+              "link": "https://www.floydsbarbershop.com/hair-tips/affordable-franchises-in-dallas-tx",
+              "snippet": "The Dallas-Fort Worth metroplex presents a prime opportunity for entrepreneurs in the beauty industry, with a diverse and growing population that values ...",
+              "position": 4
+            },
+            {
+              "title": "Best Health & Beauty Franchise Opportunities to Buy in Dallas City",
+              "link": "https://www.franchise-local.com/cities/dallas-city/health-beauty-franchises/",
+              "snippet": "Discover our range of the best Health Beauty Franchises Opportunities For Sale in Dallas City, and take the first step towards running your own franchise ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_auto_repair": [
+      {
+        "turn_id": "248ddd4f-f850-4265-b618-0f8ddd4eff67",
+        "timestamp": "2025-10-02 01:32:20.535843",
+        "user_message": "I want to open a car repair shop in Phoenix",
+        "bot_response": "I'll analyze the retail market in phoenix for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Retail in Phoenix**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Phoenix** - \ud83d\udccd Phoenix\n2. **Kimpton Hotel Palomar Phoenix** - 4.4/5 \u2b50 (1844 reviews)\n   \ud83d\udccd 2 East Jefferson Street, Phoenix\n3. **Hotel San Carlos** - 3.8/5 \u2b50 (714 reviews)\n   \ud83d\udccd 202 North Central Avenue, Phoenix\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Retail Businesses For Sale in Phoenix, AZ**\n   \ud83d\udcdd Browse 64 Phoenix, AZ Retail Businesses for sale on BizBuySell. Find seller financed Flower Shops, L...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/arizona/phoenix/retail-businesses-for-sale/)\n2. **Franchise Businesses For Sale in Phoenix, AZ, 34 ...**\n   \ud83d\udcdd 34 Franchise Businesses Available to Buy Now in Phoenix, AZ on BFS, The World's Largest Marketplace ...\n   \ud83d\udd17 [Learn More](https://us.businessesforsale.com/us/search/franchise-businesses-for-sale-in-phoenix)\n3. **Franchise Opportunities Near You Phoenix, Arizona**\n   \ud83d\udcdd Uncover business and franchise possibilities in Phoenix, AZ. Explore available businesses for sale a...\n   \ud83d\udd17 [Learn More](https://www.franchiseopportunities.com/near-me/phoenix-arizona)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (1.9% growth)\n\u2022 Confidence: 74%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.9/1.0\n\u2022 Growth Potential: 0.4/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\u2022 Limited growth potential - consider market expansion\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 74% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "retail",
+          "location": "phoenix",
+          "timestamp": "2025-10-02T01:32:16.387974",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 33.44823,
+            "longitude": -112.075098
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 33.44823,
+              "lng": -112.075098
+            },
+            "radius_miles": 10.0,
+            "business_type": "retail",
+            "competitor_count": 20,
+            "average_rating": 3.72,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Phoenix",
+                "address": "Phoenix",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 33.4482948,
+                  "longitude": -112.0725488
+                },
+                "place_id": "ChIJy3mhUO0SK4cRrBtKNfjHaYw"
+              },
+              {
+                "name": "Kimpton Hotel Palomar Phoenix",
+                "address": "2 East Jefferson Street, Phoenix",
+                "rating": 4.4,
+                "user_ratings_total": 1844,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.447393,
+                  "longitude": -112.073269
+                },
+                "place_id": "ChIJHVv2ryESK4cRd4AGmCWnl4g"
+              },
+              {
+                "name": "Hotel San Carlos",
+                "address": "202 North Central Avenue, Phoenix",
+                "rating": 3.8,
+                "user_ratings_total": 714,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.4505562,
+                  "longitude": -112.074072
+                },
+                "place_id": "ChIJSeuJSSISK4cRZg3xiXZaISM"
+              },
+              {
+                "name": "Hyatt Regency Phoenix",
+                "address": "122 North 2nd Street, Phoenix",
+                "rating": 4.4,
+                "user_ratings_total": 4411,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.4497405,
+                  "longitude": -112.0716698
+                },
+                "place_id": "ChIJv6eIVR8SK4cRaUlFdFSoXq0"
+              },
+              {
+                "name": "The Westin Phoenix Downtown",
+                "address": "333 North Central Avenue, Phoenix",
+                "rating": 4.4,
+                "user_ratings_total": 1749,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.451669,
+                  "longitude": -112.0730282
+                },
+                "place_id": "ChIJc-kxXyISK4cRyYzbrftG_Yw"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State phoenix",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Retail Businesses For Sale in Phoenix, AZ",
+              "link": "https://www.bizbuysell.com/arizona/phoenix/retail-businesses-for-sale/",
+              "snippet": "Browse 64 Phoenix, AZ Retail Businesses for sale on BizBuySell. Find seller financed Flower Shops, Liquor Stores, or other Phoenix, AZ Retail ...",
+              "position": 1
+            },
+            {
+              "title": "Franchise Businesses For Sale in Phoenix, AZ, 34 ...",
+              "link": "https://us.businessesforsale.com/us/search/franchise-businesses-for-sale-in-phoenix",
+              "snippet": "34 Franchise Businesses Available to Buy Now in Phoenix, AZ on BFS, The World's Largest Marketplace for Buying and Selling a Business.",
+              "position": 2
+            },
+            {
+              "title": "Franchise Opportunities Near You Phoenix, Arizona",
+              "link": "https://www.franchiseopportunities.com/near-me/phoenix-arizona",
+              "snippet": "Uncover business and franchise possibilities in Phoenix, AZ. Explore available businesses for sale and ignite your entrepreneurial drive.",
+              "position": 3
+            },
+            {
+              "title": "Retail Businesses For Sale in Phoenix, Arizona",
+              "link": "https://www.loopnet.com/biz/arizona/phoenix/retail-businesses-for-sale/",
+              "snippet": "View 64 Phoenix, Arizona Retail businesses for sale on LoopNet.com. Search LoopNet for Retail businesses for sale in Phoenix, Arizona and other locations.",
+              "position": 4
+            },
+            {
+              "title": "Hi guys, what are some Franchise's you wish were in ...",
+              "link": "https://www.reddit.com/r/phoenix/comments/1hdtkd5/hi_guys_what_are_some_franchises_you_wish_were_in/",
+              "snippet": "For me it's got to be Wawa or a Buccee's (Heard we are getting one in Goodyear!!)",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_auto_explicit": [
+      {
+        "turn_id": "18866d01-d361-4741-9deb-b1d5cc940981",
+        "timestamp": "2025-10-02 01:32:30.164324",
+        "user_message": "I want to open an auto repair business in Denver",
+        "bot_response": "I'll analyze the automotive market in denver for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Automotive in Denver**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Denver** - \ud83d\udccd Denver\n2. **The Brown Palace Hotel and Spa, Autograph Collection** - 4.4/5 \u2b50 (4619 reviews)\n   \ud83d\udccd 321 17th Street, Denver\n3. **Sheraton Denver Downtown Hotel** - 4.2/5 \u2b50 (6656 reviews)\n   \ud83d\udccd 1550 Court Place, Denver\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Franchise in Denver, CO (80231)**\n   \ud83d\udcdd If you're ready to explore the exciting prospect of franchising with Tint World in Denver, CO, conta...\n   \ud83d\udd17 [Learn More](https://www.tintworld.com/franchise-opportunities/franchise-in-denver-co-80231/)\n2. **Automotive Franchise Opportunities in Denver, Colorado**\n   \ud83d\udcdd Big O Tires brings top automotive franchise opportunities to Denver\u2014launch with confidence using our...\n   \ud83d\udd17 [Learn More](https://www.bigofranchise.com/available-markets/denver/)\n3. **Franchise in Denver, CO (80202)**\n   \ud83d\udcdd Tint World offers a turnkey business model that provides first-time franchisees with comprehensive s...\n   \ud83d\udd17 [Learn More](https://www.tintworld.com/franchise-opportunities/franchise-denver-co-80202/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "automotive",
+          "location": "denver",
+          "timestamp": "2025-10-02T01:32:24.090829",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 39.741681,
+            "longitude": -104.986109
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 39.741681,
+              "lng": -104.986109
+            },
+            "radius_miles": 10.0,
+            "business_type": "automotive",
+            "competitor_count": 20,
+            "average_rating": 3.79,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Denver",
+                "address": "Denver",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 39.7392358,
+                  "longitude": -104.990251
+                },
+                "place_id": "ChIJzxcfI6qAa4cR1jaKJ_j0jhE"
+              },
+              {
+                "name": "The Brown Palace Hotel and Spa, Autograph Collection",
+                "address": "321 17th Street, Denver",
+                "rating": 4.4,
+                "user_ratings_total": 4619,
+                "price_level": 3,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 39.7439251,
+                  "longitude": -104.9878805
+                },
+                "place_id": "ChIJ9dBRb9Z4bIcRD9UXGYyDqvY"
+              },
+              {
+                "name": "Sheraton Denver Downtown Hotel",
+                "address": "1550 Court Place, Denver",
+                "rating": 4.2,
+                "user_ratings_total": 6656,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 39.74212480000001,
+                  "longitude": -104.989906
+                },
+                "place_id": "ChIJ8Y6vMNR4bIcRHgkd29qFnA4"
+              },
+              {
+                "name": "Holiday Inn Express Denver Downtown by IHG",
+                "address": "1715 Tremont Place, Denver",
+                "rating": 3.4,
+                "user_ratings_total": 1829,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 39.74438759999999,
+                  "longitude": -104.9883169
+                },
+                "place_id": "ChIJUYEnWdZ4bIcRXQSg0Nxw30g"
+              },
+              {
+                "name": "Warwick Denver",
+                "address": "1776 Grant Street, Denver",
+                "rating": 3.8,
+                "user_ratings_total": 2933,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 39.74440109999999,
+                  "longitude": -104.9832629
+                },
+                "place_id": "ChIJ6Z13hSl5bIcRuVo0v9esU9o"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State denver",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Franchise in Denver, CO (80231)",
+              "link": "https://www.tintworld.com/franchise-opportunities/franchise-in-denver-co-80231/",
+              "snippet": "If you're ready to explore the exciting prospect of franchising with Tint World in Denver, CO, contact us today to learn more about the available opportunities.",
+              "position": 1
+            },
+            {
+              "title": "Automotive Franchise Opportunities in Denver, Colorado",
+              "link": "https://www.bigofranchise.com/available-markets/denver/",
+              "snippet": "Big O Tires brings top automotive franchise opportunities to Denver\u2014launch with confidence using our brand, systems, and support.",
+              "position": 2
+            },
+            {
+              "title": "Franchise in Denver, CO (80202)",
+              "link": "https://www.tintworld.com/franchise-opportunities/franchise-denver-co-80202/",
+              "snippet": "Tint World offers a turnkey business model that provides first-time franchisees with comprehensive support, training, and resources to establish ...",
+              "position": 3
+            },
+            {
+              "title": "Automotive Franchises Opportunity in Denver, CO",
+              "link": "https://autoappraisalnetwork.com/automotive-franchises-opportunity-in-denver-co.html",
+              "snippet": "Interested in becoming a franchisee of Auto Appraisal Network? Our brand offers an automotive franchises opportunity in Denver, CO that affords you freedom, ...",
+              "position": 4
+            },
+            {
+              "title": "Best Automotive Franchise Opportunities to Buy in Denver",
+              "link": "https://www.franchise-local.com/counties/denver-county/automotive-franchises/",
+              "snippet": "Discover our range of the best Automotive Franchises Opportunities For Sale in Denver, and take the first step towards running your own franchise business today ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_misspelled_location": [
+      {
+        "turn_id": "6a2b2ebf-8536-41d7-8177-5e0bff829976",
+        "timestamp": "2025-10-02 01:32:39.378305",
+        "user_message": "I want to open a bookstore in eknzas",
+        "bot_response": "I'll analyze the bookstore market in kansas for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Bookstore in Kansas**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Hoisington** - \ud83d\udccd Hoisington\n2. **KVGB-FM Great Bend** - \ud83d\udccd Great Bend\n3. **Barton Community College 1** - 4.1/5 \u2b50 (61 reviews)\n   \ud83d\udccd 245 Northeast 30 Road, Great Bend\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas ...**\n   \ud83d\udcdd PRICE: $150,000 $183,382 revenue $9,596 seller discretionary earnings Profitable franchise with loya...\n   \ud83d\udd17 [Learn More](https://www.facebook.com/transworldwichita/posts/own-a-thriving-bookstore-gift-shop-and-caf%C3%A9-in-a-vibrant-kansas-neighborhood-bel/1074287151379482/)\n2. **Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas ...**\n   \ud83d\udcdd Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas neighborhood, beloved for its cura...\n   \ud83d\udd17 [Learn More](https://www.instagram.com/p/DE-svkpADju/)\n3. **Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas ...**\n   \ud83d\udcdd Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas neighborhood, beloved for its cura...\n   \ud83d\udd17 [Learn More](https://www.facebook.com/story.php?story_fbid=1080769467397917&id=100063946214596)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (-1.3% growth)\n\u2022 Confidence: 73%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 1.0/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.3/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Weak competition - capitalize on market gaps\n\u2022 Excellent demographic match for this business\n\u2022 Limited growth potential - consider market expansion\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 73% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "bookstore",
+          "location": "kansas",
+          "timestamp": "2025-10-02T01:32:33.685659",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 38.53208,
+            "longitude": -98.725739
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 38.53208,
+              "lng": -98.725739
+            },
+            "radius_miles": 10.0,
+            "business_type": "bookstore",
+            "competitor_count": 20,
+            "average_rating": 3.0,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Hoisington",
+                "address": "Hoisington",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 38.5180672,
+                  "longitude": -98.7781394
+                },
+                "place_id": "ChIJHZmDUESSo4cRVy8dg5dOlxU"
+              },
+              {
+                "name": "KVGB-FM Great Bend",
+                "address": "Great Bend",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "convenience_store",
+                  "store",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.4316786,
+                  "longitude": -98.7720291
+                },
+                "place_id": "ChIJISeBWECMo4cRhqnnkgsrjBU"
+              },
+              {
+                "name": "Barton Community College 1",
+                "address": "245 Northeast 30 Road, Great Bend",
+                "rating": 4.1,
+                "user_ratings_total": 61,
+                "price_level": 0,
+                "types": [
+                  "university",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.4037674,
+                  "longitude": -98.7331466
+                },
+                "place_id": "ChIJO1BqmqCEo4cRPVjQDjw0vJs"
+              },
+              {
+                "name": "Cheyenne Bottoms Refuge",
+                "address": "204 Northeast 60 Road, Great Bend",
+                "rating": 4.7,
+                "user_ratings_total": 186,
+                "price_level": 0,
+                "types": [
+                  "park",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.46957959999999,
+                  "longitude": -98.6490584
+                },
+                "place_id": "ChIJxTkbW2GFo4cR8XxtHtzDAWY"
+              },
+              {
+                "name": "Concordia Lutheran Church",
+                "address": "460 West 9th Street, Hoisington",
+                "rating": 4.4,
+                "user_ratings_total": 7,
+                "price_level": 0,
+                "types": [
+                  "church",
+                  "place_of_worship",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.5217295,
+                  "longitude": -98.7823942
+                },
+                "place_id": "ChIJX_kto1qSo4cRuiS8wO4p8zs"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State kansas",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas ...",
+              "link": "https://www.facebook.com/transworldwichita/posts/own-a-thriving-bookstore-gift-shop-and-caf%C3%A9-in-a-vibrant-kansas-neighborhood-bel/1074287151379482/",
+              "snippet": "PRICE: $150,000 $183,382 revenue $9,596 seller discretionary earnings Profitable franchise with loyal clients, strong community reputation, and franchisor ...",
+              "position": 1
+            },
+            {
+              "title": "Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas ...",
+              "link": "https://www.instagram.com/p/DE-svkpADju/",
+              "snippet": "Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas neighborhood, beloved for its curated books, unique gifts, artisan treasures, and warm, ...",
+              "position": 2
+            },
+            {
+              "title": "Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas ...",
+              "link": "https://www.facebook.com/story.php?story_fbid=1080769467397917&id=100063946214596",
+              "snippet": "Own a thriving bookstore, gift shop, and caf\u00e9 in a vibrant Kansas neighborhood, beloved for its curated books, unique gifts, artisan treasures, and warm,...",
+              "position": 3
+            },
+            {
+              "title": "Book Stores For Sale",
+              "link": "https://www.bizbuysell.com/book-stores-for-sale/",
+              "snippet": "This well-established, profitable bookstore in the heart of bustling downtown Grand Junction is up for sale! With a rich history and a loyal customer base.",
+              "position": 4
+            },
+            {
+              "title": "Book and Music Store Franchise Opportunities",
+              "link": "https://www.franchisedirect.com/retailfranchises/bookandmusicstores/361",
+              "snippet": "Interested in owning a successful book and music store franchise business? Search listings of book and music store franchise and business opportunities in ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_partial_info": [
+      {
+        "turn_id": "287db416-48b0-4c16-8371-d58043f2fb2f",
+        "timestamp": "2025-10-02 01:32:46.168214",
+        "user_message": "I want to open a restaurant",
+        "bot_response": "I'll analyze the restaurant market in washington for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Restaurant in Washington**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 10 competitors in the area\n\n**Top Competitors:**\n1. **Blueberry Hills Farm** - 4.5/5 \u2b50 (1928 reviews)\n   \ud83d\udccd 1315 Washington Street, Manson\n2. **12 Tribes Lake Chelan Casino** - 4/5 \u2b50 (1483 reviews)\n   \ud83d\udccd 455 Wapato Lake Road, Manson\n3. **Cowboy River Restaurant** - 4.1/5 \u2b50 (207 reviews)\n   \ud83d\udccd 245 Lakeshore Drive, Pateros\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Food Franchises in Washington**\n   \ud83d\udcdd Find the best Food Franchises in Washington. Simply browse our directory to find your ideal franchis...\n   \ud83d\udd17 [Learn More](https://www.franchisedirect.com/usfranchises/washington/food-franchises/290/14/)\n2. **Restaurant & Food Franchises Opportunities in Washington**\n   \ud83d\udcdd Choose the best Washington Restaurant & Food Franchises opportunities from 21 available. Start your ...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/franchises-for-sale/washington/food-and-restaurant-franchise/)\n3. **Franchise Opportunities**\n   \ud83d\udcdd Good Stuff Eatery is dedicated to bringing goodness everywhere and offers franchise opportunities fo...\n   \ud83d\udd17 [Learn More](https://goodstuffeatery.com/franchise-opportunities)\n\n\n\ud83d\udcc8 **Market Trend Analysis:**\n\u2022 Trend: Growing (5.0% growth)\n\u2022 Confidence: 80%\n\u2022 Risk Level: Low\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.7/1.0**\n\u2022 Market Saturation: 0.5/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.4/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 80% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "restaurant",
+          "location": "washington",
+          "timestamp": "2025-10-02T01:32:42.618711",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 48.025005,
+            "longitude": -120.094293
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 48.025005,
+              "lng": -120.094293
+            },
+            "radius_miles": 10.0,
+            "business_type": "restaurant",
+            "competitor_count": 10,
+            "average_rating": 3.74,
+            "opportunity_score": 0.8,
+            "market_saturation": "moderate",
+            "recommended_action": "proceed_with_caution",
+            "top_competitors": [
+              {
+                "name": "Blueberry Hills Farm",
+                "address": "1315 Washington Street, Manson",
+                "rating": 4.5,
+                "user_ratings_total": 1928,
+                "price_level": 2,
+                "types": [
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.9057194,
+                  "longitude": -120.1792444
+                },
+                "place_id": "ChIJL75e5vydm1QRJscPJhCBHD4"
+              },
+              {
+                "name": "12 Tribes Lake Chelan Casino",
+                "address": "455 Wapato Lake Road, Manson",
+                "rating": 4,
+                "user_ratings_total": 1483,
+                "price_level": 0,
+                "types": [
+                  "casino",
+                  "tourist_attraction",
+                  "night_club",
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.8854598,
+                  "longitude": -120.1315062
+                },
+                "place_id": "ChIJJ7xO4DScm1QRfoburkqSnc0"
+              },
+              {
+                "name": "Cowboy River Restaurant",
+                "address": "245 Lakeshore Drive, Pateros",
+                "rating": 4.1,
+                "user_ratings_total": 207,
+                "price_level": 2,
+                "types": [
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 48.051533,
+                  "longitude": -119.902206
+                },
+                "place_id": "ChIJi1GnLNuBnFQRQoAu7y3mH0E"
+              },
+              {
+                "name": "12 Tribes Lake Chelan Casino's Amphitheater",
+                "address": "455 Wapato Lake Road, Manson",
+                "rating": 4,
+                "user_ratings_total": 48,
+                "price_level": 0,
+                "types": [
+                  "casino",
+                  "bar",
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 47.8854164,
+                  "longitude": -120.1305634
+                },
+                "place_id": "ChIJk7tO4DScm1QRHtR2-EXu77I"
+              },
+              {
+                "name": "Methow Cafe",
+                "address": "35 Main Street, Methow",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "restaurant",
+                  "food",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 48.12935539999999,
+                  "longitude": -120.0042076
+                },
+                "place_id": "ChIJuUp2UwCDnFQRTXP9_MfGFOI"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State washington",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Food Franchises in Washington",
+              "link": "https://www.franchisedirect.com/usfranchises/washington/food-franchises/290/14/",
+              "snippet": "Find the best Food Franchises in Washington. Simply browse our directory to find your ideal franchise or business opportunity.",
+              "position": 1
+            },
+            {
+              "title": "Restaurant & Food Franchises Opportunities in Washington",
+              "link": "https://www.loopnet.com/biz/franchises-for-sale/washington/food-and-restaurant-franchise/",
+              "snippet": "Choose the best Washington Restaurant & Food Franchises opportunities from 21 available. Start your own Restaurant & Food Franchises.",
+              "position": 2
+            },
+            {
+              "title": "Franchise Opportunities",
+              "link": "https://goodstuffeatery.com/franchise-opportunities",
+              "snippet": "Good Stuff Eatery is dedicated to bringing goodness everywhere and offers franchise opportunities for growth and success. Contact them to discuss.",
+              "position": 3
+            },
+            {
+              "title": "Franchises and Business Opportunities in Washington DC",
+              "link": "https://www.franchisebuy.com/franchises-in-washington-dc",
+              "snippet": "There are 497 franchise opportunities in Washington DC, including options like FranServe consultant, Subway, and Sugar Sugar, with varying minimum cash ...",
+              "position": 4
+            },
+            {
+              "title": "Washington Franchise Opportunity Guide",
+              "link": "https://www.franchising.com/washington_opportunities/",
+              "snippet": "Washington franchise opportunities include Golden Corral (buffet), Kitchen Tune-Up (kitchen upgrades), Camp Bow Wow (dog care), and Travelin' Tom's Coffee ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_unclear_business": [
+      {
+        "turn_id": "ec633b1a-115e-42f2-893a-b08e7f59b596",
+        "timestamp": "2025-10-02 01:32:49.737445",
+        "user_message": "I want to start a business in Boston",
+        "bot_response": "Perfect! Let me help you explore business opportunities. What type of business are you thinking about?",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "location": "boston"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_quantum_lab": [
+      {
+        "turn_id": "15ae67fb-b370-4fa9-82b7-afa5c2bc8c4a",
+        "timestamp": "2025-10-02 01:33:01.974340",
+        "user_message": "I want to open a quantum computing lab in San Francisco",
+        "bot_response": "Great! I'd love to help you find the perfect business opportunity. What type of business are you considering?",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "location": "san francisco"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_pet_grooming": [
+      {
+        "turn_id": "79475936-b425-4975-8463-d383c9b7cd0c",
+        "timestamp": "2025-10-02 01:34:48.164865",
+        "user_message": "I want to open a pet grooming salon in Portland, Oregon",
+        "bot_response": "I'll analyze the beauty market in los angeles for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Beauty in Los Angeles**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Los Angeles** - \ud83d\udccd Los Angeles\n2. **Los Angeles Athletic Club** - 4.5/5 \u2b50 (1281 reviews)\n   \ud83d\udccd 431 West 7th Street, Los Angeles\n3. **Hilton Checkers Los Angeles** - 4/5 \u2b50 (1618 reviews)\n   \ud83d\udccd 535 South Grand Avenue, Los Angeles\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Beauty and Personal Care Businesses For Sale in Los ...**\n   \ud83d\udcdd Browse 94 Los Angeles County, CA Beauty and Personal Care Businesses available for sale on BizBuySel...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/california/los-angeles-county/beauty-and-personal-care-businesses-for-sale/)\n2. **Los Angeles Beauty and Personal Care Businesses For Sale**\n   \ud83d\udcdd View 24 Los Angeles, California Beauty and Personal Care businesses for sale on LoopNet.com. Search ...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/california/los-angeles/beauty-and-personal-care-businesses-for-sale/)\n3. **Health & Beauty Businesses For Sale In Los Angeles ...**\n   \ud83d\udcdd Interested in the wellness sector? Browse our extensive listings of Health and Beauty Businesses For...\n   \ud83d\udd17 [Learn More](https://us.businessesforsale.com/us/search/health-and-beauty-businesses-for-sale-in-los-angeles)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "beauty",
+          "location": "los angeles",
+          "timestamp": "2025-10-02T01:34:43.480719",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 34.048051,
+            "longitude": -118.254187
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 34.048051,
+              "lng": -118.254187
+            },
+            "radius_miles": 10.0,
+            "business_type": "beauty",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Los Angeles",
+                "address": "Los Angeles",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 34.0549076,
+                  "longitude": -118.242643
+                },
+                "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I"
+              },
+              {
+                "name": "Los Angeles Athletic Club",
+                "address": "431 West 7th Street, Los Angeles",
+                "rating": 4.5,
+                "user_ratings_total": 1281,
+                "price_level": 0,
+                "types": [
+                  "spa",
+                  "gym",
+                  "lodging",
+                  "point_of_interest",
+                  "health",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0469169,
+                  "longitude": -118.2550353
+                },
+                "place_id": "ChIJ-_RdD7XHwoARN0-Zc_fk4ZA"
+              },
+              {
+                "name": "Hilton Checkers Los Angeles",
+                "address": "535 South Grand Avenue, Los Angeles",
+                "rating": 4,
+                "user_ratings_total": 1618,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0496146,
+                  "longitude": -118.2549957
+                },
+                "place_id": "ChIJU9oTm7THwoARF9dZF0pdn0U"
+              },
+              {
+                "name": "Standard",
+                "address": "550 Flower Street, Los Angeles",
+                "rating": 4.2,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0501865,
+                  "longitude": -118.2571724
+                },
+                "place_id": "ChIJ71dGk7PHwoARHWr_QGbZIGU"
+              },
+              {
+                "name": "Sheraton Grand Los Angeles",
+                "address": "711 South Hope Street, Los Angeles",
+                "rating": 4.4,
+                "user_ratings_total": 2706,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0478628,
+                  "longitude": -118.2583756
+                },
+                "place_id": "ChIJmRr_HrTHwoARjigvltPYgzo"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State los angeles",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Beauty and Personal Care Businesses For Sale in Los ...",
+              "link": "https://www.bizbuysell.com/california/los-angeles-county/beauty-and-personal-care-businesses-for-sale/",
+              "snippet": "Browse 94 Los Angeles County, CA Beauty and Personal Care Businesses available for sale on BizBuySell. Find your ideal Tanning Salons, Massage, ...",
+              "position": 1
+            },
+            {
+              "title": "Los Angeles Beauty and Personal Care Businesses For Sale",
+              "link": "https://www.loopnet.com/biz/california/los-angeles/beauty-and-personal-care-businesses-for-sale/",
+              "snippet": "View 24 Los Angeles, California Beauty and Personal Care businesses for sale on LoopNet.com. Search LoopNet for Beauty and Personal Care businesses for sale ...",
+              "position": 2
+            },
+            {
+              "title": "Health & Beauty Businesses For Sale In Los Angeles ...",
+              "link": "https://us.businessesforsale.com/us/search/health-and-beauty-businesses-for-sale-in-los-angeles",
+              "snippet": "Interested in the wellness sector? Browse our extensive listings of Health and Beauty Businesses For Sale in Los Angeles, California.",
+              "position": 3
+            },
+            {
+              "title": "Franchise A Location",
+              "link": "https://blushington.com/pages/franchise?srsltid=AfmBOorurBF6Jro8KO288P1wTUEMkSNcMbp0Vk1EIdXG4UAJUKcgLAaq",
+              "snippet": "Blushington is a one-stop beauty franchise offering blowouts, makeup, and skincare services under one roof. Blushington's enhanced concept meets the diverse ...",
+              "position": 4
+            },
+            {
+              "title": "Buy Los Angeles County, California Hair and Beauty ...",
+              "link": "https://www.bizquest.com/hair-and-beauty-businesses-for-sale-in-los-angeles-county-ca/",
+              "snippet": "Join a thriving community of nearly 600 franchises and counting with FS Cut & Color. Leverage our affordable luxury brand, low overhead, and simple operations ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_pet_care_explicit": [
+      {
+        "turn_id": "1dad4a5c-dce5-47ef-ab4a-2749e3e69222",
+        "timestamp": "2025-10-02 01:34:56.689649",
+        "user_message": "I want to open a pet care business in Portland",
+        "bot_response": "I'll analyze the pet care market in los angeles for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Pet Care in Los Angeles**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Los Angeles** - \ud83d\udccd Los Angeles\n2. **Los Angeles Athletic Club** - 4.5/5 \u2b50 (1281 reviews)\n   \ud83d\udccd 431 West 7th Street, Los Angeles\n3. **Hilton Checkers Los Angeles** - 4/5 \u2b50 (1618 reviews)\n   \ud83d\udccd 535 South Grand Avenue, Los Angeles\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Pet Service Businesses For Sale in Los Angeles County, CA**\n   \ud83d\udcdd Browse 24 Los Angeles County, CA Pet Service Businesses available for sale on BizBuySell. Find your ...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/california/los-angeles-county/pet-service-businesses-for-sale/)\n2. **Pet Store Franchise in Los Angeles**\n   \ud83d\udcdd Explore pet store franchise opportunities in Los Angeles with Pet Evolution Franchising. Start your ...\n   \ud83d\udd17 [Learn More](https://petevolutionfranchising.com/pet-store-franchise-in-los-angeles)\n3. **Los Angeles Metro Area Pet Service Businesses For Sale**\n   \ud83d\udcdd Zoom Room Torrance is a well-established and highly successful positive reinforcement dog training f...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/california/los-angeles-metro-area/pet-service-businesses-for-sale/)\n\n\n\ud83d\udcc8 **Market Trend Analysis:**\n\u2022 Trend: Growing (7.9% growth)\n\u2022 Confidence: 86%\n\u2022 Risk Level: Low\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Growing market segment\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 1.0/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 High growth potential in this market segment\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 86% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "pet care",
+          "location": "los angeles",
+          "timestamp": "2025-10-02T01:34:51.515557",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 34.048051,
+            "longitude": -118.254187
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 34.048051,
+              "lng": -118.254187
+            },
+            "radius_miles": 10.0,
+            "business_type": "pet care",
+            "competitor_count": 20,
+            "average_rating": 3.67,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Los Angeles",
+                "address": "Los Angeles",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 34.0549076,
+                  "longitude": -118.242643
+                },
+                "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I"
+              },
+              {
+                "name": "Los Angeles Athletic Club",
+                "address": "431 West 7th Street, Los Angeles",
+                "rating": 4.5,
+                "user_ratings_total": 1281,
+                "price_level": 0,
+                "types": [
+                  "gym",
+                  "spa",
+                  "lodging",
+                  "health",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0469169,
+                  "longitude": -118.2550353
+                },
+                "place_id": "ChIJ-_RdD7XHwoARN0-Zc_fk4ZA"
+              },
+              {
+                "name": "Hilton Checkers Los Angeles",
+                "address": "535 South Grand Avenue, Los Angeles",
+                "rating": 4,
+                "user_ratings_total": 1618,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0496146,
+                  "longitude": -118.2549957
+                },
+                "place_id": "ChIJU9oTm7THwoARF9dZF0pdn0U"
+              },
+              {
+                "name": "Standard",
+                "address": "550 Flower Street, Los Angeles",
+                "rating": 4.2,
+                "user_ratings_total": 2577,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0501865,
+                  "longitude": -118.2571724
+                },
+                "place_id": "ChIJ71dGk7PHwoARHWr_QGbZIGU"
+              },
+              {
+                "name": "Sheraton Grand Los Angeles",
+                "address": "711 South Hope Street, Los Angeles",
+                "rating": 4.4,
+                "user_ratings_total": 2706,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 34.0478628,
+                  "longitude": -118.2583756
+                },
+                "place_id": "ChIJmRr_HrTHwoARjigvltPYgzo"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State los angeles",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Pet Service Businesses For Sale in Los Angeles County, CA",
+              "link": "https://www.bizbuysell.com/california/los-angeles-county/pet-service-businesses-for-sale/",
+              "snippet": "Browse 24 Los Angeles County, CA Pet Service Businesses available for sale on BizBuySell. Find your ideal Pet Grooming, Dog Daycare & Boarding, ...",
+              "position": 1
+            },
+            {
+              "title": "Pet Store Franchise in Los Angeles",
+              "link": "https://petevolutionfranchising.com/pet-store-franchise-in-los-angeles",
+              "snippet": "Explore pet store franchise opportunities in Los Angeles with Pet Evolution Franchising. Start your business journey today with our supportive network.",
+              "position": 2
+            },
+            {
+              "title": "Los Angeles Metro Area Pet Service Businesses For Sale",
+              "link": "https://www.loopnet.com/biz/california/los-angeles-metro-area/pet-service-businesses-for-sale/",
+              "snippet": "Zoom Room Torrance is a well-established and highly successful positive reinforcement dog training franchise located in a bustling area of the South Bay.",
+              "position": 3
+            },
+            {
+              "title": "Pet Businesses for sale in Los Angeles, California",
+              "link": "https://us.businessesforsale.com/us/search/pet-businesses-for-sale-in-los-angeles",
+              "snippet": "The Dog Stop - Dog Care Center Franchise in Los Angeles \u00b7 the dog stop dog \u00b7 $60,000 ; DoggieWorld Resorts & Theme Parks Franchise in Los ...",
+              "position": 4
+            },
+            {
+              "title": "Top Pet Franchises of 2025 (UPDATED RANKINGS)",
+              "link": "https://www.franchisechatter.com/2018/03/17/the-10-best-pet-franchises-of-2018/",
+              "snippet": "Dogtopia is a chain of dog daycare, boarding, grooming, and spas, including locations exclusively for corporate customers, just like an employer ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_tech_startup": [
+      {
+        "turn_id": "6fc837ce-647f-4ba8-bf15-c424105c70cc",
+        "timestamp": "2025-10-02 01:34:59.990236",
+        "user_message": "I want to open a tech startup in Austin, Texas",
+        "bot_response": "Excellent! To provide you with the most relevant analysis, what kind of business interests you?",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "location": "austin"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "test_laundromat": [
+      {
+        "turn_id": "9fca6685-62cc-40e8-b95f-21240e1777ce",
+        "timestamp": "2025-10-02 01:35:16.375749",
+        "user_message": "I want to open a laundromat in San Diego",
+        "bot_response": "I'll analyze the laundry service market in san diego for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Laundry Service in San Diego**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **San Diego** - \ud83d\udccd San Diego\n2. **Hilton San Diego Bayfront** - 4.3/5 \u2b50 (8948 reviews)\n   \ud83d\udccd 1 Park Boulevard, San Diego\n3. **The Keating Hotel** - 3.3/5 \u2b50 (562 reviews)\n   \ud83d\udccd 432 F Street, San Diego\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **San Diego County, CA**\n   \ud83d\udcdd Browse Laundromats and Coin Laundry Businesses currently for sale in San Diego County, CA on BizBuyS...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/california/san-diego-county/laundromats-and-coin-laundry-businesses-for-sale/)\n2. **San Diego County, CA - Laundromats & Coin Laundry**\n   \ud83d\udcdd View San Diego County, California Laundromats and Coin Laundry businesses for sale on LoopNet.com. S...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/california/san-diego-county/laundromats-and-coin-laundry-businesses-for-sale/)\n3. **4 San Diego County, CA Dry-Cleaning and Laundry For Sale**\n   \ud83d\udcdd Eco-Friendly 30+ years Cleaners with Loyal Customers! (runs itself). San Diego, CA. Alterations serv...\n   \ud83d\udd17 [Learn More](https://www.bizquest.com/dry-cleaning-and-laundry-businesses-for-sale-in-san-diego-county-ca/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (2.5% growth)\n\u2022 Confidence: 75%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.6/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 75% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "laundry service",
+          "location": "san diego",
+          "timestamp": "2025-10-02T01:35:10.517945",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 32.713623,
+            "longitude": -117.16016
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 32.713623,
+              "lng": -117.16016
+            },
+            "radius_miles": 10.0,
+            "business_type": "laundry service",
+            "competitor_count": 20,
+            "average_rating": 3.8,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "San Diego",
+                "address": "San Diego",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 32.715738,
+                  "longitude": -117.1610838
+                },
+                "place_id": "ChIJSx6SrQ9T2YARed8V_f0hOg0"
+              },
+              {
+                "name": "Hilton San Diego Bayfront",
+                "address": "1 Park Boulevard, San Diego",
+                "rating": 4.3,
+                "user_ratings_total": 8948,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.70400879999999,
+                  "longitude": -117.1576613
+                },
+                "place_id": "ChIJC0ZfMUVT2YAR15-g5m_LadY"
+              },
+              {
+                "name": "The Keating Hotel",
+                "address": "432 F Street, San Diego",
+                "rating": 3.3,
+                "user_ratings_total": 562,
+                "price_level": 0,
+                "types": [
+                  "real_estate_agency",
+                  "travel_agency",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.7137681,
+                  "longitude": -117.1603815
+                },
+                "place_id": "ChIJZ3MAFVhT2YARA6VEyoK26bc"
+              },
+              {
+                "name": "USA Hostels San Diego",
+                "address": "726 Fifth Avenue, San Diego",
+                "rating": 4.4,
+                "user_ratings_total": 410,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.7129417,
+                  "longitude": -117.1604
+                },
+                "place_id": "ChIJ1Tt0SFhT2YARKVs_VG072PM"
+              },
+              {
+                "name": "Andaz San Diego, by Hyatt",
+                "address": "600 F Street, San Diego",
+                "rating": 4.3,
+                "user_ratings_total": 1569,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 32.71385530000001,
+                  "longitude": -117.1587941
+                },
+                "place_id": "ChIJoWmU9VhT2YARDCYOgn4SIEM"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State san diego",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "San Diego County, CA",
+              "link": "https://www.bizbuysell.com/california/san-diego-county/laundromats-and-coin-laundry-businesses-for-sale/",
+              "snippet": "Browse Laundromats and Coin Laundry Businesses currently for sale in San Diego County, CA on BizBuySell. Find a seller financed San Diego County, ...",
+              "position": 1
+            },
+            {
+              "title": "San Diego County, CA - Laundromats & Coin Laundry",
+              "link": "https://www.loopnet.com/biz/california/san-diego-county/laundromats-and-coin-laundry-businesses-for-sale/",
+              "snippet": "View San Diego County, California Laundromats and Coin Laundry businesses for sale on LoopNet.com. Search LoopNet for Laundromats and Coin Laundry ...",
+              "position": 2
+            },
+            {
+              "title": "4 San Diego County, CA Dry-Cleaning and Laundry For Sale",
+              "link": "https://www.bizquest.com/dry-cleaning-and-laundry-businesses-for-sale-in-san-diego-county-ca/",
+              "snippet": "Eco-Friendly 30+ years Cleaners with Loyal Customers! (runs itself). San Diego, CA. Alterations services also offered (room to expand). $360,000.",
+              "position": 3
+            },
+            {
+              "title": "Laundromats and Coin Laundry Businesses For Sale in ...",
+              "link": "https://www.bizbuysell.com/california/laundromats-and-coin-laundry-businesses-for-sale/",
+              "snippet": "Browse 73 Laundromats and Coin Laundry Businesses currently for sale in California on BizBuySell. Find a seller financed California Laundromat and ...",
+              "position": 4
+            },
+            {
+              "title": "San Diego County Commercial Laundry Businesses For Sale",
+              "link": "https://www.loopnet.com/biz/california/san-diego-county/commercial-laundry-businesses-for-sale/",
+              "snippet": "San Diego County Commercial Laundry Businesses For Sale \u00b7 Minuteman Press Business Services \u00b7 Benjamin Franklin Plumbing \u00b7 LIME Painting \u00b7 Merry Maids \u00b7 One Hour ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
     ]
   },
   "user_profiles": {
@@ -2395,12 +3956,132 @@
       "experience_level": "experienced",
       "communication_style": "formal",
       "last_interaction": "2025-10-02 00:57:57.057350"
+    },
+    "test_session_fix": {
+      "user_id": "test_session_fix",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:04.767321"
+    },
+    "test_nail_salon": {
+      "user_id": "test_nail_salon",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:13.467001"
+    },
+    "test_auto_repair": {
+      "user_id": "test_auto_repair",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:20.535851"
+    },
+    "test_auto_explicit": {
+      "user_id": "test_auto_explicit",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:30.164333"
+    },
+    "test_misspelled_location": {
+      "user_id": "test_misspelled_location",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:39.378313"
+    },
+    "test_partial_info": {
+      "user_id": "test_partial_info",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:46.168219"
+    },
+    "test_unclear_business": {
+      "user_id": "test_unclear_business",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:32:49.737453"
+    },
+    "test_quantum_lab": {
+      "user_id": "test_quantum_lab",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:33:01.974348"
+    },
+    "test_pet_grooming": {
+      "user_id": "test_pet_grooming",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:34:48.164872"
+    },
+    "test_pet_care_explicit": {
+      "user_id": "test_pet_care_explicit",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:34:56.689655"
+    },
+    "test_tech_startup": {
+      "user_id": "test_tech_startup",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:34:59.990242"
+    },
+    "test_laundromat": {
+      "user_id": "test_laundromat",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-02 01:35:16.375754"
     }
   },
   "global_insights": {
     "common_patterns": {
-      "unknown_False_False": 16
+      "unknown_False_False": 28
     }
   },
-  "last_updated": "2025-10-02T00:57:57.057691"
+  "last_updated": "2025-10-02T01:35:16.376346"
 }
