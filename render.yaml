@@ -24,7 +24,7 @@ services:
   - type: web
     name: delta-frontend
     env: static
-    plan: free
+    plan: starter
     buildCommand: echo "Frontend deployment"
     staticPublishPath: ./frontend
     envVars:
