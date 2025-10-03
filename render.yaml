@@ -4,8 +4,8 @@ services:
     name: delta-backend-api
     env: python
     plan: free
-    buildCommand: cd BOT && pip install -r requirements-smart.txt
-    startCommand: cd BOT && gunicorn bot_server_smart:app --bind 0.0.0.0:$PORT --workers 1 --worker-class uvicorn.workers.UvicornWorker --timeout 120
+    buildCommand: cd BOT && pip install -r requirements-light.txt
+    startCommand: cd BOT && gunicorn bot_server_light:app --bind 0.0.0.0:$PORT --workers 1 --worker-class uvicorn.workers.UvicornWorker --timeout 120
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
