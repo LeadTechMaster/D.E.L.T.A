@@ -200,24 +200,6 @@ class DeltaAPIClient:
             logger.error(f"❌ Autocomplete search error: {e}")
             return {"success": False, "error": str(e)}
 
-# State code mapping for Census API
-STATE_CODES = {
-    "miami": "12",  # Florida
-    "florida": "12",
-    "seattle": "53",  # Washington
-    "washington": "53",
-    "new york": "36",  # New York
-    "nyc": "36",
-    "manhattan": "36",
-    "brooklyn": "36",
-    "chicago": "17",  # Illinois
-    "illinois": "17",
-    "atlanta": "13",  # Georgia
-    "georgia": "13",
-    "dallas": "48",  # Texas
-    "texas": "48"
-}
-
     async def keyword_research(self, keyword: str, location: str = "United States") -> Dict[str, Any]:
         """Perform REAL keyword research using multiple APIs"""
         try:
@@ -300,7 +282,25 @@ STATE_CODES = {
         except Exception as e:
             logger.error(f"❌ Keyword research error: {e}")
             return {"status": "error", "message": str(e)}
-    
+
+# State code mapping for Census API
+STATE_CODES = {
+    "miami": "12",  # Florida
+    "florida": "12",
+    "seattle": "53",  # Washington
+    "washington": "53",
+    "new york": "36",  # New York
+    "nyc": "36",
+    "manhattan": "36",
+    "brooklyn": "36",
+    "chicago": "17",  # Illinois
+    "illinois": "17",
+    "atlanta": "13",  # Georgia
+    "georgia": "13",
+    "dallas": "48",  # Texas
+    "texas": "48"
+}
+
     def _generate_keyword_expansions(self, keyword: str, location: str) -> Dict[str, list]:
         """Generate REAL keyword expansions based on Arty's requirements"""
         expansions = {
