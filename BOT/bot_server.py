@@ -1305,31 +1305,17 @@ async def create_ar_session(ar_request: dict):
         location = ar_request.get("location", {"x": 0, "y": 0, "z": 0})
         interaction_mode = ar_request.get("interaction_mode", "gesture")
         
-        from ar_visualization import ARDevice, InteractionMode, ARCoordinate
+        # AR functionality not implemented yet
+        # from ar_visualization import ARDevice, InteractionMode, ARCoordinate
         
-        ar_device = ARDevice(device)
-        interaction = InteractionMode(interaction_mode)
-        ar_coordinate = ARCoordinate(
-            x=location.get("x", 0),
-            y=location.get("y", 0),
-            z=location.get("z", 0)
-        )
-        
-        session = await ar_visualization_engine.create_ar_session(
-            user_id, ar_device, ar_coordinate, interaction
-        )
-        
+        # AR functionality not implemented yet
         return {
-            "session_id": session.session_id,
-            "user_id": session.user_id,
-            "device": session.device.value,
-            "interaction_mode": session.interaction_mode.value,
-            "location": {
-                "x": session.location.x,
-                "y": session.location.y,
-                "z": session.location.z
-            },
-            "created_at": session.created_at.isoformat()
+            "message": "AR functionality coming soon",
+            "status": "not_implemented",
+            "user_id": user_id,
+            "device": device,
+            "location": location,
+            "interaction_mode": interaction_mode
         }
         
     except Exception as e:
