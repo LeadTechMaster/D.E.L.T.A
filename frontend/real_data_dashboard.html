@@ -575,9 +575,80 @@
             font-size: 0.7em;
             transition: transform 0.3s ease;
         }
-        
+
         .logs-header.collapsed::after {
             transform: rotate(-90deg);
+        }
+
+        /* Search Section Styles */
+        .search-section {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 204, 255, 0.1) 100%);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .search-section h2 {
+            color: #00ff88;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .search-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .search-box h4 {
+            color: #00ff88;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 6px;
+            color: #e8e8e8;
+            font-family: 'Courier New', monospace;
+        }
+
+        .search-box input::placeholder {
+            color: #888;
+        }
+
+        .search-results {
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        .search-result-item {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+            color: #e8e8e8;
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
         }
         
         .status-indicator {
@@ -642,6 +713,39 @@
     <div class="data-policy">
         <h2>🚫 REAL DATA ONLY POLICY</h2>
         <p>✅ Real Data Only | 🚫 No Mock Data | 🚫 No Demo Data | 🚫 No Fallback Data | 🚫 No Hardcoded Data</p>
+    </div>
+
+    <!-- Quick Search Section -->
+    <div class="search-section">
+        <h2>🔍 Quick Search & Analysis</h2>
+        <div class="search-grid">
+            <div class="search-box">
+                <h4>🏢 Business Type Search</h4>
+                <input type="text" id="businessSearch" placeholder="e.g., coffee shop, pizza, gym" onkeypress="handleBusinessSearch(event)">
+                <button class="btn" onclick="searchBusinessTypes()">Search Business Types</button>
+                <div id="businessSearchResults" class="search-results"></div>
+            </div>
+            <div class="search-box">
+                <h4>📍 Address Search</h4>
+                <input type="text" id="addressSearch" placeholder="e.g., Miami, FL or 123 Main St" onkeypress="handleAddressSearch(event)">
+                <button class="btn" onclick="searchAddresses()">Search Addresses</button>
+                <div id="addressSearchResults" class="search-results"></div>
+            </div>
+            <div class="search-box">
+                <h4>🏪 Places Search</h4>
+                <input type="text" id="placesSearch" placeholder="e.g., restaurants, gas stations" onkeypress="handlePlacesSearch(event)">
+                <input type="text" id="placesSearchLocation" placeholder="Location (e.g., Miami, FL)">
+                <button class="btn" onclick="searchPlaces()">Search Places</button>
+                <div id="placesSearchResults" class="search-results"></div>
+            </div>
+            <div class="search-box">
+                <h4>🏆 Franchise Search</h4>
+                <input type="text" id="franchiseSearch" placeholder="e.g., fast food, retail" onkeypress="handleFranchiseSearch(event)">
+                <input type="text" id="franchiseSearchLocation" placeholder="Location (e.g., Miami, FL)">
+                <button class="btn" onclick="searchFranchises()">Search Franchises</button>
+                <div id="franchiseSearchResults" class="search-results"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Interactive Map -->
@@ -1478,6 +1582,131 @@
 
             content.classList.toggle('collapsed');
             header.classList.toggle('collapsed');
+        }
+
+        // Search Functions
+        function handleBusinessSearch(event) {
+            if (event.key === 'Enter') {
+                searchBusinessTypes();
+            }
+        }
+
+        function handleAddressSearch(event) {
+            if (event.key === 'Enter') {
+                searchAddresses();
+            }
+        }
+
+        function handlePlacesSearch(event) {
+            if (event.key === 'Enter') {
+                searchPlaces();
+            }
+        }
+
+        function handleFranchiseSearch(event) {
+            if (event.key === 'Enter') {
+                searchFranchises();
+            }
+        }
+
+        async function searchBusinessTypes() {
+            const query = document.getElementById('businessSearch').value.trim();
+            if (!query) return;
+
+            const resultsDiv = document.getElementById('businessSearchResults');
+            resultsDiv.innerHTML = '<div class="search-result-item">🔍 Searching...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/search/business-types?query=${encodeURIComponent(query)}`);
+                const data = await response.json();
+
+                if (data.matches && data.matches.length > 0) {
+                    resultsDiv.innerHTML = data.matches.map(match => 
+                        `<div class="search-result-item">🏢 ${match}</div>`
+                    ).join('');
+                } else {
+                    resultsDiv.innerHTML = '<div class="search-result-item">❌ No matches found</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div class="search-result-item">❌ Error searching business types</div>';
+                console.error('Business search error:', error);
+            }
+        }
+
+        async function searchAddresses() {
+            const query = document.getElementById('addressSearch').value.trim();
+            if (!query) return;
+
+            const resultsDiv = document.getElementById('addressSearchResults');
+            resultsDiv.innerHTML = '<div class="search-result-item">🔍 Searching...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/search/addresses?query=${encodeURIComponent(query)}`);
+                const data = await response.json();
+
+                if (data.suggestions && data.suggestions.length > 0) {
+                    resultsDiv.innerHTML = data.suggestions.map(suggestion => 
+                        `<div class="search-result-item">📍 ${suggestion.text}</div>`
+                    ).join('');
+                } else {
+                    resultsDiv.innerHTML = '<div class="search-result-item">❌ No addresses found</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div class="search-result-item">❌ Error searching addresses</div>';
+                console.error('Address search error:', error);
+            }
+        }
+
+        async function searchPlaces() {
+            const query = document.getElementById('placesSearch').value.trim();
+            const location = document.getElementById('placesSearchLocation').value.trim();
+            if (!query) return;
+
+            const resultsDiv = document.getElementById('placesSearchResults');
+            resultsDiv.innerHTML = '<div class="search-result-item">🔍 Searching...</div>';
+
+            try {
+                const url = `${API_URL}/search/places?query=${encodeURIComponent(query)}${location ? `&location=${encodeURIComponent(location)}` : ''}`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.places && data.places.length > 0) {
+                    resultsDiv.innerHTML = data.places.map(place => 
+                        `<div class="search-result-item">🏪 ${place.name} - ${place.address}</div>`
+                    ).join('');
+                } else {
+                    resultsDiv.innerHTML = '<div class="search-result-item">❌ No places found</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div class="search-result-item">❌ Error searching places</div>';
+                console.error('Places search error:', error);
+            }
+        }
+
+        async function searchFranchises() {
+            const query = document.getElementById('franchiseSearch').value.trim();
+            const location = document.getElementById('franchiseSearchLocation').value.trim();
+            if (!query) return;
+
+            const resultsDiv = document.getElementById('franchiseSearchResults');
+            resultsDiv.innerHTML = '<div class="search-result-item">🔍 Searching...</div>';
+
+            try {
+                const url = `${API_URL}/search/franchises?query=${encodeURIComponent(query)}${location ? `&location=${encodeURIComponent(location)}` : ''}`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.franchises && data.franchises.length > 0) {
+                    resultsDiv.innerHTML = data.franchises.map(franchise => 
+                        `<div class="search-result-item">🏆 ${franchise.title || franchise.name}</div>`
+                    ).join('');
+                } else {
+                    resultsDiv.innerHTML = '<div class="search-result-item">❌ No franchises found</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div class="search-result-item">❌ Error searching franchises</div>';
+                console.error('Franchise search error:', error);
+            }
         }
 
         // Check bot status

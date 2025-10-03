@@ -394,6 +394,67 @@ async def get_sessions():
         "total_sessions": len(bot_state.sessions)
     }
 
+@app.get("/search/business-types")
+async def search_business_types_endpoint(query: str):
+    """Search business types by keyword"""
+    try:
+        matching_types = search_business_types(query)
+        return {
+            "query": query,
+            "matches": matching_types,
+            "total_matches": len(matching_types)
+        }
+    except Exception as e:
+        logger.error(f"❌ Error searching business types: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/search/addresses")
+async def search_addresses(query: str):
+    """Search addresses using Mapbox autocomplete"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.search_address_autocomplete(query)
+            return {
+                "query": query,
+                "suggestions": result.get("suggestions", []),
+                "total_suggestions": len(result.get("suggestions", []))
+            }
+    except Exception as e:
+        logger.error(f"❌ Error searching addresses: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/search/places")
+async def search_places(query: str, location: str = "United States"):
+    """Search for places using Google Places API"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.search_places(query, location)
+            return {
+                "query": query,
+                "location": location,
+                "places": result.get("businesses", []),
+                "total_results": len(result.get("businesses", []))
+            }
+    except Exception as e:
+        logger.error(f"❌ Error searching places: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/search/franchises")
+async def search_franchises(query: str, location: str = "United States"):
+    """Search for franchise opportunities using SerpAPI"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.search_franchise_opportunities(query, location)
+            return {
+                "query": query,
+                "location": location,
+                "franchises": result.get("search_results", []),
+                "total_results": len(result.get("search_results", []))
+            }
+    except Exception as e:
+        logger.error(f"❌ Error searching franchises: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
     logger.info("🚀 Starting D.E.L.T.A Lightweight Franchise Intelligence Bot...")
     logger.info(f"🤖 Bot will be available at: http://0.0.0.0:{BOT_PORT}")

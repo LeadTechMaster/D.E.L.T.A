@@ -644,6 +644,39 @@
         <p>✅ Real Data Only | 🚫 No Mock Data | 🚫 No Demo Data | 🚫 No Fallback Data | 🚫 No Hardcoded Data</p>
     </div>
 
+    <!-- Quick Search Section -->
+    <div class="search-section">
+        <h2>🔍 Quick Search & Analysis</h2>
+        <div class="search-grid">
+            <div class="search-box">
+                <h4>🏢 Business Type Search</h4>
+                <input type="text" id="businessSearch" placeholder="e.g., coffee shop, pizza, gym" onkeypress="handleBusinessSearch(event)">
+                <button class="btn" onclick="searchBusinessTypes()">Search Business Types</button>
+                <div id="businessSearchResults" class="search-results"></div>
+            </div>
+            <div class="search-box">
+                <h4>📍 Address Search</h4>
+                <input type="text" id="addressSearch" placeholder="e.g., Miami, FL or 123 Main St" onkeypress="handleAddressSearch(event)">
+                <button class="btn" onclick="searchAddresses()">Search Addresses</button>
+                <div id="addressSearchResults" class="search-results"></div>
+            </div>
+            <div class="search-box">
+                <h4>🏪 Places Search</h4>
+                <input type="text" id="placesSearch" placeholder="e.g., restaurants, gas stations" onkeypress="handlePlacesSearch(event)">
+                <input type="text" id="placesSearchLocation" placeholder="Location (e.g., Miami, FL)">
+                <button class="btn" onclick="searchPlaces()">Search Places</button>
+                <div id="placesSearchResults" class="search-results"></div>
+            </div>
+            <div class="search-box">
+                <h4>🏆 Franchise Search</h4>
+                <input type="text" id="franchiseSearch" placeholder="e.g., fast food, retail" onkeypress="handleFranchiseSearch(event)">
+                <input type="text" id="franchiseSearchLocation" placeholder="Location (e.g., Miami, FL)">
+                <button class="btn" onclick="searchFranchises()">Search Franchises</button>
+                <div id="franchiseSearchResults" class="search-results"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Interactive Map -->
     <div class="map-container" id="map"></div>
     <div class="map-controls">
