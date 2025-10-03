@@ -878,6 +878,39 @@
             display: block;
             margin-top: 5px;
         }
+
+        /* Advanced Examples Section */
+        .advanced-examples {
+            margin-top: 25px;
+        }
+
+        .advanced-examples h4 {
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+
+        .example-commands {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .example-btn {
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            border: none;
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85em;
+        }
+
+        .example-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+        }
         
         .status-indicator {
             display: inline-block;
@@ -1017,7 +1050,7 @@
                         </div>
                         
                         <div class="keyword-features">
-                            <h4>Keyword Features Available:</h4>
+                            <h4>Advanced Features Available:</h4>
                             <div class="feature-grid">
                                 <div class="feature-item">
                                     <strong>🔍 Keyword Research:</strong><br>
@@ -1025,9 +1058,14 @@
                                     <small>Analyzes keyword volume, competition, and trends</small>
                                 </div>
                                 <div class="feature-item">
-                                    <strong>💡 Keyword Autocomplete:</strong><br>
-                                    <code>/keywords autocomplete [keyword]</code><br>
-                                    <small>Gets related keyword suggestions</small>
+                                    <strong>🗺️ Keyword Heatmaps:</strong><br>
+                                    <code>/heatmap [keyword] [geo_level]</code><br>
+                                    <small>Green/Yellow/Red regions with trend arrows</small>
+                                </div>
+                                <div class="feature-item">
+                                    <strong>🏗️ Territory Builder:</strong><br>
+                                    <code>/territory [business_type] [location]</code><br>
+                                    <small>MCI scoring and territory proposals</small>
                                 </div>
                                 <div class="feature-item">
                                     <strong>📈 Keyword Trends:</strong><br>
@@ -1035,10 +1073,27 @@
                                     <small>Shows keyword trend analysis over time</small>
                                 </div>
                                 <div class="feature-item">
+                                    <strong>💡 Keyword Autocomplete:</strong><br>
+                                    <code>/keywords autocomplete [keyword]</code><br>
+                                    <small>Gets related keyword suggestions</small>
+                                </div>
+                                <div class="feature-item">
                                     <strong>🎯 Business Type Search:</strong><br>
                                     <code>/search business [type]</code><br>
                                     <small>Finds matching business categories</small>
                                 </div>
+                            </div>
+                        </div>
+                        
+                        <div class="advanced-examples">
+                            <h4>🚀 Advanced Examples:</h4>
+                            <div class="example-commands">
+                                <button onclick="insertCommand('/heatmap plumber city')" class="example-btn">🗺️ Plumber Heatmap</button>
+                                <button onclick="insertCommand('/territory lawyer chicago')" class="example-btn">🏗️ Lawyer Territory</button>
+                                <button onclick="insertCommand('/heatmap dentist state')" class="example-btn">🗺️ Dentist Heatmap</button>
+                                <button onclick="insertCommand('/territory roofer miami')" class="example-btn">🏗️ Roofer Territory</button>
+                                <button onclick="insertCommand('/heatmap hvac country')" class="example-btn">🗺️ HVAC Heatmap</button>
+                                <button onclick="insertCommand('/territory contractor seattle')" class="example-btn">🏗️ Contractor Territory</button>
                             </div>
                         </div>
                     </div>

@@ -216,6 +216,14 @@ class SmartFranchiseBot:
         if message_lower.startswith("/keywords"):
             return await self.parse_keyword_commands(message)
         
+        # Check for heatmap commands
+        if message_lower.startswith("/heatmap"):
+            return await self.parse_heatmap_commands(message)
+        
+        # Check for territory builder commands
+        if message_lower.startswith("/territory"):
+            return await self.parse_territory_commands(message)
+        
         # Use smart context analyzer
         context_analysis = smart_context_analyzer.analyze_context(message)
         logger.info(f"🧠 Smart context analysis: {context_analysis.intent}")
@@ -311,6 +319,50 @@ class SmartFranchiseBot:
             "keyword_query": keyword_query
         }
     
+    async def parse_heatmap_commands(self, message: str) -> Dict[str, Any]:
+        """Parse heatmap commands"""
+        heatmap_parts = message.replace("/heatmap", "").strip().split()
+        
+        if len(heatmap_parts) < 2:
+            return {
+                "original_message": message,
+                "intent": "heatmap_help",
+                "keyword": None,
+                "geo_level": None
+            }
+        
+        keyword = heatmap_parts[0]
+        geo_level = heatmap_parts[1] if len(heatmap_parts) > 1 else "city"
+        
+        return {
+            "original_message": message,
+            "intent": "heatmap_analysis",
+            "keyword": keyword,
+            "geo_level": geo_level
+        }
+    
+    async def parse_territory_commands(self, message: str) -> Dict[str, Any]:
+        """Parse territory builder commands"""
+        territory_parts = message.replace("/territory", "").strip().split()
+        
+        if len(territory_parts) < 2:
+            return {
+                "original_message": message,
+                "intent": "territory_help",
+                "business_type": None,
+                "location": None
+            }
+        
+        business_type = territory_parts[0]
+        location = " ".join(territory_parts[1:]) if len(territory_parts) > 1 else "United States"
+        
+        return {
+            "original_message": message,
+            "intent": "territory_builder",
+            "business_type": business_type,
+            "location": location
+        }
+    
     async def generate_smart_response(self, parsed: Dict[str, Any], session: Dict[str, Any], session_id: str) -> Dict[str, Any]:
         """Generate response with smart AI features"""
         intent = parsed.get("intent")
@@ -326,6 +378,22 @@ class SmartFranchiseBot:
         # Handle keyword help
         if intent == "keyword_help":
             return await self.handle_keyword_help(parsed, session)
+        
+        # Handle heatmap analysis
+        if intent == "heatmap_analysis":
+            return await self.handle_heatmap_analysis(parsed, session)
+        
+        # Handle heatmap help
+        if intent == "heatmap_help":
+            return await self.handle_heatmap_help(parsed, session)
+        
+        # Handle territory builder
+        if intent == "territory_builder":
+            return await self.handle_territory_builder(parsed, session)
+        
+        # Handle territory help
+        if intent == "territory_help":
+            return await self.handle_territory_help(parsed, session)
         
         # Handle greeting with smart response generator
         if intent == "greeting":
@@ -798,6 +866,217 @@ class SmartFranchiseBot:
             ]
         }
     
+    async def handle_heatmap_analysis(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle heatmap analysis commands"""
+        keyword = parsed.get("keyword")
+        geo_level = parsed.get("geo_level", "city")
+        
+        if not keyword:
+            return {
+                "response": """🗺️ **Keyword Heatmap Analysis Commands**\n\n**Usage:** `/heatmap [keyword] [geo_level]`\n\n**Available geo levels:**\n• `city` - City-level analysis (default)\n• `state` - State-level analysis\n• `country` - Country-level analysis\n\n**Examples:**\n• `/heatmap plumber city` - City-level plumber keyword heatmap\n• `/heatmap lawyer state` - State-level lawyer keyword heatmap\n• `/heatmap dentist country` - Country-level dentist keyword heatmap\n\n**What You Get:**\n🟢 **Green Regions** - High opportunity (final_score ≥ 0.66)\n🟡 **Yellow Regions** - Medium opportunity (0.33 ≤ final_score < 0.66)\n🔴 **Red Regions** - Low opportunity (final_score < 0.33)\n\n**Features:**\n• National baseline volume comparison\n• Trend analysis with arrows (↑/→/↓)\n• Intent grouping (Green/Yellow/Red)\n• Relative share calculations\n• Quality scoring per region""",
+                "intent": "heatmap_help_complete",
+                "next_questions": ["Try `/heatmap [your_keyword] city` for detailed analysis"]
+            }
+        
+        try:
+            async with DeltaAPIClient() as api_client:
+                result = await api_client.keyword_heatmap_analysis(keyword, geo_level)
+                
+                if result.get("status") == "success":
+                    response = f"🗺️ **Keyword Heatmap Analysis: '{keyword}' at {geo_level} level**\n\n"
+                    response += f"📊 **National Baseline:** {result.get('national_baseline', 0):,} total volume\n"
+                    
+                    summary = result.get("heatmap_summary", {})
+                    response += f"🎯 **Regional Breakdown:**\n"
+                    response += f"• 🟢 Green Regions: {summary.get('green_regions', 0)} (High opportunity)\n"
+                    response += f"• 🟡 Yellow Regions: {summary.get('yellow_regions', 0)} (Medium opportunity)\n"
+                    response += f"• 🔴 Red Regions: {summary.get('red_regions', 0)} (Low opportunity)\n\n"
+                    
+                    regions = result.get("regions", {})
+                    if regions:
+                        response += f"🏆 **Top Performing Regions:**\n"
+                        for i, (region_name, region_data) in enumerate(list(regions.items())[:5], 1):
+                            color_emoji = "🟢" if region_data["color"] == "green" else "🟡" if region_data["color"] == "yellow" else "🔴"
+                            response += f"{i}. {color_emoji} **{region_name}**\n"
+                            response += f"   📊 Volume: {region_data['volume']:,} | Score: {region_data['final_score']:.2f}\n"
+                            response += f"   📈 Trend: {region_data['trend_arrow']} | Competition: {region_data['competition']}\n\n"
+                    
+                    response += "💡 **Heatmap Features:**\n"
+                    response += "• Real-time keyword volume data from Google Trends\n"
+                    response += "• Competition analysis per region\n"
+                    response += "• Trend arrows showing growth direction\n"
+                    response += "• Intent grouping with Green/Yellow/Red scoring\n"
+                    response += "• National baseline comparison for relative scoring\n"
+                    
+                    return {
+                        "response": response,
+                        "intent": "heatmap_analysis_complete",
+                        "next_questions": [
+                            "Try `/territory [business_type] [location]` for territory analysis",
+                            "Use `/keywords research [keyword] [location]` for detailed keyword research"
+                        ]
+                    }
+                else:
+                    return {
+                        "response": f"❌ Error generating heatmap: {result.get('message', 'Unknown error')}",
+                        "intent": "heatmap_error",
+                        "next_questions": ["Try a different keyword or geo level"]
+                    }
+        
+        except Exception as e:
+            logger.error(f"❌ Heatmap analysis error: {e}")
+            return {
+                "response": f"❌ Error performing heatmap analysis: {str(e)}",
+                "intent": "heatmap_error",
+                "next_questions": ["Try again with a simpler keyword query"]
+            }
+    
+    async def handle_heatmap_help(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle heatmap help command"""
+        return {
+            "response": """🗺️ **Keyword Heatmap Analysis - Advanced Feature!**
+
+**Available Commands:**
+• `/heatmap [keyword] [geo_level]` - Generate keyword heatmap analysis
+
+**Geo Levels:**
+• `city` - City-level analysis (default)
+• `state` - State-level analysis  
+• `country` - Country-level analysis
+
+**Examples:**
+• `/heatmap plumber city` - City-level plumber keyword heatmap
+• `/heatmap lawyer state` - State-level lawyer keyword heatmap
+• `/heatmap dentist country` - Country-level dentist keyword heatmap
+
+**What You Get:**
+🟢 **Green Regions** - High opportunity (final_score ≥ 0.66)
+🟡 **Yellow Regions** - Medium opportunity (0.33 ≤ final_score < 0.66)  
+🔴 **Red Regions** - Low opportunity (final_score < 0.33)
+
+**Advanced Features:**
+📊 **National Baseline Comparison** - All volumes relative to national total
+📈 **Trend Analysis** - Arrows showing growth direction (↑/→/↓)
+🎯 **Intent Grouping** - Green/Yellow/Red keyword categorization
+📊 **Quality Scoring** - Multi-factor scoring per region
+🔍 **Real Data Only** - No mock data, all from Google Trends API
+
+**Perfect for Service Businesses:** Visualize keyword opportunity across regions!""",
+            "intent": "heatmap_help_complete",
+            "next_questions": [
+                "Try `/heatmap [your_keyword] city` for detailed analysis",
+                "Use `/territory [business_type] [location]` for territory analysis"
+            ]
+        }
+    
+    async def handle_territory_builder(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle territory builder analysis commands"""
+        business_type = parsed.get("business_type")
+        location = parsed.get("location")
+        
+        if not business_type:
+            return {
+                "response": """🏗️ **Territory Builder Analysis Commands**\n\n**Usage:** `/territory [business_type] [location]`\n\n**Examples:**\n• `/territory plumber miami` - Analyze plumber territories in Miami\n• `/territory lawyer chicago` - Analyze lawyer territories in Chicago\n• `/territory dentist seattle` - Analyze dentist territories in Seattle\n\n**What You Get:**\n🏆 **Market Competitiveness Index (MCI 0-100)**\n🎯 **Territory Proposals (2-4 locations)**\n📊 **Competitor Analysis**\n💰 **Investment Recommendations**\n📈 **ROI Predictions**\n⚠️ **Risk Assessment**\n\n**MCI Components:**\n• Competition density (20%)\n• Average reviews (10%)\n• Rating distribution (15%)\n• Ad presence (15%)\n• Demographic fit (20%)\n• Keyword score (20%)""",
+                "intent": "territory_help_complete",
+                "next_questions": ["Try `/territory [your_business_type] [your_city]` for analysis"]
+            }
+        
+        try:
+            async with DeltaAPIClient() as api_client:
+                result = await api_client.territory_builder_analysis(business_type, location)
+                
+                if result.get("status") == "success":
+                    response = f"🏗️ **Territory Builder Analysis: '{business_type}' in {location}**\n\n"
+                    
+                    market_summary = result.get("market_summary", {})
+                    response += f"📊 **Market Summary:**\n"
+                    response += f"• Total Competitors: {market_summary.get('total_competitors', 0)}\n"
+                    response += f"• Average MCI: {market_summary.get('average_mci', 0):.1f}/100\n"
+                    response += f"• Highest MCI: {market_summary.get('highest_mci', 0):.1f}/100\n"
+                    response += f"• Lowest MCI: {market_summary.get('lowest_mci', 0):.1f}/100\n\n"
+                    
+                    proposals = result.get("territory_proposals", [])
+                    if proposals:
+                        response += f"🎯 **Territory Proposals (Top {len(proposals)} locations):**\n"
+                        for proposal in proposals:
+                            response += f"\n**Proposal {proposal['proposal_id']}: {proposal['location']}**\n"
+                            response += f"🏆 MCI Score: {proposal['mci_score']}/100\n"
+                            response += f"💡 Recommendation: {proposal['recommendation']}\n"
+                            response += f"💰 Investment: {proposal['investment_required']}\n"
+                            response += f"📈 Expected ROI: {proposal['expected_roi']}\n"
+                            response += f"⚠️ Risk Level: {proposal['risk_level']}\n"
+                            response += f"📝 Reasoning: {proposal['reasoning']}\n"
+                    
+                    response += "\n💡 **Territory Builder Features:**\n"
+                    response += "• Real competitor data from Google Places API\n"
+                    response += "• Market Competitiveness Index (MCI 0-100)\n"
+                    response += "• Competition density analysis\n"
+                    response += "• Investment and ROI recommendations\n"
+                    response += "• Risk assessment per territory\n"
+                    response += "• 2-4 optimal location proposals\n"
+                    
+                    return {
+                        "response": response,
+                        "intent": "territory_builder_complete",
+                        "next_questions": [
+                            "Try `/heatmap [keyword] [geo_level]` for keyword heatmap analysis",
+                            "Use `/keywords research [keyword] [location]` for keyword research"
+                        ]
+                    }
+                else:
+                    return {
+                        "response": f"❌ Error performing territory analysis: {result.get('message', 'Unknown error')}",
+                        "intent": "territory_error",
+                        "next_questions": ["Try a different business type or location"]
+                    }
+        
+        except Exception as e:
+            logger.error(f"❌ Territory builder error: {e}")
+            return {
+                "response": f"❌ Error performing territory builder analysis: {str(e)}",
+                "intent": "territory_error",
+                "next_questions": ["Try again with a simpler business type query"]
+            }
+    
+    async def handle_territory_help(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle territory builder help command"""
+        return {
+            "response": """🏗️ **Territory Builder Analysis - Advanced Feature!**
+
+**Available Commands:**
+• `/territory [business_type] [location]` - Perform territory builder analysis
+
+**Examples:**
+• `/territory plumber miami` - Analyze plumber territories in Miami
+• `/territory lawyer chicago` - Analyze lawyer territories in Chicago
+• `/territory dentist seattle` - Analyze dentist territories in Seattle
+• `/territory roofer phoenix` - Analyze roofer territories in Phoenix
+• `/territory hvac atlanta` - Analyze HVAC territories in Atlanta
+
+**What You Get:**
+🏆 **Market Competitiveness Index (MCI 0-100)**
+🎯 **Territory Proposals (2-4 optimal locations)**
+📊 **Real Competitor Analysis**
+💰 **Investment Recommendations**
+📈 **ROI Predictions**
+⚠️ **Risk Assessment**
+
+**MCI Calculation (0-100):**
+• Competition Density (20%) - How many competitors nearby
+• Average Reviews (10%) - Review volume analysis
+• Rating Distribution (15%) - Customer satisfaction scores
+• Ad Presence (15%) - Marketing activity detection
+• Demographic Fit (20%) - Market suitability
+• Keyword Score (20%) - Search demand analysis
+
+**Perfect for Franchise Development and Market Entry!**""",
+            "intent": "territory_help_complete",
+            "next_questions": [
+                "Try `/territory [your_business_type] [your_city]` for analysis",
+                "Use `/heatmap [keyword] [geo_level]` for keyword heatmap analysis"
+            ]
+        }
+    
     async def perform_market_analysis(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
         """Perform comprehensive market analysis with smart features"""
         business_type = parsed.get("detected_business")
@@ -1043,6 +1322,28 @@ async def search_franchises(query: str, location: str = "United States"):
             }
     except Exception as e:
         logger.error(f"❌ Error searching franchises: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/keywords/heatmap")
+async def keyword_heatmap_endpoint(keyword: str, geo_level: str = "city"):
+    """Generate keyword heatmap with Green/Yellow/Red regions"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.keyword_heatmap_analysis(keyword, geo_level)
+            return result
+    except Exception as e:
+        logger.error(f"❌ Error generating keyword heatmap: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/territory/builder")
+async def territory_builder_endpoint(business_type: str, location: str = "United States"):
+    """Perform territory builder analysis with MCI scoring"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.territory_builder_analysis(business_type, location)
+            return result
+    except Exception as e:
+        logger.error(f"❌ Error performing territory builder analysis: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # Keyword Research Endpoints
