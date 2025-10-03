@@ -3804,6 +3804,19 @@
         "user_satisfaction": null,
         "follow_up_needed": false
       }
+    ],
+    "test_smart_123": [
+      {
+        "turn_id": "01ca762b-c0da-47a5-80b8-d642afd5ffa6",
+        "timestamp": "2025-10-03 06:14:42.441494",
+        "user_message": "/search business coffee shop",
+        "bot_response": "\u2753 **Unknown Command**\n\nI don't recognize the command '/search business coffee shop'\n\n**Available Commands:**\n\u2022 `/help` - Show all commands\n\u2022 `/address [term]` - Search addresses\n\u2022 `/business [type]` - Search business types\n\u2022 `/analyze` - Start market analysis\n\u2022 `/status` - Check session status",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": null,
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
     ]
   },
   "user_profiles": {
@@ -4076,12 +4089,22 @@
       "experience_level": "experienced",
       "communication_style": "formal",
       "last_interaction": "2025-10-02 01:35:16.375754"
+    },
+    "test_smart_123": {
+      "user_id": "test_smart_123",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-03 06:14:42.441542"
     }
   },
   "global_insights": {
     "common_patterns": {
-      "unknown_False_False": 28
+      "unknown_False_False": 29
     }
   },
-  "last_updated": "2025-10-02T01:35:16.376346"
+  "last_updated": "2025-10-03T06:14:42.442305"
 }

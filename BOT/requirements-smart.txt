@@ -1,0 +1,21 @@
+# Smart Optimized Requirements - Full AI features with memory optimization
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+httpx==0.25.2
+python-dotenv==1.0.0
+gunicorn==21.2.0
+
+# Smart AI Features (optimized versions) - using more compatible versions
+transformers>=4.35.0
+torch>=2.6.0
+numpy>=1.26.0
+scikit-learn>=1.3.0
+
+# Enhanced functionality
+fuzzywuzzy>=0.18.0
+python-levenshtein>=0.23.0
+
+# Optional: Remove heavy dependencies that aren't critical
+# tokenizers<0.19,>=0.14  # Already included with transformers
+# huggingface-hub<1.0,>=0.16.4  # Already included with transformers

@@ -143,6 +143,11 @@ class LightweightFranchiseBot:
             }
         
         elif intent == "business_inquiry":
+            # Check for enhanced search commands
+            message_lower = parsed["original_message"].lower()
+            if message_lower.startswith("/search"):
+                return await self.handle_enhanced_search(parsed, session)
+            
             if detected_business and detected_location:
                 logger.info("🎯 Both business and location detected, calling perform_market_analysis...")
                 session["analysis_data"] = {
@@ -289,6 +294,134 @@ class LightweightFranchiseBot:
         summary += "✅ **Analysis completed using lightweight intelligence system**"
         
         return summary
+    
+    async def handle_enhanced_search(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle enhanced search commands like /search business coffee, /search address miami"""
+        message = parsed["original_message"]
+        search_parts = message.replace("/search", "").strip().split()
+        
+        if len(search_parts) < 2:
+            return {
+                "response": """🔍 **Enhanced Search Commands**\n\n**Usage:** `/search [type] [query]`\n\n**Available search types:**\n• `/search business [business_type]` - Search business types\n• `/search address [location]` - Search addresses\n• `/search places [business_type] in [location]` - Search places\n• `/search franchises [business_type] in [location]` - Search franchises\n\n**Examples:**\n• `/search business coffee shop`\n• `/search address Miami, FL`\n• `/search places restaurants in Seattle`\n• `/search franchises fast food in Miami`""",
+                "next_step": "search_help",
+                "next_questions": ["Try `/search business coffee` or `/search address Miami`"]
+            }
+        
+        search_type = search_parts[0].lower()
+        search_query = " ".join(search_parts[1:])
+        
+        try:
+            if search_type == "business":
+                # Search business types
+                matching_types = search_business_types(search_query)
+                if matching_types:
+                    response = f"🏢 **Business Type Search Results for '{search_query}':**\n\n"
+                    for i, business_type in enumerate(matching_types[:5], 1):
+                        response += f"{i}. **{business_type.title()}**\n"
+                    response += f"\n💡 Found {len(matching_types)} matching business types!"
+                else:
+                    response = f"❌ No business types found matching '{search_query}'"
+                
+                return {
+                    "response": response,
+                    "next_step": "business_search_complete",
+                    "next_questions": ["Try `/search places [business_type] in [location]` to find actual businesses"]
+                }
+            
+            elif search_type == "address":
+                # Search addresses using API
+                async with DeltaAPIClient() as api_client:
+                    result = await api_client.search_address_autocomplete(search_query)
+                    suggestions = result.get("suggestions", [])
+                    
+                    if suggestions:
+                        response = f"📍 **Address Search Results for '{search_query}':**\n\n"
+                        for i, suggestion in enumerate(suggestions[:5], 1):
+                            response += f"{i}. **{suggestion.get('text', 'N/A')}**\n"
+                        response += f"\n💡 Found {len(suggestions)} address suggestions!"
+                    else:
+                        response = f"❌ No addresses found for '{search_query}'"
+                    
+                    return {
+                        "response": response,
+                        "next_step": "address_search_complete",
+                        "next_questions": ["Try `/search places [business_type] in [location]` to find businesses in this area"]
+                    }
+            
+            elif search_type == "places":
+                # Parse places search: "restaurants in miami" or "coffee shops in seattle"
+                if " in " in search_query:
+                    business_query, location = search_query.split(" in ", 1)
+                    business_query = business_query.strip()
+                    location = location.strip()
+                else:
+                    business_query = search_query
+                    location = "United States"
+                
+                async with DeltaAPIClient() as api_client:
+                    result = await api_client.search_places(business_query, location)
+                    places = result.get("businesses", [])
+                    
+                    if places:
+                        response = f"🏪 **Places Search Results for '{business_query}' in {location}:**\n\n"
+                        for i, place in enumerate(places[:5], 1):
+                            response += f"{i}. **{place.get('name', 'N/A')}**\n"
+                            response += f"   📍 {place.get('address', 'N/A')}\n"
+                            response += f"   ⭐ {place.get('rating', 'N/A')}/5 ({place.get('user_ratings_total', 0)} reviews)\n\n"
+                        response += f"💡 Found {len(places)} places!"
+                    else:
+                        response = f"❌ No places found for '{business_query}' in {location}"
+                    
+                    return {
+                        "response": response,
+                        "next_step": "places_search_complete",
+                        "next_questions": ["Try `/search franchises [business_type] in [location]` for franchise opportunities"]
+                    }
+            
+            elif search_type == "franchises":
+                # Parse franchise search: "fast food in miami" or "retail in seattle"
+                if " in " in search_query:
+                    business_query, location = search_query.split(" in ", 1)
+                    business_query = business_query.strip()
+                    location = location.strip()
+                else:
+                    business_query = search_query
+                    location = "United States"
+                
+                async with DeltaAPIClient() as api_client:
+                    result = await api_client.search_franchise_opportunities(f"{business_query} franchise", location)
+                    franchises = result.get("search_results", [])
+                    
+                    if franchises:
+                        response = f"🏆 **Franchise Search Results for '{business_query}' in {location}:**\n\n"
+                        for i, franchise in enumerate(franchises[:5], 1):
+                            response += f"{i}. **{franchise.get('title', 'N/A')}**\n"
+                            response += f"   📝 {franchise.get('snippet', 'N/A')[:100]}...\n"
+                            response += f"   🔗 {franchise.get('link', 'N/A')}\n\n"
+                        response += f"💡 Found {len(franchises)} franchise opportunities!"
+                    else:
+                        response = f"❌ No franchise opportunities found for '{business_query}' in {location}"
+                    
+                    return {
+                        "response": response,
+                        "next_step": "franchise_search_complete",
+                        "next_questions": ["Try `/search business [business_type]` to explore more business types"]
+                    }
+            
+            else:
+                return {
+                    "response": f"❌ Unknown search type '{search_type}'. Available types: business, address, places, franchises",
+                    "next_step": "search_error",
+                    "next_questions": ["Try `/search business coffee` or `/search address Miami`"]
+                }
+        
+        except Exception as e:
+            logger.error(f"❌ Enhanced search error: {e}")
+            return {
+                "response": f"❌ Error performing search: {str(e)}",
+                "next_step": "search_error",
+                "next_questions": ["Try again with a simpler search query"]
+            }
     
     async def save_analysis_results(self, analysis_results: Dict[str, Any]):
         """Save analysis results to JSON file"""
