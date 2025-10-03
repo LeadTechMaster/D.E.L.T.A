@@ -42,10 +42,23 @@ This will automatically deploy:
 
 **Environment Variables:**
 ```
+# Core API Keys
 MAPBOX_ACCESS_TOKEN=your_mapbox_token
+NEXT_PUBLIC_MAPBOX_TOKEN=your_mapbox_token
 GOOGLE_PLACES_API_KEY=your_google_places_key
 SERPAPI_API_KEY=your_serpapi_key
 CENSUS_API_KEY=your_census_key
+
+# Advanced API Keys
+META_ADS_ACCESS_TOKEN=your_meta_ads_token
+META_ADS_APP_TOKEN=your_meta_ads_app_token
+BRIGHTLOCAL_API_KEY=your_brightlocal_key
+
+# Google OAuth
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+# System
 PYTHON_VERSION=3.11.0
 ```
 
@@ -80,10 +93,13 @@ REACT_APP_API_URL=https://delta-backend-api.onrender.com
 
 You'll need to obtain API keys from these services:
 
-1. **Mapbox** (Geocoding): https://www.mapbox.com/
-2. **Google Places API** (Business data): https://console.cloud.google.com/
-3. **SerpAPI** (Franchise search): https://serpapi.com/
-4. **US Census API** (Demographics): https://api.census.gov/
+1. **Mapbox** (Interactive maps, geocoding, routing): https://www.mapbox.com/
+2. **Google Places API** (Business listings, reviews, photos): https://console.cloud.google.com/
+3. **SerpAPI** (Google search results, trends, local businesses): https://serpapi.com/
+4. **US Census API** (Population demographics, economic data): https://api.census.gov/
+5. **Meta Ads Library** (Facebook/Instagram ad data, competitor analysis): https://developers.facebook.com/
+6. **Brightlocal API** (Local SEO data, citations, reviews): https://www.brightlocal.com/
+7. **Google OAuth** (Authentication and user data): https://console.cloud.google.com/
 
 ## Deployment URLs
 
