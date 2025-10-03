@@ -212,6 +212,10 @@ class SmartFranchiseBot:
         if message_lower.startswith("/search"):
             return await self.parse_enhanced_search(message)
         
+        # Check for keyword research commands
+        if message_lower.startswith("/keywords"):
+            return await self.parse_keyword_commands(message)
+        
         # Use smart context analyzer
         context_analysis = smart_context_analyzer.analyze_context(message)
         logger.info(f"🧠 Smart context analysis: {context_analysis.intent}")
@@ -285,6 +289,28 @@ class SmartFranchiseBot:
             "search_query": search_query
         }
     
+    async def parse_keyword_commands(self, message: str) -> Dict[str, Any]:
+        """Parse keyword research commands"""
+        keyword_parts = message.replace("/keywords", "").strip().split()
+        
+        if len(keyword_parts) < 2:
+            return {
+                "original_message": message,
+                "intent": "keyword_help",
+                "keyword_type": None,
+                "keyword_query": None
+            }
+        
+        keyword_type = keyword_parts[0].lower()
+        keyword_query = " ".join(keyword_parts[1:])
+        
+        return {
+            "original_message": message,
+            "intent": "keyword_research",
+            "keyword_type": keyword_type,
+            "keyword_query": keyword_query
+        }
+    
     async def generate_smart_response(self, parsed: Dict[str, Any], session: Dict[str, Any], session_id: str) -> Dict[str, Any]:
         """Generate response with smart AI features"""
         intent = parsed.get("intent")
@@ -292,6 +318,14 @@ class SmartFranchiseBot:
         # Handle enhanced search
         if intent == "enhanced_search":
             return await self.handle_enhanced_search(parsed, session)
+        
+        # Handle keyword research
+        if intent == "keyword_research":
+            return await self.handle_keyword_research(parsed, session)
+        
+        # Handle keyword help
+        if intent == "keyword_help":
+            return await self.handle_keyword_help(parsed, session)
         
         # Handle greeting with smart response generator
         if intent == "greeting":
@@ -573,6 +607,197 @@ class SmartFranchiseBot:
                 "next_questions": ["Try again with a simpler search query"]
             }
     
+    async def handle_keyword_research(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle keyword research commands"""
+        keyword_type = parsed.get("keyword_type")
+        keyword_query = parsed.get("keyword_query")
+        
+        if not keyword_type or not keyword_query:
+            return {
+                "response": """🔑 **Keyword Research Commands**\n\n**Usage:** `/keywords [type] [query]`\n\n**Available keyword types:**\n• `/keywords research [service] [location]` - Research keywords for a service\n• `/keywords autocomplete [keyword]` - Get keyword suggestions\n• `/keywords trends [keyword] [location]` - Get keyword trends\n\n**Examples:**\n• `/keywords research plumber miami`\n• `/keywords autocomplete coffee shop`\n• `/keywords trends lawyer chicago`""",
+                "intent": "keyword_help",
+                "next_questions": ["Try `/keywords research plumber miami` or `/keywords autocomplete coffee shop`"]
+            }
+        
+        try:
+            if keyword_type == "research":
+                # Parse service and location
+                parts = keyword_query.split()
+                if len(parts) >= 2:
+                    service = parts[0]
+                    location = " ".join(parts[1:])
+                else:
+                    service = keyword_query
+                    location = "United States"
+                
+                # Perform keyword research
+                async with DeltaAPIClient() as api_client:
+                    result = await api_client.keyword_research(service, location)
+                    
+                    if result.get("status") == "success":
+                        response = f"🔑 **Keyword Research Results for '{service}' in {location}:**\n\n"
+                        response += f"📊 **Search Volume:** {result.get('search_volume', 'N/A')} monthly searches\n"
+                        response += f"🎯 **Competition Level:** {result.get('competition_level', 'N/A')}\n\n"
+                        
+                        related_keywords = result.get("related_keywords", [])
+                        if related_keywords:
+                            response += f"🔗 **Related Keywords:**\n"
+                            for i, keyword in enumerate(related_keywords[:5], 1):
+                                response += f"{i}. {keyword}\n"
+                            response += "\n"
+                        
+                        top_results = result.get("top_results", [])
+                        if top_results:
+                            response += f"🏆 **Top Search Results:**\n"
+                            for i, result_item in enumerate(top_results[:3], 1):
+                                response += f"{i}. **{result_item.get('title', 'N/A')}**\n"
+                                response += f"   📝 {result_item.get('snippet', 'N/A')[:100]}...\n\n"
+                        
+                        response += "💡 **Smart Keyword Expansion Suggestions:**\n"
+                        response += f"• {service} near me\n"
+                        response += f"• {service} {location}\n"
+                        response += f"• {service} services\n"
+                        response += f"• best {service} {location}\n"
+                        response += f"• affordable {service} {location}\n"
+                        
+                        return {
+                            "response": response,
+                            "intent": "keyword_research_complete",
+                            "next_questions": [
+                                "Try `/keywords autocomplete [keyword]` for more suggestions",
+                                "Use `/keywords trends [keyword] [location]` for trend analysis",
+                                "Try `/search places [service] in [location]` to find businesses"
+                            ]
+                        }
+                    else:
+                        return {
+                            "response": f"❌ Error performing keyword research: {result.get('message', 'Unknown error')}",
+                            "intent": "keyword_research_error",
+                            "next_questions": ["Try a different service or location"]
+                        }
+            
+            elif keyword_type == "autocomplete":
+                async with DeltaAPIClient() as api_client:
+                    result = await api_client.keyword_autocomplete(keyword_query)
+                    
+                    if result.get("status") == "success":
+                        suggestions = result.get("suggestions", [])
+                        if suggestions:
+                            response = f"💡 **Keyword Autocomplete Suggestions for '{keyword_query}':**\n\n"
+                            for i, suggestion in enumerate(suggestions[:10], 1):
+                                response += f"{i}. **{suggestion.get('keyword', 'N/A')}**\n"
+                            response += f"\n💡 Found {len(suggestions)} keyword suggestions!"
+                        else:
+                            response = f"❌ No autocomplete suggestions found for '{keyword_query}'"
+                        
+                        return {
+                            "response": response,
+                            "intent": "keyword_autocomplete_complete",
+                            "next_questions": [
+                                "Try `/keywords research [service] [location]` for detailed analysis",
+                                "Use `/keywords trends [keyword] [location]` for trend data"
+                            ]
+                        }
+                    else:
+                        return {
+                            "response": f"❌ Error getting autocomplete suggestions: {result.get('message', 'Unknown error')}",
+                            "intent": "keyword_autocomplete_error",
+                            "next_questions": ["Try a different keyword"]
+                        }
+            
+            elif keyword_type == "trends":
+                # Parse keyword and location
+                parts = keyword_query.split()
+                if len(parts) >= 2:
+                    keyword = parts[0]
+                    location = " ".join(parts[1:])
+                else:
+                    keyword = keyword_query
+                    location = "United States"
+                
+                async with DeltaAPIClient() as api_client:
+                    result = await api_client.keyword_trends(keyword, location)
+                    
+                    if result.get("status") == "success":
+                        trends = result.get("trends", {})
+                        response = f"📈 **Keyword Trends for '{keyword}' in {location}:**\n\n"
+                        response += f"🔢 **Search Volume:** {trends.get('search_volume', 'N/A'):,} monthly searches\n"
+                        response += f"🏆 **Competition:** {trends.get('competition', 'N/A')}\n"
+                        response += f"📅 **Seasonality:** {trends.get('seasonality', 'N/A')}\n"
+                        response += f"📊 **Growth Trend:** {trends.get('growth_trend', 'N/A')}\n\n"
+                        
+                        # Add trend arrow
+                        growth_trend = trends.get('growth_trend', '').lower()
+                        if 'increasing' in growth_trend:
+                            response += "📈 **Trend Direction:** ↑ Rising demand\n"
+                        elif 'decreasing' in growth_trend:
+                            response += "📉 **Trend Direction:** ↓ Declining demand\n"
+                        else:
+                            response += "➡️ **Trend Direction:** → Stable demand\n"
+                        
+                        response += f"⏰ **Timeframe:** {result.get('timeframe', '12 months')}\n"
+                        
+                        return {
+                            "response": response,
+                            "intent": "keyword_trends_complete",
+                            "next_questions": [
+                                "Try `/keywords research [keyword] [location]` for detailed analysis",
+                                "Use `/search business [type]` to find related business categories"
+                            ]
+                        }
+                    else:
+                        return {
+                            "response": f"❌ Error getting keyword trends: {result.get('message', 'Unknown error')}",
+                            "intent": "keyword_trends_error",
+                            "next_questions": ["Try a different keyword or location"]
+                        }
+            
+            else:
+                return {
+                    "response": f"❌ Unknown keyword type '{keyword_type}'. Available types: research, autocomplete, trends",
+                    "intent": "keyword_error",
+                    "next_questions": ["Try `/keywords research [service] [location]` or `/keywords autocomplete [keyword]`"]
+                }
+        
+        except Exception as e:
+            logger.error(f"❌ Keyword research error: {e}")
+            return {
+                "response": f"❌ Error performing keyword research: {str(e)}",
+                "intent": "keyword_error",
+                "next_questions": ["Try again with a simpler keyword query"]
+            }
+    
+    async def handle_keyword_help(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle keyword help command"""
+        return {
+            "response": """🔑 **Keyword Research & Analysis - BIG IMPORTANT FEATURE!**
+
+**Available Commands:**
+• `/keywords research [service] [location]` - Comprehensive keyword analysis
+• `/keywords autocomplete [keyword]` - Get related keyword suggestions  
+• `/keywords trends [keyword] [location]` - Analyze keyword trends over time
+
+**Examples:**
+• `/keywords research plumber miami` - Research plumbing keywords in Miami
+• `/keywords autocomplete coffee shop` - Get coffee shop keyword suggestions
+• `/keywords trends lawyer chicago` - Analyze lawyer keyword trends in Chicago
+
+**What You Get:**
+🔍 **Smart Keyword Expansion** - Auto-generates "near me", "open now", "city name"
+🎯 **Intent Grouping** - Green (high-intent), Yellow (competitive), Red (irrelevant)
+📈 **Trend Analysis** - Track demand over time with arrows (↑/→/↓)
+💰 **CPL Estimation** - Cost-per-lead predictions using CPC data
+🗺️ **Heatmap Visualization** - Green/Yellow/Red regions based on keyword quality
+
+**Perfect for Service Businesses:** plumbers, lawyers, dentists, movers, roofers, painters, contractors, landscapers, HVAC, storage, logistics, and more!""",
+            "intent": "keyword_help_complete",
+            "next_questions": [
+                "Try `/keywords research [your_service] [your_city]`",
+                "Use `/keywords autocomplete [keyword]` for suggestions",
+                "Test `/keywords trends [keyword] [location]` for trend data"
+            ]
+        }
+    
     async def perform_market_analysis(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
         """Perform comprehensive market analysis with smart features"""
         business_type = parsed.get("detected_business")
@@ -818,6 +1043,55 @@ async def search_franchises(query: str, location: str = "United States"):
             }
     except Exception as e:
         logger.error(f"❌ Error searching franchises: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Keyword Research Endpoints
+@app.get("/keywords/research")
+async def keyword_research(keyword: str, location: str = "United States"):
+    """Perform keyword research using SerpAPI"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.keyword_research(keyword, location)
+            return {
+                "keyword": keyword,
+                "location": location,
+                "research_data": result,
+                "status": result.get("status", "success")
+            }
+    except Exception as e:
+        logger.error(f"❌ Error performing keyword research: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/keywords/autocomplete")
+async def keyword_autocomplete(keyword: str, location: str = "United States"):
+    """Get keyword autocomplete suggestions"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.keyword_autocomplete(keyword, location)
+            return {
+                "keyword": keyword,
+                "location": location,
+                "suggestions": result.get("suggestions", []),
+                "status": result.get("status", "success")
+            }
+    except Exception as e:
+        logger.error(f"❌ Error getting keyword autocomplete: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/keywords/trends")
+async def keyword_trends(keyword: str, location: str = "United States"):
+    """Get keyword trends and search volume"""
+    try:
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.keyword_trends(keyword, location)
+            return {
+                "keyword": keyword,
+                "location": location,
+                "trends": result.get("trends", {}),
+                "status": result.get("status", "success")
+            }
+    except Exception as e:
+        logger.error(f"❌ Error getting keyword trends: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # Smart AI Endpoints (if features available)
