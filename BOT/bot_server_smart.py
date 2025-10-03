@@ -467,6 +467,9 @@ class SmartFranchiseBot:
                 if matching_types:
                     response = f"🏢 **Business Type Search Results for '{search_query}':**\n\n"
                     for i, business_type in enumerate(matching_types[:5], 1):
+                        # Handle both string and tuple formats
+                        if isinstance(business_type, tuple):
+                            business_type = business_type[0]
                         response += f"{i}. **{business_type.title()}**\n"
                     response += f"\n💡 Found {len(matching_types)} matching business types!"
                 else:
@@ -744,8 +747,7 @@ async def chat(message: BotMessage):
                 conversation_memory.add_turn(
                     session_id,
                     user_message=message.message,
-                    bot_response=response.response,
-                    intent=getattr(response, 'intent', 'unknown')
+                    bot_response=response.response
                 )
             except Exception as e:
                 logger.warning(f"⚠️ Could not add to conversation memory: {e}")
