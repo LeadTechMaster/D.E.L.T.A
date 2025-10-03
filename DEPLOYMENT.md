@@ -12,7 +12,21 @@ This guide will help you deploy the D.E.L.T.A Franchise Intelligence Platform to
 
 ## Deployment Steps
 
-### 1. Backend API Service
+### Option 1: Blueprint Deployment (Recommended)
+
+1. **Go to [render.com](https://render.com)**
+2. **Connect your GitHub account**
+3. **Import the `D.E.L.T.A` repository**
+4. **Create a new Blueprint from `render.yaml`**
+5. **Set your environment variables in the Blueprint**
+
+This will automatically deploy:
+- **Backend API Service** (`delta-backend-api`)
+- **Frontend Service** (`delta-frontend`)
+
+### Option 2: Manual Deployment
+
+#### 1. Backend API Service
 
 **Service Type:** Web Service
 **Environment:** Python 3.11
@@ -35,18 +49,19 @@ CENSUS_API_KEY=your_census_key
 PYTHON_VERSION=3.11.0
 ```
 
-### 2. Database Service
+#### 2. Database Service (Optional - Manual Creation)
 
 **Service Type:** PostgreSQL
 **Plan:** Free
 
-**Configuration:**
-- **Name:** `delta-database`
-- **Database Name:** `delta_db`
-- **User:** Auto-generated
-- **Password:** Auto-generated
+**Note:** Create this manually in Render Dashboard if you need persistent storage:
+1. Go to Render Dashboard
+2. Click "New" → "PostgreSQL"
+3. Name: `delta-database`
+4. Plan: Free
+5. Copy the connection string for environment variables
 
-### 3. Frontend Service
+#### 3. Frontend Service
 
 **Service Type:** Static Site
 **Plan:** Free

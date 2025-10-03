@@ -20,14 +20,6 @@ services:
     healthCheckPath: /status
     autoDeploy: true
 
-  # Database Service (PostgreSQL)
-  - type: pserv
-    name: delta-database
-    plan: free
-    runtime: postgresql
-    startCommand: postgres
-    autoDeploy: true
-
   # Frontend Service (Static Site)
   - type: web
     name: delta-frontend
