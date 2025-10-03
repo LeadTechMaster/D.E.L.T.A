@@ -1,0 +1,41 @@
+services:
+  # Backend API Service
+  - type: web
+    name: delta-backend-api
+    env: python
+    plan: free
+    buildCommand: cd BOT && pip install -r requirements.txt
+    startCommand: cd BOT && gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: MAPBOX_ACCESS_TOKEN
+        sync: false
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
+      - key: SERPAPI_API_KEY
+        sync: false
+      - key: CENSUS_API_KEY
+        sync: false
+    healthCheckPath: /status
+    autoDeploy: true
+
+  # Database Service (PostgreSQL)
+  - type: pserv
+    name: delta-database
+    plan: free
+    env: postgresql
+    ipAllowList: []
+    autoDeploy: true
+
+  # Frontend Service (Static Site)
+  - type: web
+    name: delta-frontend
+    env: static
+    plan: free
+    buildCommand: echo "Frontend deployment"
+    staticPublishPath: ./frontend
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://delta-backend-api.onrender.com
+    autoDeploy: true
