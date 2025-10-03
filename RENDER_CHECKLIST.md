@@ -23,21 +23,19 @@
 - [ ] Connect GitHub account
 - [ ] Verify repository access
 
-### 2. Deploy Backend API
-- [ ] Create new Web Service
+### 2. Deploy Using Blueprint (Recommended)
+- [ ] Click "New Blueprint" in Render Dashboard
 - [ ] Connect to `SirShkolnik-WonderLand/D.E.L.T.A` repository
-- [ ] Use configuration from `render.yaml`
-- [ ] Set environment variables
+- [ ] Select `render.yaml` configuration
+- [ ] Set environment variables in Blueprint
+- [ ] Deploy both Backend API and Frontend services
 
-### 3. Deploy Database
-- [ ] Create PostgreSQL service
+### 3. Deploy Database (Optional)
+- [ ] Create PostgreSQL service manually in Render Dashboard
+- [ ] Name: `delta-database`
+- [ ] Plan: Free
 - [ ] Note connection details
-- [ ] Update backend environment variables
-
-### 4. Deploy Frontend
-- [ ] Create Static Site service
-- [ ] Point to `frontend` directory
-- [ ] Set API URL environment variable
+- [ ] Add to backend environment variables if needed
 
 ## 🔑 Required Environment Variables
 
