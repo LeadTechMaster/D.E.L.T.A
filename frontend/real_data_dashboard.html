@@ -767,8 +767,8 @@
         .contact-info strong {
             color: #00ccff;
         }
-
         /* Keyword Research Section Styles */
+        
         .keyword-research-section {
             background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
             border: 1px solid rgba(255, 193, 7, 0.3);
@@ -776,47 +776,47 @@
             padding: 20px;
             margin: 20px 0;
         }
-
+        
         .keyword-research-section h3 {
             color: #ffc107;
             margin-bottom: 15px;
             text-align: center;
             font-size: 1.5em;
         }
-
+        
         .keyword-research-section p {
             color: #e8e8e8;
             line-height: 1.6;
             margin-bottom: 10px;
         }
-
+        
         .keyword-research-section ul {
             margin: 15px 0;
             padding-left: 20px;
         }
-
+        
         .keyword-research-section li {
             margin-bottom: 8px;
             color: #e8e8e8;
             line-height: 1.5;
         }
-
+        
         .keyword-examples {
             margin: 20px 0;
         }
-
+        
         .keyword-examples h4 {
             color: #ffc107;
             margin-bottom: 15px;
         }
-
+        
         .keyword-commands {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 10px;
             margin-bottom: 20px;
         }
-
+        
         .keyword-btn {
             background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
             border: none;
@@ -828,27 +828,27 @@
             transition: all 0.3s ease;
             font-size: 0.9em;
         }
-
+        
         .keyword-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
         }
-
+        
         .keyword-features {
             margin-top: 20px;
         }
-
+        
         .keyword-features h4 {
             color: #ffc107;
             margin-bottom: 15px;
         }
-
+        
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
-
+        
         .feature-item {
             background: rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 193, 7, 0.2);
@@ -856,13 +856,13 @@
             padding: 15px;
             color: #e8e8e8;
         }
-
+        
         .feature-item strong {
             color: #ffc107;
             display: block;
             margin-bottom: 8px;
         }
-
+        
         .feature-item code {
             background: rgba(255, 193, 7, 0.2);
             color: #ffc107;
@@ -871,30 +871,30 @@
             font-family: 'Courier New', monospace;
             font-size: 0.9em;
         }
-
+        
         .feature-item small {
             color: #bbb;
             font-size: 0.85em;
             display: block;
             margin-top: 5px;
         }
-
         /* Advanced Examples Section */
+        
         .advanced-examples {
             margin-top: 25px;
         }
-
+        
         .advanced-examples h4 {
             color: #ffc107;
             margin-bottom: 15px;
         }
-
+        
         .example-commands {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 10px;
         }
-
+        
         .example-btn {
             background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
             border: none;
@@ -906,7 +906,7 @@
             transition: all 0.3s ease;
             font-size: 0.85em;
         }
-
+        
         .example-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
@@ -1022,7 +1022,7 @@
                         <button onclick="insertCommand('/search places restaurants in miami')" class="quick-btn">/search places</button>
                         <button onclick="insertCommand('/search franchises fast food in miami')" class="quick-btn">/search franchises</button>
                     </div>
-                    
+
                     <!-- Keyword Research Section -->
                     <div class="keyword-research-section">
                         <h3>🔑 Keyword Research & Analysis</h3>
@@ -1036,7 +1036,7 @@
                             <li><strong>Heatmap Visualization:</strong> Green/Yellow/Red regions based on keyword quality</li>
                             <li><strong>Multi-Source Data:</strong> Google + Bing keyword data integration</li>
                         </ul>
-                        
+
                         <div class="keyword-examples">
                             <h4>Example Keyword Commands:</h4>
                             <div class="keyword-commands">
@@ -1048,7 +1048,7 @@
                                 <button onclick="insertCommand('/keywords research hvac atlanta')" class="keyword-btn">Research HVAC Keywords</button>
                             </div>
                         </div>
-                        
+
                         <div class="keyword-features">
                             <h4>Advanced Features Available:</h4>
                             <div class="feature-grid">
@@ -1068,6 +1068,11 @@
                                     <small>MCI scoring and territory proposals</small>
                                 </div>
                                 <div class="feature-item">
+                                    <strong>🗺️ Drive/Walk Isochrones:</strong><br>
+                                    <code>/isochrones [location] [travel_mode] [times]</code><br>
+                                    <small>10/20/30 min drive/walk time zones</small>
+                                </div>
+                                <div class="feature-item">
                                     <strong>📈 Keyword Trends:</strong><br>
                                     <code>/keywords trends [keyword] [location]</code><br>
                                     <small>Shows keyword trend analysis over time</small>
@@ -1084,16 +1089,19 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="advanced-examples">
                             <h4>🚀 Advanced Examples:</h4>
                             <div class="example-commands">
                                 <button onclick="insertCommand('/heatmap plumber city')" class="example-btn">🗺️ Plumber Heatmap</button>
                                 <button onclick="insertCommand('/territory lawyer chicago')" class="example-btn">🏗️ Lawyer Territory</button>
+                                <button onclick="insertCommand('/isochrones miami')" class="example-btn">🗺️ Miami Isochrones</button>
                                 <button onclick="insertCommand('/heatmap dentist state')" class="example-btn">🗺️ Dentist Heatmap</button>
                                 <button onclick="insertCommand('/territory roofer miami')" class="example-btn">🏗️ Roofer Territory</button>
+                                <button onclick="insertCommand('/isochrones new york walking')" class="example-btn">🚶 NYC Walk Zones</button>
                                 <button onclick="insertCommand('/heatmap hvac country')" class="example-btn">🗺️ HVAC Heatmap</button>
                                 <button onclick="insertCommand('/territory contractor seattle')" class="example-btn">🏗️ Contractor Territory</button>
+                                <button onclick="insertCommand('/isochrones chicago driving 15,30,45')" class="example-btn">🚗 Chicago Drive Zones</button>
                             </div>
                         </div>
                     </div>
@@ -2658,7 +2666,8 @@
 
                     <h4>Franchise Opportunity Analysis:</h4>
                     <p>Comprehensive franchise research including investment requirements, franchise fees, territory availability, support systems, and success rates. The platform helps users evaluate franchise opportunities against independent business
-                        options.</p>
+                        options.
+                    </p>
                 </div>
 
                 <div class="explanation-section">
@@ -2675,7 +2684,8 @@
 
                     <h4>Multi-Step Analysis Support:</h4>
                     <p>The system guides users through complex analysis processes, remembering previous inputs and building comprehensive reports. Users can start with basic questions and progressively dive deeper into specific aspects of their business
-                        opportunity.</p>
+                        opportunity.
+                    </p>
 
                     <h4>Adaptive Learning:</h4>
                     <p>The platform learns from user interactions, improving recommendations and responses over time. It adapts to user preferences, investment styles, and analytical needs.</p>

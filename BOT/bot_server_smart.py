@@ -224,6 +224,10 @@ class SmartFranchiseBot:
         if message_lower.startswith("/territory"):
             return await self.parse_territory_commands(message)
         
+        # Check for isochrones commands
+        if message_lower.startswith("/isochrones"):
+            return await self.parse_isochrones_commands(message)
+        
         # Use smart context analyzer
         context_analysis = smart_context_analyzer.analyze_context(message)
         logger.info(f"🧠 Smart context analysis: {context_analysis.intent}")
@@ -358,9 +362,47 @@ class SmartFranchiseBot:
         
         return {
             "original_message": message,
-            "intent": "territory_builder",
+            "intent": "territory_analysis",
             "business_type": business_type,
             "location": location
+        }
+    
+    async def parse_isochrones_commands(self, message: str) -> Dict[str, Any]:
+        """Parse isochrones commands"""
+        isochrones_parts = message.replace("/isochrones", "").strip().split()
+        
+        if len(isochrones_parts) < 1:
+            return {
+                "original_message": message,
+                "intent": "isochrones_help",
+                "location": None,
+                "travel_mode": None,
+                "times": None
+            }
+        
+        location = isochrones_parts[0]
+        travel_mode = "driving"  # Default
+        times = [10, 20, 30]  # Default
+        
+        # Parse travel mode if specified
+        if len(isochrones_parts) > 1:
+            mode = isochrones_parts[1].lower()
+            if mode in ["driving", "walking"]:
+                travel_mode = mode
+        
+        # Parse times if specified
+        if len(isochrones_parts) > 2:
+            try:
+                times = [int(x) for x in isochrones_parts[2].split(",")]
+            except ValueError:
+                times = [10, 20, 30]  # Default
+        
+        return {
+            "original_message": message,
+            "intent": "isochrones_analysis",
+            "location": location,
+            "travel_mode": travel_mode,
+            "times": times
         }
     
     async def generate_smart_response(self, parsed: Dict[str, Any], session: Dict[str, Any], session_id: str) -> Dict[str, Any]:
@@ -394,6 +436,14 @@ class SmartFranchiseBot:
         # Handle territory help
         if intent == "territory_help":
             return await self.handle_territory_help(parsed, session)
+        
+        # Handle isochrones analysis
+        if intent == "isochrones_analysis":
+            return await self.handle_isochrones_analysis(parsed, session)
+        
+        # Handle isochrones help
+        if intent == "isochrones_help":
+            return await self.handle_isochrones_help(parsed, session)
         
         # Handle greeting with smart response generator
         if intent == "greeting":
@@ -1077,6 +1127,122 @@ class SmartFranchiseBot:
             ]
         }
     
+    async def handle_isochrones_analysis(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle isochrones analysis command"""
+        location = parsed.get("location")
+        travel_mode = parsed.get("travel_mode", "driving")
+        times = parsed.get("times", [10, 20, 30])
+        
+        if not location:
+            return {
+                "response": "❌ Please provide a location for isochrones analysis.\n\n**Usage:** `/isochrones [location] [travel_mode] [times]`\n\n**Example:** `/isochrones miami driving 10,20,30`",
+                "intent": "isochrones_incomplete"
+            }
+        
+        try:
+            async with DeltaAPIClient() as api_client:
+                result = await api_client.isochrones_analysis(location, travel_mode, times)
+                
+                if result.get("success"):
+                    coverage_metrics = result.get("coverage_metrics", [])
+                    location_info = result.get("location", {})
+                    features = result.get("features", [])
+                    
+                    # Format coverage metrics
+                    metrics_text = ""
+                    for metric in coverage_metrics:
+                        time_min = metric["time_minutes"]
+                        area = metric["area_km2"]
+                        businesses = metric["businesses_count"]
+                        population = metric["population_estimate"]
+                        density = metric["business_density"]
+                        coverage_type = metric["coverage_type"]
+                        
+                        metrics_text += f"**{time_min}-minute zone ({coverage_type}):**\n"
+                        metrics_text += f"• Area: {area} km²\n"
+                        metrics_text += f"• Businesses: {businesses}\n"
+                        metrics_text += f"• Population: ~{population:,}\n"
+                        metrics_text += f"• Business Density: {density} per km²\n\n"
+                    
+                    features_text = "\n".join([f"✅ {feature}" for feature in features])
+                    
+                    return {
+                        "response": f"""🗺️ **Drive/Walk Time Isochrones Analysis**
+
+**Location:** {location_info.get('address', location)}
+**Travel Mode:** {travel_mode.title()}
+**Coordinates:** {location_info.get('coordinates', {}).get('lat', 'N/A')}, {location_info.get('coordinates', {}).get('lng', 'N/A')}
+
+**Coverage Analysis:**
+{metrics_text}
+
+**Features Available:**
+{features_text}
+
+**Perfect for Service Area Planning and Territory Optimization!**""",
+                        "intent": "isochrones_analysis_complete",
+                        "next_questions": [
+                            "Try `/isochrones [location] walking` for walk-time zones",
+                            "Use `/territory [business_type] [location]` for territory analysis"
+                        ]
+                    }
+                else:
+                    return {
+                        "response": f"❌ Error generating isochrones: {result.get('error', 'Unknown error')}",
+                        "intent": "isochrones_error",
+                        "next_questions": ["Try a different location or check the address format"]
+                    }
+        
+        except Exception as e:
+            logger.error(f"❌ Isochrones analysis error: {e}")
+            return {
+                "response": f"❌ Error performing isochrones analysis: {str(e)}",
+                "intent": "isochrones_error",
+                "next_questions": ["Try again with a simpler location query"]
+            }
+    
+    async def handle_isochrones_help(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle isochrones help command"""
+        return {
+            "response": """🗺️ **Drive/Walk Time Isochrones - Advanced Feature!**
+
+**Available Commands:**
+• `/isochrones [location] [travel_mode] [times]` - Generate drive/walk time zones
+
+**Parameters:**
+• **location** - Address, city, or coordinates (lat,lng)
+• **travel_mode** - `driving` (default) or `walking`
+• **times** - Comma-separated minutes (default: 10,20,30)
+
+**Examples:**
+• `/isochrones miami` - 10/20/30 min driving zones from Miami
+• `/isochrones new york walking` - 10/20/30 min walking zones from NYC
+• `/isochrones 25.7617,-80.1918 driving` - Using coordinates
+• `/isochrones chicago driving 15,30,45` - Custom time intervals
+
+**What You Get:**
+🎯 **Drive/Walk Time Zones (10/20/30 min)**
+📊 **Population Coverage Analysis**
+🏢 **Business Density within Zones**
+🚗 **Traffic Pattern Insights**
+📍 **Service Area Optimization**
+🔄 **Real-time Route Calculations**
+
+**Perfect for Service Area Planning and Territory Optimization!**
+
+**Use Cases:**
+• **Service Businesses** - Define optimal service areas
+• **Delivery Services** - Plan delivery zones
+• **Sales Territories** - Optimize sales coverage
+• **Emergency Services** - Calculate response times
+• **Real Estate** - Analyze accessibility areas""",
+            "intent": "isochrones_help_complete",
+            "next_questions": [
+                "Try `/isochrones [your_location]` for analysis",
+                "Use `/territory [business_type] [location]` for territory analysis"
+            ]
+        }
+    
     async def perform_market_analysis(self, parsed: Dict[str, Any], session: Dict[str, Any]) -> Dict[str, Any]:
         """Perform comprehensive market analysis with smart features"""
         business_type = parsed.get("detected_business")
@@ -1344,6 +1510,23 @@ async def territory_builder_endpoint(business_type: str, location: str = "United
             return result
     except Exception as e:
         logger.error(f"❌ Error performing territory builder analysis: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/isochrones/analysis")
+async def isochrones_analysis_endpoint(location: str, travel_mode: str = "driving", times: str = "10,20,30"):
+    """Generate drive/walk time isochrones (10/20/30 min zones)"""
+    try:
+        # Parse times parameter
+        try:
+            times_list = [int(x.strip()) for x in times.split(",")]
+        except ValueError:
+            times_list = [10, 20, 30]  # Default
+        
+        async with DeltaAPIClient() as api_client:
+            result = await api_client.isochrones_analysis(location, travel_mode, times_list)
+            return result
+    except Exception as e:
+        logger.error(f"❌ Error generating isochrones: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # Keyword Research Endpoints

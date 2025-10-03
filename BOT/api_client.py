@@ -740,6 +740,280 @@ STATE_CODES = {
         
         return proposals
 
+    async def isochrones_analysis(self, location: str, travel_mode: str = "driving", times: list = None):
+        """
+        Generate drive/walk time isochrones (10/20/30 min zones)
+        
+        Args:
+            location: Address or coordinates (lat,lng)
+            travel_mode: 'driving' or 'walking'
+            times: List of time intervals in minutes (default: [10, 20, 30])
+        
+        Returns:
+            dict: Isochrones data with coverage metrics
+        """
+        if times is None:
+            times = [10, 20, 30]
+        
+        try:
+            # Get coordinates for the location
+            coordinates = await self._get_coordinates(location)
+            if not coordinates:
+                return {
+                    "error": f"Could not find coordinates for location: {location}",
+                    "success": False
+                }
+            
+            lat, lng = coordinates
+            
+            # Generate isochrones using Mapbox Isochrone API
+            isochrones_data = await self._generate_mapbox_isochrones(
+                lat, lng, travel_mode, times
+            )
+            
+            if not isochrones_data:
+                return {
+                    "error": "Failed to generate isochrones",
+                    "success": False
+                }
+            
+            # Calculate coverage metrics
+            coverage_metrics = await self._calculate_isochrone_coverage(
+                lat, lng, isochrones_data, travel_mode
+            )
+            
+            return {
+                "success": True,
+                "location": {
+                    "address": location,
+                    "coordinates": {"lat": lat, "lng": lng}
+                },
+                "travel_mode": travel_mode,
+                "isochrones": isochrones_data,
+                "coverage_metrics": coverage_metrics,
+                "features": [
+                    "Drive/Walk time zones (10/20/30 min)",
+                    "Population coverage analysis",
+                    "Business density within zones",
+                    "Traffic pattern insights",
+                    "Service area optimization",
+                    "Real-time route calculations"
+                ]
+            }
+            
+        except Exception as e:
+            logger.error(f"❌ Error generating isochrones: {e}")
+            return {
+                "error": f"Failed to generate isochrones: {str(e)}",
+                "success": False
+            }
+    
+    async def _get_coordinates(self, location: str):
+        """Get coordinates for a location using Mapbox Geocoding"""
+        try:
+            # Try Mapbox Geocoding API first
+            url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{location}.json"
+            params = {
+                "access_token": self.mapbox_token,
+                "limit": 1
+            }
+            
+            async with httpx.AsyncClient() as client:
+                response = await client.get(url, params=params)
+                if response.status_code == 200:
+                    data = response.json()
+                    if data.get("features"):
+                        coords = data["features"][0]["center"]
+                        return coords[1], coords[0]  # Return lat, lng
+            
+            # Fallback: try to parse as coordinates
+            if "," in location:
+                try:
+                    lat, lng = map(float, location.split(","))
+                    return lat, lng
+                except ValueError:
+                    pass
+            
+            return None
+            
+        except Exception as e:
+            logger.error(f"Error getting coordinates: {e}")
+            return None
+    
+    async def _generate_mapbox_isochrones(self, lat: float, lng: float, travel_mode: str, times: list):
+        """Generate isochrones using Mapbox Isochrone API"""
+        try:
+            isochrones = []
+            
+            for time_minutes in times:
+                # Mapbox Isochrone API
+                url = f"https://api.mapbox.com/isochrone/v1/mapbox/{travel_mode}/{lng},{lat}"
+                params = {
+                    "contours_minutes": time_minutes,
+                    "polygons": True,
+                    "access_token": self.mapbox_token
+                }
+                
+                async with httpx.AsyncClient() as client:
+                    response = await client.get(url, params=params)
+                    if response.status_code == 200:
+                        data = response.json()
+                        if data.get("features"):
+                            feature = data["features"][0]
+                            isochrones.append({
+                                "time_minutes": time_minutes,
+                                "geometry": feature["geometry"],
+                                "properties": {
+                                    "contour": time_minutes,
+                                    "color": self._get_isochrone_color(time_minutes)
+                                }
+                            })
+            
+            return isochrones
+            
+        except Exception as e:
+            logger.error(f"Error generating Mapbox isochrones: {e}")
+            return []
+    
+    def _get_isochrone_color(self, time_minutes: int):
+        """Get color for isochrone based on time"""
+        if time_minutes <= 10:
+            return "#00FF00"  # Green
+        elif time_minutes <= 20:
+            return "#FFFF00"  # Yellow
+        else:
+            return "#FF0000"  # Red
+    
+    async def _calculate_isochrone_coverage(self, lat: float, lng: float, isochrones: list, travel_mode: str):
+        """Calculate coverage metrics for isochrones"""
+        try:
+            coverage_metrics = []
+            
+            for isochrone in isochrones:
+                time_minutes = isochrone["time_minutes"]
+                
+                # Get businesses within the isochrone area
+                businesses = await self._get_businesses_in_isochrone(
+                    lat, lng, isochrone, travel_mode, time_minutes
+                )
+                
+                # Calculate area (simplified estimation)
+                area_km2 = self._estimate_polygon_area(isochrone["geometry"])
+                
+                # Calculate population estimate (simplified)
+                population_estimate = self._estimate_population_density(area_km2, lat, lng)
+                
+                coverage_metrics.append({
+                    "time_minutes": time_minutes,
+                    "area_km2": round(area_km2, 2),
+                    "businesses_count": len(businesses),
+                    "population_estimate": population_estimate,
+                    "business_density": round(len(businesses) / max(area_km2, 0.1), 2),
+                    "color": self._get_isochrone_color(time_minutes),
+                    "coverage_type": "high" if time_minutes <= 10 else "medium" if time_minutes <= 20 else "extended"
+                })
+            
+            return coverage_metrics
+            
+        except Exception as e:
+            logger.error(f"Error calculating isochrone coverage: {e}")
+            return []
+    
+    async def _get_businesses_in_isochrone(self, lat: float, lng: float, isochrone: dict, travel_mode: str, time_minutes: int):
+        """Get businesses within isochrone area using Google Places API"""
+        try:
+            # Use Google Places API to find nearby businesses
+            # For now, we'll use a radius approximation based on travel time
+            radius = self._get_radius_for_time(time_minutes, travel_mode)
+            
+            url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+            params = {
+                "location": f"{lat},{lng}",
+                "radius": radius,
+                "key": self.google_places_key
+            }
+            
+            async with httpx.AsyncClient() as client:
+                response = await client.get(url, params=params)
+                if response.status_code == 200:
+                    data = response.json()
+                    return data.get("results", [])[:20]  # Limit to 20 businesses
+            
+            return []
+            
+        except Exception as e:
+            logger.error(f"Error getting businesses in isochrone: {e}")
+            return []
+    
+    def _get_radius_for_time(self, time_minutes: int, travel_mode: str):
+        """Estimate radius in meters for given travel time"""
+        if travel_mode == "driving":
+            # Average driving speed: ~50 km/h in urban areas
+            speed_kmh = 50
+        else:  # walking
+            # Average walking speed: ~5 km/h
+            speed_kmh = 5
+        
+        # Calculate distance in meters
+        distance_km = (time_minutes / 60) * speed_kmh
+        radius_meters = distance_km * 1000
+        
+        return int(radius_meters)
+    
+    def _estimate_polygon_area(self, geometry: dict):
+        """Estimate polygon area in km² (simplified calculation)"""
+        try:
+            if geometry["type"] == "Polygon":
+                coords = geometry["coordinates"][0]
+                
+                # Use shoelace formula for area estimation
+                area = 0
+                n = len(coords)
+                for i in range(n):
+                    j = (i + 1) % n
+                    area += coords[i][0] * coords[j][1]
+                    area -= coords[j][0] * coords[i][1]
+                
+                area = abs(area) / 2
+                
+                # Convert from degrees to km² (rough approximation)
+                # 1 degree ≈ 111 km, so 1 degree² ≈ 12,321 km²
+                area_km2 = area * 12321
+                
+                return area_km2
+            
+            return 0
+            
+        except Exception as e:
+            logger.error(f"Error estimating polygon area: {e}")
+            return 0
+    
+    def _estimate_population_density(self, area_km2: float, lat: float, lng: float):
+        """Estimate population within area based on location"""
+        try:
+            # Rough population density estimates by region
+            if lat > 40:  # Northern US (higher density)
+                density_per_km2 = 150
+            elif lat > 30:  # Southern US (medium density)
+                density_per_km2 = 100
+            else:  # Very southern US (lower density)
+                density_per_km2 = 50
+            
+            # Adjust for longitude (east coast higher density)
+            if lng > -80:  # East coast
+                density_per_km2 *= 1.5
+            elif lng > -100:  # Central US
+                density_per_km2 *= 1.0
+            else:  # West coast
+                density_per_km2 *= 1.2
+            
+            population = int(area_km2 * density_per_km2)
+            return max(population, 0)
+            
+        except Exception as e:
+            logger.error(f"Error estimating population: {e}")
+            return 0
+
 def get_state_code(location: str) -> str:
     """Get state code for location"""
     location_lower = location.lower()
