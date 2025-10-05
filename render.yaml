@@ -4,8 +4,8 @@ services:
     name: delta-backend-api
     env: python
     plan: free
-    buildCommand: cd BOT && pip install -r requirements-light.txt
-    startCommand: cd BOT && gunicorn bot_server_light:app --bind 0.0.0.0:$PORT --workers 1 --worker-class uvicorn.workers.UvicornWorker --timeout 120
+    buildCommand: cd backend && pip install -r requirements.txt && cd ../BOT && pip install -r requirements.txt
+    startCommand: cd backend && python real_api_server.py --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
@@ -32,12 +32,34 @@ services:
     healthCheckPath: /status
     autoDeploy: true
 
-  # Frontend Service (Static Site)
+  # BOT Service
+  - type: web
+    name: delta-bot-service
+    env: python
+    plan: free
+    buildCommand: cd BOT && pip install -r requirements.txt
+    startCommand: cd BOT && python bot_server.py --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: MAPBOX_ACCESS_TOKEN
+        sync: false
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
+      - key: SERPAPI_API_KEY
+        sync: false
+      - key: CENSUS_API_KEY
+        sync: false
+    healthCheckPath: /status
+    autoDeploy: true
+
+  # Frontend Service (React + Vite)
   - type: web
     name: delta-frontend
-    env: static
-    buildCommand: echo "Frontend deployment"
-    staticPublishPath: ./frontend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview -- --host 0.0.0.0 --port $PORT
     envVars:
       - key: REACT_APP_API_URL
         value: https://delta-backend-api.onrender.com
