@@ -258,6 +258,24 @@ class FranchiseBot:
             insights.append("• Technical expertise and innovation are key differentiators")
             insights.append("• Consider proximity to tech talent and startup ecosystem")
             insights.append("• Market volatility requires flexible business model")
+            
+        elif business_type == 'casino_gaming':
+            insights.append("🎰 **Casino & Gaming Insights:**")
+            insights.append("• Gaming regulations and licensing are critical requirements")
+            insights.append("• Consider tourist traffic and local gaming demographics")
+            insights.append("• Location visibility and accessibility are essential for success")
+            
+        elif business_type == 'nightlife_adult_entertainment':
+            insights.append("🌃 **Nightlife & Adult Entertainment Insights:**")
+            insights.append("• Entertainment licensing and zoning regulations are crucial")
+            insights.append("• Consider peak hours and target demographic preferences")
+            insights.append("• Location in entertainment district with good visibility")
+            
+        elif business_type == 'sports_entertainment':
+            insights.append("🏟️ **Sports & Entertainment Insights:**")
+            insights.append("• Venue size and facilities are key differentiators")
+            insights.append("• Consider event programming and seasonal variations")
+            insights.append("• Location accessibility and parking are critical factors")
         
         return "\n".join(insights)
     

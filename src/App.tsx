@@ -1805,6 +1805,241 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Business Types Overview Section */}
+        <div className="mt-12 bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/20">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">
+            🏢 Supported Business Types & Categories
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* Restaurant & Food */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🍽️ Restaurant & Food
+                <span className="ml-2 bg-green-500/20 text-green-300 px-2 py-1 rounded text-xs">8+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Restaurant, Cafe, Bistro, Diner</div>
+                <div>• Fast Food, Food Truck, Catering</div>
+                <div>• Pizza, Burger, Sushi, Mexican</div>
+                <div>• Italian, Chinese, Japanese, Thai</div>
+                <div>• Fine Dining, Casual, Fast Casual</div>
+              </div>
+            </div>
+
+            {/* Retail & Shopping */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🛍️ Retail & Shopping
+                <span className="ml-2 bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">7+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Store, Shop, Boutique, Mall</div>
+                <div>• Fashion, Electronics, Home & Garden</div>
+                <div>• Beauty, Sports, Books, Toys</div>
+                <div>• Online, Brick & Mortar, Hybrid</div>
+                <div>• Specialty, Department, Convenience</div>
+              </div>
+            </div>
+
+            {/* Health & Wellness */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🏥 Health & Wellness
+                <span className="ml-2 bg-red-500/20 text-red-300 px-2 py-1 rounded text-xs">6+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Gym, Fitness Center, Yoga Studio</div>
+                <div>• Medical Clinic, Doctor, Dentist</div>
+                <div>• Beauty Salon, Spa, Massage</div>
+                <div>• Mental Health, Therapy, Counseling</div>
+                <div>• Preventive, Therapeutic, Cosmetic</div>
+              </div>
+            </div>
+
+            {/* Professional Services */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                💼 Professional Services
+                <span className="ml-2 bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">5+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Law Firm, Legal Practice, Attorney</div>
+                <div>• Accounting Firm, CPA, Bookkeeping</div>
+                <div>• Consulting, Advisory, Strategy</div>
+                <div>• Real Estate, Property Management</div>
+                <div>• Startup, Corporate, Individual</div>
+              </div>
+            </div>
+
+            {/* Automotive */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🚗 Automotive
+                <span className="ml-2 bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded text-xs">4+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Auto Repair, Mechanic, Service</div>
+                <div>• Car Dealership, Auto Sales</div>
+                <div>• Auto Parts, Accessories</div>
+                <div>• Towing, Detailing, Car Wash</div>
+                <div>• Passenger, Commercial, Specialty</div>
+              </div>
+            </div>
+
+            {/* Technology */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                💻 Technology
+                <span className="ml-2 bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-xs">4+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Software Development, App Dev</div>
+                <div>• IT Consulting, Tech Consulting</div>
+                <div>• Tech Support, Help Desk</div>
+                <div>• Digital Marketing, SEO</div>
+                <div>• Startup, Enterprise, Consumer</div>
+              </div>
+            </div>
+
+            {/* Casino & Gaming */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🎰 Casino & Gaming
+                <span className="ml-2 bg-orange-500/20 text-orange-300 px-2 py-1 rounded text-xs">5+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Casino, Gaming Hall, Casino Resort</div>
+                <div>• Table Games, Slot Machines</div>
+                <div>• Sports Betting, Race Book</div>
+                <div>• Poker Room, Card Room</div>
+                <div>• Luxury, Tourist, Local, Online</div>
+              </div>
+            </div>
+
+            {/* Nightlife & Adult Entertainment */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🌃 Nightlife & Adult Entertainment
+                <span className="ml-2 bg-pink-500/20 text-pink-300 px-2 py-1 rounded text-xs">4+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Nightclub, Dance Club, Lounge</div>
+                <div>• Bar, Pub, Tavern, Sports Bar</div>
+                <div>• Adult Entertainment, Strip Club</div>
+                <div>• Karaoke Bar, Cocktail Lounge</div>
+                <div>• Upscale, Casual, Themed</div>
+              </div>
+            </div>
+
+            {/* Sports & Entertainment */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🏟️ Sports & Entertainment
+                <span className="ml-2 bg-green-500/20 text-green-300 px-2 py-1 rounded text-xs">4+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Sports Complex, Stadium, Arena</div>
+                <div>• Horse Racing, Race Track</div>
+                <div>• Entertainment Center, Venue</div>
+                <div>• Recreation Center, Activity Center</div>
+                <div>• Professional, Amateur, Youth</div>
+              </div>
+            </div>
+
+            {/* Education */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🎓 Education
+                <span className="ml-2 bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded text-xs">4+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• School, Academy, Learning Center</div>
+                <div>• Preschool, K-12, Higher Education</div>
+                <div>• Academic, Vocational, Arts</div>
+                <div>• Training, Professional Development</div>
+                <div>• Early Childhood, Adult Education</div>
+              </div>
+            </div>
+
+            {/* General Entertainment */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
+                🎭 General Entertainment
+                <span className="ml-2 bg-teal-500/20 text-teal-300 px-2 py-1 rounded text-xs">3+ Types</span>
+              </h3>
+              <div className="space-y-1 text-sm text-white/70">
+                <div>• Theater, Cinema, Bowling</div>
+                <div>• Arcade, Escape Room</div>
+                <div>• Family, Adult, Corporate Events</div>
+                <div>• Indoor, Outdoor Activities</div>
+                <div>• Entertainment District Venues</div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Summary Statistics */}
+          <div className="mt-8 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4 text-center">
+              📊 Business Intelligence Coverage
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div className="text-3xl font-bold text-purple-300">10+</div>
+                <div className="text-white/70 text-sm">Business Categories</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-300">50+</div>
+                <div className="text-white/70 text-sm">Business Types</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-300">200+</div>
+                <div className="text-white/70 text-sm">Keywords & Variations</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-yellow-300">100%</div>
+                <div className="text-white/70 text-sm">Real Data Analysis</div>
+              </div>
+            </div>
+          </div>
+
+          {/* How It Works */}
+          <div className="mt-6 bg-white/5 rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center">
+              🧠 How Our AI Business Classifier Works
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-white/70">
+              <div className="text-center">
+                <div className="text-2xl mb-2">🔍</div>
+                <div className="font-medium text-white mb-1">1. Natural Language Processing</div>
+                <div>Analyzes your query using advanced NLP to understand business intent and context</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl mb-2">🎯</div>
+                <div className="font-medium text-white mb-1">2. Keyword Matching</div>
+                <div>Matches your query against 200+ business keywords and variations for accurate classification</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl mb-2">📊</div>
+                <div className="font-medium text-white mb-1">3. Real Data Analysis</div>
+                <div>Provides comprehensive market analysis using real APIs and live data sources</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-6 text-center">
+            <p className="text-white/80 mb-4">
+              💡 <strong>Try it now!</strong> Ask about any business type in any location - our AI will understand and provide comprehensive analysis.
+            </p>
+            <div className="text-sm text-white/60">
+              Examples: "casino in las vegas", "nightclub in miami", "gaming hall in atlantic city", "sports complex in denver"
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
