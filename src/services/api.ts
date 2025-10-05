@@ -173,6 +173,7 @@ class DeltaAPIService {
       location: request.location,
       coordinates: analysisData.coordinates || [0, 0], // Use real coordinates from BOT
       competitors: this.formatCompetitors(analysisData.competition),
+      competition: analysisData.competition || {}, // Add competition data for direct access
       demographics: this.formatDemographics(analysisData.demographics),
       marketOpportunity: this.formatMarketOpportunity(analysisData.market_opportunity, analysisData.competition),
       franchiseOpportunities: this.formatFranchiseOpportunities(analysisData.franchise_opportunities),
