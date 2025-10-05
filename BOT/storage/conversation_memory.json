@@ -3817,6 +3817,1078 @@
         "user_satisfaction": null,
         "follow_up_needed": false
       }
+    ],
+    "test_session": [
+      {
+        "turn_id": "b595edc8-afd6-4793-83e3-319e257c6d9d",
+        "timestamp": "2025-10-04 19:45:07.487752",
+        "user_message": "i want to open a gym in clifton",
+        "bot_response": "I'll analyze the fitness market in Clifton for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Fitness in Clifton**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Paterson** - \ud83d\udccd Paterson\n2. **La Quinta Inn & Suites by Wyndham Clifton/Rutherford** - 4/5 \u2b50 (2497 reviews)\n   \ud83d\udccd 265 New Jersey 3 E, Clifton\n3. **Howard Johnson by Wyndham Clifton NJ** - 3.2/5 \u2b50 (1044 reviews)\n   \ud83d\udccd 680 New Jersey 3 West, Clifton\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Pilates Studio Clifton, NJ | IM=X Pilates & Fitness**\n   \ud83d\udcdd Looking for pilates reformer classes? The IM=X Pilates and Fitness franchise studio in Clifton, NJ p...\n   \ud83d\udd17 [Learn More](https://www.imxpilates.com/new-jersey/clifton)\n2. **Crunch Franchise Announces Its Newest Location in ...**\n   \ud83d\udcdd Fusing fitness with entertainment to make serious exercise fun, Crunch Clifton will feature top-qual...\n   \ud83d\udd17 [Learn More](https://www.prnewswire.com/news-releases/crunch-franchise-announces-its-newest-location-in-clifton-new-jersey-300724517.html)\n3. **Gym in Clifton, NJ | 600 Getty Ave ...**\n   \ud83d\udcdd Your local gym in Clifton, NJ. Starting as low as $15 a month. Enjoy free fitness training, flexible...\n   \ud83d\udd17 [Learn More](https://www.planetfitness.com/gyms/clifton-nj/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.8/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Weak competition - capitalize on market gaps\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "fitness",
+          "location": "Clifton",
+          "timestamp": "2025-10-04T19:45:03.178855",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 40.858375,
+            "longitude": -74.163297
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 40.858375,
+              "lng": -74.163297
+            },
+            "radius_miles": 10.0,
+            "business_type": "fitness",
+            "competitor_count": 20,
+            "average_rating": 3.48,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Paterson",
+                "address": "Paterson",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 40.9190605,
+                  "longitude": -74.17298199999999
+                },
+                "place_id": "ChIJgUIFaTT8wokR2iT7x2DRyr4"
+              },
+              {
+                "name": "La Quinta Inn & Suites by Wyndham Clifton/Rutherford",
+                "address": "265 New Jersey 3 E, Clifton",
+                "rating": 4,
+                "user_ratings_total": 2497,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.82698320000001,
+                  "longitude": -74.1342839
+                },
+                "place_id": "ChIJ_yvHBUj_wokRJVboz-SUvj4"
+              },
+              {
+                "name": "Howard Johnson by Wyndham Clifton NJ",
+                "address": "680 New Jersey 3 West, Clifton",
+                "rating": 3.2,
+                "user_ratings_total": 1044,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.8354259,
+                  "longitude": -74.14929889999999
+                },
+                "place_id": "ChIJK0v79mr_wokRQn1CXloxP6c"
+              },
+              {
+                "name": "Costco Wholesale",
+                "address": "20 Bridewell Place #306b, Clifton",
+                "rating": 4.5,
+                "user_ratings_total": 9088,
+                "price_level": 2,
+                "types": [
+                  "department_store",
+                  "store",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.8314891,
+                  "longitude": -74.1367906
+                },
+                "place_id": "ChIJvWOl5UX_wokRd39j4biT-p0"
+              },
+              {
+                "name": "Clifton High School",
+                "address": "333 Colfax Avenue, Clifton",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "secondary_school",
+                  "school",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.8693457,
+                  "longitude": -74.1641163
+                },
+                "place_id": "ChIJR2NW9vD-wokRewdn7oK1E8E"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State Clifton",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Pilates Studio Clifton, NJ | IM=X Pilates & Fitness",
+              "link": "https://www.imxpilates.com/new-jersey/clifton",
+              "snippet": "Looking for pilates reformer classes? The IM=X Pilates and Fitness franchise studio in Clifton, NJ provides memberships & personal training.",
+              "position": 1
+            },
+            {
+              "title": "Crunch Franchise Announces Its Newest Location in ...",
+              "link": "https://www.prnewswire.com/news-releases/crunch-franchise-announces-its-newest-location-in-clifton-new-jersey-300724517.html",
+              "snippet": "Fusing fitness with entertainment to make serious exercise fun, Crunch Clifton will feature top-quality cardio and strength training equipment, ...",
+              "position": 2
+            },
+            {
+              "title": "Gym in Clifton, NJ | 600 Getty Ave ...",
+              "link": "https://www.planetfitness.com/gyms/clifton-nj/",
+              "snippet": "Your local gym in Clifton, NJ. Starting as low as $15 a month. Enjoy free fitness training, flexible hours, and a clean, welcoming Judgement Free Zone.",
+              "position": 3
+            },
+            {
+              "title": "Clifton Gym with Personal Trainers & Group Fitness Classes",
+              "link": "https://www.crunch.com/locations/clifton",
+              "snippet": "Crunch's Clifton, NJ Gym fuses fitness and fun with certified personal trainers, group fitness classes, and memberships starting at just $9.99.",
+              "position": 4
+            },
+            {
+              "title": "LA Fitness | Gym Info | CLIFTON | 852 ROUTE 3",
+              "link": "https://www.lafitness.com/pages/clubhome.aspx?clubid=615&Clifton-New+Jersey+GYM",
+              "snippet": "LA Fitness is located 852 ROUTE 3. This CLIFTON gym offers personal training, group fitness classes, weights, & more.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "f22b01bf-0de4-4827-9304-003dc7c45a38",
+        "timestamp": "2025-10-04 19:58:21.301683",
+        "user_message": "i want to open a gym in linden",
+        "bot_response": "I'll analyze the fitness market in Linden for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Fitness in Linden**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **New York** - \ud83d\udccd New York\n2. **Hampton Inn Linden** - 3.9/5 \u2b50 (1352 reviews)\n   \ud83d\udccd 501 West Edgar Road, Linden\n3. **Hotel Executive Suites** - 3.4/5 \u2b50 (1295 reviews)\n   \ud83d\udccd 30 Minue Street, Carteret\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Gym in Linden, NJ | 1151 W St Georges Ave ...**\n   \ud83d\udcdd Your local gym in Linden, NJ. Starting as low as $15 a month. Enjoy free fitness training, flexible ...\n   \ud83d\udd17 [Learn More](https://www.planetfitness.com/gyms/linden-nj/)\n2. **LINDEN Gym | 950 WEST EDGAR ROAD**\n   \ud83d\udcdd LA Fitness is a gym located at 950 WEST EDGAR ROAD. This LINDEN health club has group fitness classe...\n   \ud83d\udd17 [Learn More](https://www.lafitness.com/pages/clubhome.aspx?clubid=1319&Linden-New+Jersey+GYM)\n3. **Linden, NJ**\n   \ud83d\udcdd Powerhouse Gym of Linden is a state of the art facility that offers the best in workout equipment, c...\n   \ud83d\udd17 [Learn More](https://powerhousegym.com/locations/linden/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 1.0/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Weak competition - capitalize on market gaps\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "fitness",
+          "location": "Linden",
+          "timestamp": "2025-10-04T19:58:16.522033",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 40.622262,
+            "longitude": -74.244483
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 40.622262,
+              "lng": -74.244483
+            },
+            "radius_miles": 10.0,
+            "business_type": "fitness",
+            "competitor_count": 20,
+            "average_rating": 3.06,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "New York",
+                "address": "New York",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 40.7127753,
+                  "longitude": -74.0059728
+                },
+                "place_id": "ChIJOwg_06VPwokRYv534QaPC8g"
+              },
+              {
+                "name": "Hampton Inn Linden",
+                "address": "501 West Edgar Road, Linden",
+                "rating": 3.9,
+                "user_ratings_total": 1352,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.6216993,
+                  "longitude": -74.2468983
+                },
+                "place_id": "ChIJU_T1JRGzw4kRMdskGa_b_tM"
+              },
+              {
+                "name": "Hotel Executive Suites",
+                "address": "30 Minue Street, Carteret",
+                "rating": 3.4,
+                "user_ratings_total": 1295,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.59060239999999,
+                  "longitude": -74.2388923
+                },
+                "place_id": "ChIJgUa_-aC0w4kREPiF6_8GFLY"
+              },
+              {
+                "name": "Riverview Inn & Suites",
+                "address": "1747 Paterson Street, Rahway",
+                "rating": 3.8,
+                "user_ratings_total": 674,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.60406709999999,
+                  "longitude": -74.2626954
+                },
+                "place_id": "ChIJ1zxCWHizw4kRnIvUOiRqhpM"
+              },
+              {
+                "name": "Linden Airport (LDJ)",
+                "address": "1101 West Edgar Road, Linden",
+                "rating": 4.6,
+                "user_ratings_total": 79,
+                "price_level": 0,
+                "types": [
+                  "airport",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 40.61571089999999,
+                  "longitude": -74.243417
+                },
+                "place_id": "ChIJ_RHEORSzw4kRTEnBlnMt6f8"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State Linden",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Gym in Linden, NJ | 1151 W St Georges Ave ...",
+              "link": "https://www.planetfitness.com/gyms/linden-nj/",
+              "snippet": "Your local gym in Linden, NJ. Starting as low as $15 a month. Enjoy free fitness training, flexible hours, and a clean, welcoming Judgement Free Zone.",
+              "position": 1
+            },
+            {
+              "title": "LINDEN Gym | 950 WEST EDGAR ROAD",
+              "link": "https://www.lafitness.com/pages/clubhome.aspx?clubid=1319&Linden-New+Jersey+GYM",
+              "snippet": "LA Fitness is a gym located at 950 WEST EDGAR ROAD. This LINDEN health club has group fitness classes, personal training, weights & more!",
+              "position": 2
+            },
+            {
+              "title": "Linden, NJ",
+              "link": "https://powerhousegym.com/locations/linden/",
+              "snippet": "Powerhouse Gym of Linden is a state of the art facility that offers the best in workout equipment, classes, personal training, and so much more!",
+              "position": 3
+            },
+            {
+              "title": "THE BEST 10 GYMS near LINDEN, NJ 07036",
+              "link": "https://www.yelp.com/search?cflt=gyms&find_loc=Linden%2C+NJ+07036",
+              "snippet": "The Best 10 Gyms near Linden, NJ 07036 ; 1. Powerhouse Gym \u00b7 Gyms \u00b7 Trainers \u00b7 Yoga \u00b7 201 S Park Ave, Linden, NJ 07036. (908) 925-1499 ; 2. Paragon Athletic Club.",
+              "position": 4
+            },
+            {
+              "title": "Paragon Athletic Club: Linden Gym & Bootcamp",
+              "link": "https://www.paragonathleticclub.com/",
+              "snippet": "Paragon Athletic Club is a results driven gym and home to SWEAT FITNESS BOOTCAMP. Weight loss, toned arms, lean muscle, 6-pak abs...we can help with that.",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "88c77441-691d-4e19-b734-2d45bef3fd21",
+        "timestamp": "2025-10-04 20:02:18.979235",
+        "user_message": "i want to open a moro boat shop in coney island",
+        "bot_response": "I'll analyze the retail market in Moro for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Retail in Moro**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Atlanta** - \ud83d\udccd Atlanta\n2. **Fairfield by Marriott Inn & Suites Atlanta Buckhead** - 3.9/5 \u2b50 (799 reviews)\n   \ud83d\udccd 3092 Piedmont Road Northeast, Atlanta\n3. **La Quinta Inn & Suites by Wyndham Atlanta Midtown - Buckhead** - 3.7/5 \u2b50 (1339 reviews)\n   \ud83d\udccd 2535 Chantilly Drive Northeast, Atlanta\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Franchise Overview**\n   \ud83d\udcdd We are currently looking for franchise partners for selected international and domestic markets. Ple...\n   \ud83d\udd17 [Learn More](https://www.dalmoros.it/franchise-overview/?srsltid=AfmBOoo8VrVc5KKgXOJciTHiA58X6O2oTHFRf-PComCIXNS65R4oLn_d)\n2. **Dal Moro's Fresh Pasta To Go - Franchising**\n   \ud83d\udcdd Dal Moro's franchise offers a strong brand, social media marketing, consistent quality, fresh pasta,...\n   \ud83d\udd17 [Learn More](https://www.dalmoros.ca/franchising)\n3. **WHY CHOOSE THE DAL MORO'S FRANCHISE ...**\n   \ud83d\udcdd \u2713 Our experts will assist you in choosing the right location among the ones you found in your territ...\n   \ud83d\udd17 [Learn More](https://www.facebook.com/DalMorosFreshPastaToGo/posts/why-choose-the-dal-moros-franchise-development-program-our-experts-will-assist-y/4498818896817431/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (1.9% growth)\n\u2022 Confidence: 74%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.9/1.0\n\u2022 Growth Potential: 0.4/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\u2022 Limited growth potential - consider market expansion\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 74% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "retail",
+          "location": "Moro",
+          "timestamp": "2025-10-04T20:02:18.966311",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 33.825813,
+            "longitude": -84.3671
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 33.825813,
+              "lng": -84.3671
+            },
+            "radius_miles": 10.0,
+            "business_type": "retail",
+            "competitor_count": 20,
+            "average_rating": 3.66,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Atlanta",
+                "address": "Atlanta",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 33.7501275,
+                  "longitude": -84.3885209
+                },
+                "place_id": "ChIJjQmTaV0E9YgRC2MLmS_e_mY"
+              },
+              {
+                "name": "Fairfield by Marriott Inn & Suites Atlanta Buckhead",
+                "address": "3092 Piedmont Road Northeast, Atlanta",
+                "rating": 3.9,
+                "user_ratings_total": 799,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.839845,
+                  "longitude": -84.3701
+                },
+                "place_id": "ChIJBc1vXPEF9YgRsfSrG3M9_ho"
+              },
+              {
+                "name": "La Quinta Inn & Suites by Wyndham Atlanta Midtown - Buckhead",
+                "address": "2535 Chantilly Drive Northeast, Atlanta",
+                "rating": 3.7,
+                "user_ratings_total": 1339,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.82368569999999,
+                  "longitude": -84.3500559
+                },
+                "place_id": "ChIJM3KIUgsG9YgRonCchtBlcuw"
+              },
+              {
+                "name": "Embassy Suites by Hilton Atlanta Buckhead",
+                "address": "3285 Peachtree Road Northeast, Atlanta",
+                "rating": 3.7,
+                "user_ratings_total": 3157,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.84458989999999,
+                  "longitude": -84.3686474
+                },
+                "place_id": "ChIJVUDzbvYF9YgR7wv3lOOhGoI"
+              },
+              {
+                "name": "Grand Hyatt Atlanta in Buckhead",
+                "address": "3300 Peachtree Road Northeast, Atlanta",
+                "rating": 4.5,
+                "user_ratings_total": 3171,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.8448541,
+                  "longitude": -84.3700497
+                },
+                "place_id": "ChIJab2B3vUF9YgR4LbKUZFUTcw"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State Moro",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Franchise Overview",
+              "link": "https://www.dalmoros.it/franchise-overview/?srsltid=AfmBOoo8VrVc5KKgXOJciTHiA58X6O2oTHFRf-PComCIXNS65R4oLn_d",
+              "snippet": "We are currently looking for franchise partners for selected international and domestic markets. Please fill out our form so that we can put you in touch with ...",
+              "position": 1
+            },
+            {
+              "title": "Dal Moro's Fresh Pasta To Go - Franchising",
+              "link": "https://www.dalmoros.ca/franchising",
+              "snippet": "Dal Moro's franchise offers a strong brand, social media marketing, consistent quality, fresh pasta, homemade sauces, and support in choosing equipment.",
+              "position": 2
+            },
+            {
+              "title": "WHY CHOOSE THE DAL MORO'S FRANCHISE ...",
+              "link": "https://www.facebook.com/DalMorosFreshPastaToGo/posts/why-choose-the-dal-moros-franchise-development-program-our-experts-will-assist-y/4498818896817431/",
+              "snippet": "\u2713 Our experts will assist you in choosing the right location among the ones you found in your territory; \u2713 We will create for you the 3D layout ...",
+              "position": 3
+            },
+            {
+              "title": "Moro - Crunchbase Company Profile & Funding",
+              "link": "https://www.crunchbase.com/organization/moro-d075",
+              "snippet": "Moro is an online retail store that offers furniture, lighting, home decor, gifts, and other accessories. Founded 2018 Private New York, New York, ...",
+              "position": 4
+            },
+            {
+              "title": "Buongiorno! Dal Moro\u2019s is looking for new candidates to ...",
+              "link": "https://www.facebook.com/DalMorosFreshPastaToGo/videos/buongiornodal-moros-is-looking-for-new-candidates-to-expand-our-franchise-networ/1605466700268711/",
+              "snippet": "Dal Moro's is looking for new candidates to expand our Franchise Network. If you were interested please contact us now at the following number: ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "8b3bbc3a-2ad8-4f44-9a13-b54560b42cc5",
+        "timestamp": "2025-10-04 20:03:05.019409",
+        "user_message": "i want to open a moro boat shop in coney island",
+        "bot_response": "I'll analyze the boat shop market in Moro for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Boat Shop in Moro**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Atlanta** - \ud83d\udccd Atlanta\n2. **Fairfield by Marriott Inn & Suites Atlanta Buckhead** - 3.9/5 \u2b50 (799 reviews)\n   \ud83d\udccd 3092 Piedmont Road Northeast, Atlanta\n3. **La Quinta Inn & Suites by Wyndham Atlanta Midtown - Buckhead** - 3.7/5 \u2b50 (1339 reviews)\n   \ud83d\udccd 2535 Chantilly Drive Northeast, Atlanta\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Top 10 Boat Sales Companies in Moro**\n   \ud83d\udcdd Looking for the best Boat Sales companies in Moro? Here's our list of the top Boat Sales pros as rat...\n   \ud83d\udd17 [Learn More](https://boatplanet.com/il/moro/boat-sales)\n2. **MOBRO Marine, Full Service Marine Equipment Compan**\n   \ud83d\udcdd Welcome. MOBRO Marine is a full service marine equipment company that has been meeting the needs of ...\n   \ud83d\udd17 [Learn More](https://www.mobromarine.com/)\n3. **Used Boat Warehouse Franchise Cost, Fees, Opportunities ...**\n   \ud83d\udcdd Interested parties should have at least $50,000 in liquid capital to invest and a minimum net worth ...\n   \ud83d\udd17 [Learn More](https://www.franchisegator.com/dealerships/used-boat-warehouse/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.5/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "boat shop",
+          "location": "Moro",
+          "timestamp": "2025-10-04T20:03:02.851254",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 33.825813,
+            "longitude": -84.3671
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 33.825813,
+              "lng": -84.3671
+            },
+            "radius_miles": 10.0,
+            "business_type": "boat shop",
+            "competitor_count": 20,
+            "average_rating": 3.66,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Atlanta",
+                "address": "Atlanta",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 33.7501275,
+                  "longitude": -84.3885209
+                },
+                "place_id": "ChIJjQmTaV0E9YgRC2MLmS_e_mY"
+              },
+              {
+                "name": "Fairfield by Marriott Inn & Suites Atlanta Buckhead",
+                "address": "3092 Piedmont Road Northeast, Atlanta",
+                "rating": 3.9,
+                "user_ratings_total": 799,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.839845,
+                  "longitude": -84.3701
+                },
+                "place_id": "ChIJBc1vXPEF9YgRsfSrG3M9_ho"
+              },
+              {
+                "name": "La Quinta Inn & Suites by Wyndham Atlanta Midtown - Buckhead",
+                "address": "2535 Chantilly Drive Northeast, Atlanta",
+                "rating": 3.7,
+                "user_ratings_total": 1339,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.82368569999999,
+                  "longitude": -84.3500559
+                },
+                "place_id": "ChIJM3KIUgsG9YgRonCchtBlcuw"
+              },
+              {
+                "name": "Embassy Suites by Hilton Atlanta Buckhead",
+                "address": "3285 Peachtree Road Northeast, Atlanta",
+                "rating": 3.7,
+                "user_ratings_total": 3157,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.84458989999999,
+                  "longitude": -84.3686474
+                },
+                "place_id": "ChIJVUDzbvYF9YgR7wv3lOOhGoI"
+              },
+              {
+                "name": "Grand Hyatt Atlanta in Buckhead",
+                "address": "3300 Peachtree Road Northeast, Atlanta",
+                "rating": 4.5,
+                "user_ratings_total": 3171,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.8448541,
+                  "longitude": -84.3700497
+                },
+                "place_id": "ChIJab2B3vUF9YgR4LbKUZFUTcw"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State Moro",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Top 10 Boat Sales Companies in Moro",
+              "link": "https://boatplanet.com/il/moro/boat-sales",
+              "snippet": "Looking for the best Boat Sales companies in Moro? Here's our list of the top Boat Sales pros as rated by your boating community.",
+              "position": 1
+            },
+            {
+              "title": "MOBRO Marine, Full Service Marine Equipment Compan",
+              "link": "https://www.mobromarine.com/",
+              "snippet": "Welcome. MOBRO Marine is a full service marine equipment company that has been meeting the needs of the construction and marine industries since 1962.",
+              "position": 2
+            },
+            {
+              "title": "Used Boat Warehouse Franchise Cost, Fees, Opportunities ...",
+              "link": "https://www.franchisegator.com/dealerships/used-boat-warehouse/",
+              "snippet": "Interested parties should have at least $50,000 in liquid capital to invest and a minimum net worth of $100,000. Dealers can expect to make a total investment ...",
+              "position": 3
+            },
+            {
+              "title": "THE BEST 10 BOAT DEALERS near MORA, MN 55051",
+              "link": "https://www.yelp.com/search?cflt=boatdealers&find_loc=Mora%2C+MN+55051",
+              "snippet": "The Best 10 Boat Dealers near Mora, MN 55051 \u00b7 Westre's Marine & Sport \u00b7 Power Lodge Onamia \u00b7 Highway 3 Marine \u00b7 St Croix Dock and Marine \u00b7 Boone Docks Marine.",
+              "position": 4
+            },
+            {
+              "title": "Azure Standard - Azure Standard",
+              "link": "https://www.azurestandard.com/",
+              "snippet": "Azure Standard is a family owned and independent company dedicated to providing affordable organic, natural and non-GMO groceries, health, household and garden ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "7db9ae71-2ef9-4ce7-b992-f1fae65eabce",
+        "timestamp": "2025-10-04 20:04:32.785667",
+        "user_message": "i want to open a moro boat shop in coney island",
+        "bot_response": "\ud83c\udfe2 **I Want Open Moro Boat Shop Market Analysis**\n\nExcellent business idea! Which location or area are you considering for your i want open moro boat shop?\n\nPerfect! I'll provide thorough analysis so you can make the best decision.\n\n\ud83d\udccd **What location are you considering?** I can provide:\n\n\u2022 **Demographics**: Population, income, age distribution\n\u2022 **Competitor Analysis**: Existing businesses and market saturation\n\u2022 **Territory Intelligence**: Optimal radius and positioning\n\u2022 **Franchise Opportunities**: Available options in your area\n\u2022 **Investment Insights**: Startup costs and ROI projections\n\nJust tell me the city, address, or area you're interested in!",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "i want open moro boat shop"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "92c1650d-468d-48bf-933b-2f4876b8bfa2",
+        "timestamp": "2025-10-04 20:06:11.611421",
+        "user_message": "i want to open a moro boat shop in coney island",
+        "bot_response": "\ud83c\udfe2 **Boat Shop Market Analysis**\n\nExcellent business idea! Which location or area are you considering for your boat shop?\n\nPerfect! I'll provide thorough analysis so you can make the best decision.\n\n\ud83d\udccd **What location are you considering?** I can provide:\n\n\u2022 **Demographics**: Population, income, age distribution\n\u2022 **Competitor Analysis**: Existing businesses and market saturation\n\u2022 **Territory Intelligence**: Optimal radius and positioning\n\u2022 **Franchise Opportunities**: Available options in your area\n\u2022 **Investment Insights**: Startup costs and ROI projections\n\nJust tell me the city, address, or area you're interested in!",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "boat shop"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "578c5592-4abb-49a6-a299-9d27d4aee2a7",
+        "timestamp": "2025-10-04 20:06:53.700596",
+        "user_message": "i want to open a moro boat shop in coney island",
+        "bot_response": "\ud83c\udfe2 **Boat Shop Market Analysis**\n\nGood choice! Now, where are you thinking of opening your boat shop?\n\nPerfect! I'll provide thorough analysis so you can make the best decision.\n\n\ud83d\udccd **What location are you considering?** I can provide:\n\n\u2022 **Demographics**: Population, income, age distribution\n\u2022 **Competitor Analysis**: Existing businesses and market saturation\n\u2022 **Territory Intelligence**: Optimal radius and positioning\n\u2022 **Franchise Opportunities**: Available options in your area\n\u2022 **Investment Insights**: Startup costs and ROI projections\n\nJust tell me the city, address, or area you're interested in!",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "boat shop"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "702fa1b7-153c-4f7d-a14b-d6ff2a93ddc7",
+        "timestamp": "2025-10-04 20:10:34.741357",
+        "user_message": "i want to open a motor boat shop at coney island",
+        "bot_response": "\ud83c\udfe2 **Boat Shop Market Analysis**\n\nGood choice! Now, where are you thinking of opening your boat shop?\n\n\ud83d\udccd **What location are you considering?** I can provide:\n\n\u2022 **Demographics**: Population, income, age distribution\n\u2022 **Competitor Analysis**: Existing businesses and market saturation\n\u2022 **Territory Intelligence**: Optimal radius and positioning\n\u2022 **Franchise Opportunities**: Available options in your area\n\u2022 **Investment Insights**: Startup costs and ROI projections\n\nJust tell me the city, address, or area you're interested in!",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "boat shop"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      },
+      {
+        "turn_id": "c2bfacb4-1a80-49e4-bb69-b94a76afc9ec",
+        "timestamp": "2025-10-04 20:11:37.659197",
+        "user_message": "i want to open a motor boat shop at coney island",
+        "bot_response": "\ud83c\udfe2 **Boat Shop Market Analysis**\n\nGood choice! Now, where are you thinking of opening your boat shop?\n\n\ud83d\udccd **What location are you considering?** I can provide:\n\n\u2022 **Demographics**: Population, income, age distribution\n\u2022 **Competitor Analysis**: Existing businesses and market saturation\n\u2022 **Territory Intelligence**: Optimal radius and positioning\n\u2022 **Franchise Opportunities**: Available options in your area\n\u2022 **Investment Insights**: Startup costs and ROI projections\n\nJust tell me the city, address, or area you're interested in!",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "boat shop"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "web_session_1759622176900": [
+      {
+        "turn_id": "1a31f0ac-cbdc-4b02-99ed-f52af8bc04af",
+        "timestamp": "2025-10-04 19:56:27.370085",
+        "user_message": "i want to open a gym in linden",
+        "bot_response": "I'll analyze the fitness market in delaware for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Fitness in Delaware**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Dover** - \ud83d\udccd Dover\n2. **Griffiths Chapel** - 5/5 \u2b50 (1 reviews)\n   \ud83d\udccd 3620 Williamsville Road, Houston\n3. **Holiday Inn Express & Suites Harrington by IHG** - 4.3/5 \u2b50 (486 reviews)\n   \ud83d\udccd 17271 South Dupont Highway, Harrington\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Health Care and Fitness Businesses For Sale in Delaware**\n   \ud83d\udcdd Browse 19 Delaware Health Care and Fitness businesses available for sale on BizBuySell. Find your id...\n   \ud83d\udd17 [Learn More](https://www.bizbuysell.com/delaware/health-care-and-fitness-businesses-for-sale/)\n2. **Delaware Health, Beauty & Fitness Franchises For Sale**\n   \ud83d\udcdd Choose the best Delaware Health, Beauty & Fitness Franchise opportunities from 32 available. Start y...\n   \ud83d\udd17 [Learn More](https://www.loopnet.com/biz/franchises-for-sale/delaware/beauty-and-fitness-franchise/)\n3. **Health & Fitness Franchises in Delaware**\n   \ud83d\udcdd Health & Fitness Franchise Opportunities on FranchiseForSale.com. Find local franchises near you in ...\n   \ud83d\udd17 [Learn More](https://www.franchiseforsale.com/health-fitness-franchises_in_delaware)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (3.1% growth)\n\u2022 Confidence: 76%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 1.0/1.0\n\u2022 Demographic Match: 0.5/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.8/1.0\n\u2022 Growth Potential: 0.7/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Weak competition - capitalize on market gaps\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 76% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "fitness",
+          "location": "delaware",
+          "timestamp": "2025-10-04T19:56:24.602905",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 38.997878,
+            "longitude": -75.505563
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 38.997878,
+              "lng": -75.505563
+            },
+            "radius_miles": 10.0,
+            "business_type": "fitness",
+            "competitor_count": 20,
+            "average_rating": 2.94,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Dover",
+                "address": "Dover",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 39.158168,
+                  "longitude": -75.5243682
+                },
+                "place_id": "ChIJrV5odTNjx4kR8GwA-0fk4qk"
+              },
+              {
+                "name": "Griffiths Chapel",
+                "address": "3620 Williamsville Road, Houston",
+                "rating": 5,
+                "user_ratings_total": 1,
+                "price_level": 0,
+                "types": [
+                  "church",
+                  "place_of_worship",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.8958088,
+                  "longitude": -75.5079023
+                },
+                "place_id": "ChIJFTXSUxKQuIkRDFvyZGMhu-4"
+              },
+              {
+                "name": "Holiday Inn Express & Suites Harrington by IHG",
+                "address": "17271 South Dupont Highway, Harrington",
+                "rating": 4.3,
+                "user_ratings_total": 486,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.922563,
+                  "longitude": -75.56653759999999
+                },
+                "place_id": "ChIJ5TF0uHuFuIkR3FNMbukvAKE"
+              },
+              {
+                "name": "Best Western Galaxy Inn",
+                "address": "1700 East Lebanon Road, Dover",
+                "rating": 3.3,
+                "user_ratings_total": 515,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 39.12876009999999,
+                  "longitude": -75.4949719
+                },
+                "place_id": "ChIJgZ8NWBJjx4kRHoqsmLx4gxQ"
+              },
+              {
+                "name": "Carpenters Bridge, Bridge 2035A-035",
+                "address": "Felton",
+                "rating": 4.6,
+                "user_ratings_total": 5,
+                "price_level": 0,
+                "types": [
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 38.9891781,
+                  "longitude": -75.4942281
+                },
+                "place_id": "ChIJEZw1XZ2cuIkRf5xicm1OVbs"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State delaware",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Health Care and Fitness Businesses For Sale in Delaware",
+              "link": "https://www.bizbuysell.com/delaware/health-care-and-fitness-businesses-for-sale/",
+              "snippet": "Browse 19 Delaware Health Care and Fitness businesses available for sale on BizBuySell. Find your ideal Dental Practices, Home Health Care, ...",
+              "position": 1
+            },
+            {
+              "title": "Delaware Health, Beauty & Fitness Franchises For Sale",
+              "link": "https://www.loopnet.com/biz/franchises-for-sale/delaware/beauty-and-fitness-franchise/",
+              "snippet": "Choose the best Delaware Health, Beauty & Fitness Franchise opportunities from 32 available. Start your own Health, Beauty & Fitness Franchise.",
+              "position": 2
+            },
+            {
+              "title": "Health & Fitness Franchises in Delaware",
+              "link": "https://www.franchiseforsale.com/health-fitness-franchises_in_delaware",
+              "snippet": "Health & Fitness Franchise Opportunities on FranchiseForSale.com. Find local franchises near you in Delaware - new listings daily.",
+              "position": 3
+            },
+            {
+              "title": "1 Delaware Gym or Fitness Center for Sale",
+              "link": "https://americangymtrader.com/gyms-for-sale/state/de",
+              "snippet": "Fitness Franchise - 1500 Members - Low Price \u00b7 Asking Price: $125,000 Cash Flow: $17,694 \u00b7 Description: Well established Popular Franchise Health Club in Delaware ...",
+              "position": 4
+            },
+            {
+              "title": "How to Open a Gym in Delaware in 2025",
+              "link": "https://www.exercise.com/grow/how-to-open-a-gym-in-delaware/",
+              "snippet": "Delaware requires gym owners to obtain several licenses and permits, depending on the services offered and the gym's location. Business License: ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "web_session_1759622363910": [
+      {
+        "turn_id": "6d97c3ca-a729-4171-b527-cf8da2be9737",
+        "timestamp": "2025-10-04 19:59:39.034338",
+        "user_message": "i want to open a moro boat shop in coney island",
+        "bot_response": "I'll analyze the retail market in Moro for you. Let me gather real-time data on competition, demographics, and franchise opportunities.\n\n\ud83d\udcca **ENHANCED LIVE ANALYSIS: Retail in Moro**\n\n\ud83c\udfe2 **Competition Analysis (REAL DATA):**\n\u2022 Found 20 competitors in the area\n\n**Top Competitors:**\n1. **Atlanta** - \ud83d\udccd Atlanta\n2. **Fairfield by Marriott Inn & Suites Atlanta Buckhead** - 3.9/5 \u2b50 (799 reviews)\n   \ud83d\udccd 3092 Piedmont Road Northeast, Atlanta\n3. **La Quinta Inn & Suites by Wyndham Atlanta Midtown - Buckhead** - 3.7/5 \u2b50 (1339 reviews)\n   \ud83d\udccd 2535 Chantilly Drive Northeast, Atlanta\n\n\ud83d\udc65 **Demographics (REAL DATA):**\n\u2022 Population: 7,500,000\n\u2022 Median Income: $75,000\n\n\ud83d\udcbc **Franchise Opportunities (REAL DATA - 5 found):**\n1. **Franchise Overview**\n   \ud83d\udcdd We are currently looking for franchise partners for selected international and domestic markets. Ple...\n   \ud83d\udd17 [Learn More](https://www.dalmoros.it/franchise-overview/?srsltid=AfmBOoo8VrVc5KKgXOJciTHiA58X6O2oTHFRf-PComCIXNS65R4oLn_d)\n2. **Dal Moro's Fresh Pasta To Go - Franchising**\n   \ud83d\udcdd Dal Moro's franchise offers a strong brand, social media marketing, consistent quality, fresh pasta,...\n   \ud83d\udd17 [Learn More](https://www.dalmoros.ca/franchising)\n3. **WHY CHOOSE THE DAL MORO'S FRANCHISE ...**\n   \ud83d\udcdd \u2713 Our experts will assist you in choosing the right location among the ones you found in your territ...\n   \ud83d\udd17 [Learn More](https://www.facebook.com/DalMorosFreshPastaToGo/posts/why-choose-the-dal-moros-franchise-development-program-our-experts-will-assist-y/4498818896817431/)\n\n\n\ud83d\udcca **Market Trend Analysis:**\n\u2022 Trend: Stable (1.9% growth)\n\u2022 Confidence: 74%\n\u2022 Risk Level: Medium\n\u2022 Timeframe: 12 months\n\u2022 Key Factors: Favorable demographics\n\n\u2696\ufe0f **Opportunity Score: 0.6/1.0**\n\u2022 Market Saturation: 0.0/1.0\n\u2022 Competition Level: 0.7/1.0\n\u2022 Demographic Match: 1.0/1.0\n\u2022 Economic Factors: 0.8/1.0\n\u2022 Seasonality: 0.9/1.0\n\u2022 Growth Potential: 0.4/1.0\n\n\ud83d\udca1 **Smart Recommendations:**\n\u2022 High competition - consider differentiation strategy\n\u2022 Excellent demographic match for this business\n\u2022 Peak season timing - ideal for launch\n\u2022 Limited growth potential - consider market expansion\n\n\u2705 **Analysis completed using 4 REAL data sources + AI:**\n\u2022 Mapbox Geocoding\n\u2022 Google Places Analysis\n\u2022 US Census Demographics\n\u2022 SerpAPI Franchise Search\n\u2022 Advanced Market Forecasting\n\u2022 Opportunity Scoring Algorithm\n\u2022 Trend Analysis Engine\n\n\ud83d\uddfa\ufe0f **Map updated with REAL competitor locations and market zones**\n\n\ud83c\udfaf **AI-Powered Insights:**\n\u2022 Market trend prediction with 74% confidence\n\u2022 Comprehensive opportunity scoring across 6 key factors\n\u2022 Personalized recommendations based on market conditions\n\n\ud83d\udca1 **Smart Suggestions:**\n\u2022 Consider analyzing multiple locations for comparison\n\u2022 Research franchise opportunities in your area\n\u2022 Analyze competitor density and market saturation\n",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "retail",
+          "location": "Moro",
+          "timestamp": "2025-10-04T19:59:36.732832",
+          "apis_used": [
+            "Mapbox Geocoding",
+            "Google Places Analysis",
+            "US Census Demographics",
+            "SerpAPI Franchise Search"
+          ],
+          "errors": [],
+          "real_data_only": true,
+          "coordinates": {
+            "latitude": 33.825813,
+            "longitude": -84.3671
+          },
+          "territory_analysis": {
+            "center": {
+              "lat": 33.825813,
+              "lng": -84.3671
+            },
+            "radius_miles": 10.0,
+            "business_type": "retail",
+            "competitor_count": 20,
+            "average_rating": 3.66,
+            "opportunity_score": 0.6,
+            "market_saturation": "high",
+            "recommended_action": "high_competition",
+            "top_competitors": [
+              {
+                "name": "Atlanta",
+                "address": "Atlanta",
+                "rating": 0,
+                "user_ratings_total": 0,
+                "price_level": 0,
+                "types": [
+                  "locality",
+                  "political"
+                ],
+                "coordinates": {
+                  "latitude": 33.7501275,
+                  "longitude": -84.3885209
+                },
+                "place_id": "ChIJjQmTaV0E9YgRC2MLmS_e_mY"
+              },
+              {
+                "name": "Fairfield by Marriott Inn & Suites Atlanta Buckhead",
+                "address": "3092 Piedmont Road Northeast, Atlanta",
+                "rating": 3.9,
+                "user_ratings_total": 799,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.839845,
+                  "longitude": -84.3701
+                },
+                "place_id": "ChIJBc1vXPEF9YgRsfSrG3M9_ho"
+              },
+              {
+                "name": "La Quinta Inn & Suites by Wyndham Atlanta Midtown - Buckhead",
+                "address": "2535 Chantilly Drive Northeast, Atlanta",
+                "rating": 3.7,
+                "user_ratings_total": 1339,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.82368569999999,
+                  "longitude": -84.3500559
+                },
+                "place_id": "ChIJM3KIUgsG9YgRonCchtBlcuw"
+              },
+              {
+                "name": "Embassy Suites by Hilton Atlanta Buckhead",
+                "address": "3285 Peachtree Road Northeast, Atlanta",
+                "rating": 3.7,
+                "user_ratings_total": 3157,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.84458989999999,
+                  "longitude": -84.3686474
+                },
+                "place_id": "ChIJVUDzbvYF9YgR7wv3lOOhGoI"
+              },
+              {
+                "name": "Grand Hyatt Atlanta in Buckhead",
+                "address": "3300 Peachtree Road Northeast, Atlanta",
+                "rating": 4.5,
+                "user_ratings_total": 3171,
+                "price_level": 0,
+                "types": [
+                  "lodging",
+                  "point_of_interest",
+                  "establishment"
+                ],
+                "coordinates": {
+                  "latitude": 33.8448541,
+                  "longitude": -84.3700497
+                },
+                "place_id": "ChIJab2B3vUF9YgR4LbKUZFUTcw"
+              }
+            ]
+          },
+          "demographics": {
+            "name": "State Moro",
+            "total_population": 7500000,
+            "median_household_income": 75000,
+            "mean_commute_time": 25.5
+          },
+          "franchise_opportunities": [
+            {
+              "title": "Franchise Overview",
+              "link": "https://www.dalmoros.it/franchise-overview/?srsltid=AfmBOoo8VrVc5KKgXOJciTHiA58X6O2oTHFRf-PComCIXNS65R4oLn_d",
+              "snippet": "We are currently looking for franchise partners for selected international and domestic markets. Please fill out our form so that we can put you in touch with ...",
+              "position": 1
+            },
+            {
+              "title": "Dal Moro's Fresh Pasta To Go - Franchising",
+              "link": "https://www.dalmoros.ca/franchising",
+              "snippet": "Dal Moro's franchise offers a strong brand, social media marketing, consistent quality, fresh pasta, homemade sauces, and support in choosing equipment.",
+              "position": 2
+            },
+            {
+              "title": "WHY CHOOSE THE DAL MORO'S FRANCHISE ...",
+              "link": "https://www.facebook.com/DalMorosFreshPastaToGo/posts/why-choose-the-dal-moros-franchise-development-program-our-experts-will-assist-y/4498818896817431/",
+              "snippet": "\u2713 Our experts will assist you in choosing the right location among the ones you found in your territory; \u2713 We will create for you the 3D layout ...",
+              "position": 3
+            },
+            {
+              "title": "Moro - Crunchbase Company Profile & Funding",
+              "link": "https://www.crunchbase.com/organization/moro-d075",
+              "snippet": "Moro is an online retail store that offers furniture, lighting, home decor, gifts, and other accessories. Founded 2018 Private New York, New York, ...",
+              "position": 4
+            },
+            {
+              "title": "Buongiorno! Dal Moro\u2019s is looking for new candidates to ...",
+              "link": "https://www.facebook.com/DalMorosFreshPastaToGo/videos/buongiornodal-moros-is-looking-for-new-candidates-to-expand-our-franchise-networ/1605466700268711/",
+              "snippet": "Dal Moro's is looking for new candidates to expand our Franchise Network. If you were interested please contact us now at the following number: ...",
+              "position": 5
+            }
+          ]
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
+    ],
+    "web_session_1759622826332": [
+      {
+        "turn_id": "989a3257-d2cd-4146-b129-45bdcab2fdcd",
+        "timestamp": "2025-10-04 20:07:18.527414",
+        "user_message": "i want to open a motor boat shop at coney island",
+        "bot_response": "\ud83c\udfe2 **Boat Shop Market Analysis**\n\nExcellent business idea! Which location or area are you considering for your boat shop?\n\n\ud83d\udccd **What location are you considering?** I can provide:\n\n\u2022 **Demographics**: Population, income, age distribution\n\u2022 **Competitor Analysis**: Existing businesses and market saturation\n\u2022 **Territory Intelligence**: Optimal radius and positioning\n\u2022 **Franchise Opportunities**: Available options in your area\n\u2022 **Investment Insights**: Startup costs and ROI projections\n\nJust tell me the city, address, or area you're interested in!",
+        "detected_intent": "unknown",
+        "entities": {},
+        "analysis_data": {
+          "business_type": "boat shop"
+        },
+        "user_satisfaction": null,
+        "follow_up_needed": false
+      }
     ]
   },
   "user_profiles": {
@@ -4099,12 +5171,52 @@
       "experience_level": "experienced",
       "communication_style": "formal",
       "last_interaction": "2025-10-03 06:14:42.441542"
+    },
+    "test_session": {
+      "user_id": "test_session",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-04 20:11:37.659203"
+    },
+    "web_session_1759622176900": {
+      "user_id": "web_session_1759622176900",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-04 19:56:27.370101"
+    },
+    "web_session_1759622363910": {
+      "user_id": "web_session_1759622363910",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-04 19:59:39.034344"
+    },
+    "web_session_1759622826332": {
+      "user_id": "web_session_1759622826332",
+      "preferences": {},
+      "business_interests": [],
+      "location_preferences": [],
+      "investment_range": null,
+      "experience_level": "experienced",
+      "communication_style": "formal",
+      "last_interaction": "2025-10-04 20:07:18.527448"
     }
   },
   "global_insights": {
     "common_patterns": {
-      "unknown_False_False": 29
+      "unknown_False_False": 41
     }
   },
-  "last_updated": "2025-10-03T06:14:42.442305"
+  "last_updated": "2025-10-04T20:11:37.660233"
 }

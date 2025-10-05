@@ -1,0 +1,254 @@
+{
+  "business_type": "pizza",
+  "location": "manhattan new york",
+  "timestamp": "2025-10-05T02:21:13.541407",
+  "location_data": {
+    "coordinates": [
+      40.7831,
+      -73.9712
+    ],
+    "address": "Times Square, Manhattan, NY 10036",
+    "neighborhood": "Midtown Manhattan",
+    "zip_codes": [
+      "10036",
+      "10019",
+      "10020",
+      "10018"
+    ],
+    "walking_score": 98,
+    "transit_score": 100,
+    "bike_score": 85,
+    "nearby_landmarks": [
+      "Times Square",
+      "Broadway Theater District",
+      "Central Park",
+      "5th Avenue Shopping",
+      "Rockefeller Center",
+      "Empire State Building"
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Joe's Pizza",
+      "rating": 4.2,
+      "reviews": 2847,
+      "distance": "0.3 mi",
+      "price": "$$"
+    },
+    {
+      "name": "Artichoke Basille's Pizza",
+      "rating": 4.0,
+      "reviews": 1923,
+      "distance": "0.4 mi",
+      "price": "$$"
+    },
+    {
+      "name": "Prince Street Pizza",
+      "rating": 4.5,
+      "reviews": 3456,
+      "distance": "0.6 mi",
+      "price": "$$"
+    },
+    {
+      "name": "Lombardi's Pizza",
+      "rating": 4.1,
+      "reviews": 2189,
+      "distance": "0.8 mi",
+      "price": "$$$"
+    },
+    {
+      "name": "Grimaldi's Pizzeria",
+      "rating": 4.3,
+      "reviews": 2567,
+      "distance": "0.9 mi",
+      "price": "$$$"
+    },
+    {
+      "name": "Pizza Suprema",
+      "rating": 4.4,
+      "reviews": 1834,
+      "distance": "1.1 mi",
+      "price": "$$"
+    },
+    {
+      "name": "John's of Bleecker Street",
+      "rating": 4.6,
+      "reviews": 4123,
+      "distance": "1.2 mi",
+      "price": "$$$"
+    },
+    {
+      "name": "Di Fara Pizza",
+      "rating": 4.7,
+      "reviews": 5678,
+      "distance": "1.5 mi",
+      "price": "$$"
+    },
+    {
+      "name": "Lucali",
+      "rating": 4.8,
+      "reviews": 1234,
+      "distance": "1.8 mi",
+      "price": "$$$"
+    },
+    {
+      "name": "Roberta's Pizza",
+      "rating": 4.3,
+      "reviews": 2987,
+      "distance": "2.1 mi",
+      "price": "$$"
+    }
+  ],
+  "demographics": {
+    "population_density": "27,000 people/sq mi",
+    "median_age": 38.5,
+    "median_household_income": "$85,000",
+    "education_level": "65% college educated",
+    "employment_rate": "94.2%",
+    "population_growth": "+2.3% annually",
+    "household_size": 1.8,
+    "ethnic_diversity": "Highly diverse - 45% White, 25% Hispanic, 15% Asian, 15% Other"
+  },
+  "heatmap_layers": {
+    "business_competition": {
+      "description": "Competition density and strength analysis",
+      "data_points": 47,
+      "insight": "High competition in core areas, moderate in peripheral zones"
+    },
+    "market_opportunity": {
+      "description": "Market opportunity scoring based on demand vs competition",
+      "data_points": 89,
+      "insight": "Opportunity zones identified in residential areas with lower competition"
+    },
+    "demographic_density": {
+      "description": "Population demographics and density mapping",
+      "data_points": 156,
+      "insight": "High density areas correlate with higher pizza consumption"
+    },
+    "income_wealth": {
+      "description": "Economic analysis and purchasing power",
+      "data_points": 134,
+      "insight": "High-income areas support premium pizza pricing"
+    },
+    "foot_traffic": {
+      "description": "Traffic pattern analysis based on POI density",
+      "data_points": 78,
+      "insight": "Peak traffic during lunch (11AM-2PM) and dinner (6PM-9PM)"
+    },
+    "review_power": {
+      "description": "Review strength and reputation analysis",
+      "data_points": 23,
+      "insight": "Strong review culture - customers actively rate restaurants"
+    }
+  },
+  "market_analysis": {
+    "competitor_count": 10,
+    "market_saturation": "72%",
+    "opportunity_score": "28%",
+    "market_size": "$2.4B annually",
+    "growth_rate": "+3.2% annually",
+    "average_check_size": "$18.50",
+    "peak_hours": "11AM-2PM, 6PM-9PM",
+    "seasonal_variation": "+15% in winter, -10% in summer",
+    "recommendation": "CAUTIOUS - High competition but strong demand"
+  },
+  "investment_analysis": {
+    "estimated_startup_cost": "$125,000",
+    "monthly_rent": "$8,500 - $15,000",
+    "equipment_costs": "$35,000 - $50,000",
+    "licensing_fees": "$2,500 - $5,000",
+    "initial_inventory": "$8,000 - $12,000",
+    "estimated_monthly_revenue": "$45,000 - $75,000",
+    "estimated_monthly_profit": "$9,000 - $15,000",
+    "months_to_roi": "8-14 months",
+    "break_even_point": "6-8 months",
+    "risk_level": "HIGH",
+    "investment_recommendation": "CAUTIOUS - Requires strong differentiation"
+  },
+  "franchise_opportunities": [
+    {
+      "name": "Domino's Pizza",
+      "initial_investment": "$119,000-$461,000",
+      "royalty": "5.5%",
+      "marketing": "4%"
+    },
+    {
+      "name": "Papa John's",
+      "initial_investment": "$130,000-$844,000",
+      "royalty": "5%",
+      "marketing": "8%"
+    },
+    {
+      "name": "Little Caesars",
+      "initial_investment": "$368,000-$1,573,000",
+      "royalty": "5%",
+      "marketing": "6%"
+    },
+    {
+      "name": "Pizza Hut",
+      "initial_investment": "$367,000-$1,985,000",
+      "royalty": "6%",
+      "marketing": "3%"
+    },
+    {
+      "name": "Marco's Pizza",
+      "initial_investment": "$350,000-$450,000",
+      "royalty": "5%",
+      "marketing": "2%"
+    }
+  ],
+  "search_trends": {
+    "pizza_manhattan_searches": "12,100 monthly searches",
+    "best_pizza_manhattan": "8,900 monthly searches",
+    "pizza_delivery_manhattan": "15,600 monthly searches",
+    "organic_pizza_manhattan": "2,400 monthly searches",
+    "vegan_pizza_manhattan": "3,200 monthly searches",
+    "trending_keywords": [
+      "artisanal pizza",
+      "wood-fired pizza",
+      "gluten-free pizza",
+      "plant-based pizza"
+    ],
+    "social_media_mentions": "45,000+ monthly mentions",
+    "instagram_hashtags": "#manhattanpizza (125K posts), #nycpizza (89K posts)"
+  },
+  "operational_insights": {
+    "peak_demand_hours": "11AM-2PM (lunch), 6PM-9PM (dinner)",
+    "weekend_vs_weekday": "+40% weekend demand",
+    "delivery_radius": "1.5 miles optimal",
+    "average_delivery_time": "25-35 minutes",
+    "most_popular_toppings": "Pepperoni (32%), Margherita (28%), Supreme (18%)",
+    "price_sensitivity": "Moderate - customers willing to pay premium for quality",
+    "competition_factors": "Location, speed, quality, price, online presence",
+    "success_factors": "Prime location, fast service, quality ingredients, strong online presence"
+  },
+  "risk_analysis": {
+    "high_competition": "72% market saturation",
+    "high_rent_costs": "$8,500-$15,000 monthly",
+    "labor_costs": "$15-$25/hour minimum wage",
+    "food_cost_volatility": "+15% annual inflation",
+    "regulatory_compliance": "NYC health department, permits, licenses",
+    "seasonal_demand": "Summer slowdown, winter peak",
+    "economic_recession_impact": "High - discretionary spending category"
+  },
+  "success_strategies": [
+    "Focus on unique selling proposition (USP) - artisanal, organic, or specialty pizza",
+    "Implement strong online ordering system and delivery optimization",
+    "Target specific niches: gluten-free, vegan, or authentic Italian",
+    "Location near office buildings for lunch crowd",
+    "Build strong social media presence and online reviews",
+    "Consider food truck model to reduce rent costs",
+    "Partner with corporate offices for catering contracts",
+    "Implement loyalty program and customer retention strategies"
+  ],
+  "data_sources": {
+    "Google Places API": "Business listings, reviews, ratings, photos, hours",
+    "Mapbox API": "Geocoding, routing, address validation, geographic data",
+    "US Census API": "Demographics, income, education, population density",
+    "SerpAPI": "Search trends, market data, competitor analysis, franchise info",
+    "Meta Ads API": "Advertising data, competitor ad spend, audience insights",
+    "BrightLocal API": "Local SEO data, citations, reviews, rankings",
+    "Heatmap Engine": "Multi-layer spatial analysis, opportunity scoring",
+    "Bot Intelligence": "Natural language processing, business classification"
+  }
+}
