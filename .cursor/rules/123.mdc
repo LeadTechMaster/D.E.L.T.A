@@ -1,0 +1,32 @@
+---
+alwaysApply: true
+---
+CRITICAL RULE FOR D.E.L.T.A 2 DEVELOPMENT:
+
+🚨 ABSOLUTE REQUIREMENT: REAL API INTEGRATION ONLY
+- NEVER use mock data, fake data, or hardcoded responses
+- NEVER create demo data or placeholder responses
+- ONLY use actual API calls to real external services
+- If an API fails, return an error - NEVER fallback to fake data
+- All data must come from live API endpoints
+- Environment variables for API keys - NEVER hardcode keys
+- Real-time data only - no cached or static responses
+- If you cannot implement real API integration, say so explicitly
+
+ALLOWED DATA SOURCES:
+✅ US Census Bureau API (real demographics)
+✅ Google Places API (real business data)
+✅ SerpAPI (real search trends)
+✅ Mapbox API (real maps/geocoding)
+✅ Meta Ads API (real competitor data)
+✅ Brightlocal API (real local SEO data)
+
+FORBIDDEN:
+❌ Mock responses
+❌ Hardcoded data
+❌ Demo data
+❌ Placeholder values
+❌ Generated/fake data
+❌ Static responses
+
+VIOLATION = IMMEDIATE STOP AND EXPLAIN WHY REAL API IS NEEDED
