@@ -78,8 +78,9 @@ async function getCensusDemographics(state) {
     try {
         const data = await makeApiRequest(censusUrl);
         if (data && data.length > 1) {
-            const [headers, values] = data;
+            const [headers, ...values] = data;
             const stateData = values[0];
+            
             
             return {
                 status: "success",
@@ -88,8 +89,8 @@ async function getCensusDemographics(state) {
                     total_population: parseInt(stateData[1]) || 0,
                     median_household_income: parseInt(stateData[2]) || 0,
                     median_age: parseFloat(stateData[3]) || 0,
-                    employment_rate: stateData[4] ? (parseInt(stateData[4]) / (parseInt(stateData[4]) + parseInt(stateData[5]))) * 100 : 0,
-                    unemployment_rate: stateData[5] ? (parseInt(stateData[5]) / (parseInt(stateData[4]) + parseInt(stateData[5]))) * 100 : 0,
+                    employment_rate: stateData[4] ? (parseInt(stateData[4]) / (parseInt(stateData[4]) + parseInt(stateData[5]))) * 100 : null,
+                    unemployment_rate: stateData[5] ? (parseInt(stateData[5]) / (parseInt(stateData[4]) + parseInt(stateData[5]))) * 100 : null,
                     median_home_value: parseInt(stateData[6]) || 0,
                     median_gross_rent: parseInt(stateData[7]) || 0
                 },
