@@ -157,35 +157,316 @@ graph TD
 
 ---
 
-## 📚 **Documentation**
+## 📚 **Complete API Documentation**
 
-### **API Endpoints**
+### **🔧 Backend API Endpoints**
 
-#### **Demographics**
-- `GET /api/v1/census/demographics?state=53` - State demographics
-- `GET /api/v1/zipcode/demographics?zipcode=98101` - ZIP code demographics
-- `GET /api/v1/census/age-distribution?state=53` - Age distribution data
-- `GET /api/v1/zipcode/age-distribution?zipcode=98101` - ZIP age data
+#### **📊 US Census Bureau Integration**
 
-#### **Business Intelligence**
-- `GET /api/v1/google-places/search?location=47.6062,-122.3321&query=motor boat&radius=50000` - Business search
-- `GET /api/v1/zipcode/businesses?zipcode=98101&query=motor boat` - ZIP business data
-- `GET /api/v1/businesses/locations` - Business locations for mapping
+**State-Level Demographics**
+```http
+GET /api/v1/census/demographics?state=53
+```
+**Data Retrieved:**
+- Total population (B01003_001E)
+- Median household income (B19013_001E)
+- Median age (B01002_001E)
+- Employment rate (B23025_004E, B23025_005E)
+- Median home value (B25077_001E)
+- Median gross rent (B25064_001E)
 
-#### **Search Trends**
-- `GET /api/v1/serpapi/search?query=motor boat&location=47.6062,-122.3321` - Search volume
-- Real-time keyword analysis and competition data
+**Age Distribution Analysis**
+```http
+GET /api/v1/census/age-distribution?state=53
+```
+**Data Retrieved (47 Census Variables):**
+- Male/Female age groups: B01001_003E through B01001_049E
+- Calculated percentages for: 0-17, 18-24, 25-34, 35-44, 45-54, 55-64, 65+
+- Real-time population distribution
 
-#### **Geographic Data**
-- `GET /api/v1/zipcode/coordinates?zipcode=98101` - ZIP coordinates
-- `GET /api/v1/zipcode/isochrone?zipcode=98101&minutes=15&mode=driving` - Travel areas
-- `GET /api/v1/mapbox/isochrone` - Custom isochrone generation
+**Gender Demographics**
+```http
+GET /api/v1/census/gender?state=53
+```
+**Data Retrieved:**
+- Male population (B01001_002E)
+- Female population (B01001_026E)
+- Percentage breakdown with validation
 
-### **Enhanced Census Variables**
-- **Economic Indicators**: Poverty rates, business counts, travel times
-- **Housing Intelligence**: Vacancy rates, rent burden, ownership rates  
-- **Social Demographics**: Health insurance, disability, veterans
-- **Transportation Infrastructure**: Commute times, vehicle ownership
+**Housing Intelligence**
+```http
+GET /api/v1/census/housing?state=53
+```
+**Data Retrieved:**
+- Total housing units (B25003_001E)
+- Owner occupied (B25003_002E)
+- Renter occupied (B25003_003E)
+- Ownership rates and rental percentages
+
+#### **📍 ZIP Code Level Analysis**
+
+**ZIP Code Demographics**
+```http
+GET /api/v1/zipcode/demographics?zipcode=98101
+```
+**Data Retrieved:**
+- Population (B01003_001E)
+- Income (B19013_001E)
+- Home values (B25077_001E)
+
+**ZIP Code Age Distribution**
+```http
+GET /api/v1/zipcode/age-distribution?zipcode=98101
+```
+**Data Retrieved:**
+- Complete age breakdown with 47 Census variables
+- Accurate percentage calculations
+- Male/female combined analysis
+
+**Economic Indicators**
+```http
+GET /api/v1/zipcode/economic?zipcode=98101
+```
+**Data Retrieved:**
+- Poverty rates (B17001_002E, B17001_001E)
+- Travel times to work (B08134_011E through B08134_021E)
+- Economic hardship indicators
+
+**Housing Analysis**
+```http
+GET /api/v1/zipcode/housing?zipcode=98101
+```
+**Data Retrieved:**
+- Housing unit status (B25002_001E, B25002_002E, B25002_003E)
+- Occupancy rates and vacancy data
+- Ownership vs rental breakdown
+
+**Social Demographics**
+```http
+GET /api/v1/zipcode/social?zipcode=98101
+```
+**Data Retrieved:**
+- Health insurance coverage (B27001_002E, B27001_001E)
+- Disability status (B18101_002E, B18101_001E)
+- Veteran population (B21001_002E, B21001_001E)
+
+**Transportation Infrastructure**
+```http
+GET /api/v1/zipcode/transportation-infrastructure?zipcode=98101
+```
+**Data Retrieved:**
+- Commute time distribution (B08134_001E through B08134_021E)
+- Vehicle ownership patterns
+- Transportation accessibility
+
+**Education Data**
+```http
+GET /api/v1/zipcode/education?zipcode=98101
+```
+**Data Retrieved:**
+- Educational attainment (B15003_022E through B15003_025E)
+- Bachelor's degree and higher percentages
+
+#### **🏢 Business Intelligence**
+
+**Google Places Business Search**
+```http
+GET /api/v1/google-places/search?query=motor boat&location=47.6062,-122.3321&radius=50000
+```
+**Data Retrieved:**
+- Business name, rating, review count
+- Exact coordinates and vicinity
+- Business types and price levels
+- Photos and operational hours
+
+**ZIP Code Business Analysis**
+```http
+GET /api/v1/zipcode/businesses?zipcode=98101&query=motor boat&radius=50000
+```
+**Data Retrieved:**
+- Geocoded ZIP code center coordinates
+- Business search within specified radius
+- Competitor density analysis
+
+**Business Locations for Mapping**
+```http
+GET /api/v1/businesses/locations?query=motor boat&location=47.6062,-122.3321&radius=50000
+```
+**Data Retrieved:**
+- Optimized location data for map visualization
+- Distance calculations from search center
+- Business clustering for heatmap generation
+
+#### **🔍 Search Intelligence**
+
+**SerpAPI Search Trends**
+```http
+GET /api/v1/serpapi/search?query=motor boat&location=Seattle, WA
+```
+**Data Retrieved:**
+- Real search volume and trends
+- Related search keywords
+- Competition level analysis
+- Geographic search patterns
+
+#### **🗺️ Geographic Services**
+
+**ZIP Code Coordinates**
+```http
+GET /api/v1/zipcode/coordinates?zipcode=98101
+```
+**Data Retrieved:**
+- ZIP code center coordinates via Google Geocoding
+- Boundary polygon data
+- Address validation
+
+**Isochrone Analysis**
+```http
+GET /api/v1/zipcode/isochrone?zipcode=98101&minutes=15&mode=driving
+```
+**Data Retrieved:**
+- Travel time polygons using Mapbox Isochrone API
+- Multiple travel modes (driving, walking, cycling)
+- Reach area visualization data
+
+---
+
+## 🔧 **Frontend API Services**
+
+### **Data Aggregation Functions**
+
+#### **useAreaData Hook**
+```typescript
+const { areaData, loading, error, fetchAreaData } = useAreaData();
+```
+
+**Aggregates:**
+- ZIP code detection from coordinates
+- Parallel API calls for demographics, businesses, search trends
+- Distance calculations between businesses
+- Competitor ranking by proximity
+
+#### **useZipcodeData Hook**
+```typescript
+const { currentZipcode, zipcodeData, setCurrentZipcode } = useZipcodeData();
+```
+
+**Aggregates:**
+- Demographics, age distribution, coordinates
+- Isochrone generation for travel analysis
+- Business data within ZIP boundaries
+- Real-time data validation
+
+#### **useRealData Hook**
+```typescript
+const { demographics, competitors, keywordDemand, opportunityIndex } = useRealData();
+```
+
+**Aggregates:**
+- State-level demographic data
+- Business competitor analysis
+- Search trend intelligence
+- Opportunity scoring algorithm
+
+### **Data Transformation Services**
+
+#### **transformApiData Object**
+```typescript
+export const transformApiData = {
+  demographics: (apiData) => ({ /* formatted demographic data */ }),
+  ageDistribution: (apiData) => ({ /* age group percentages */ }),
+  competitors: (apiData) => ({ /* business competitor data */ }),
+  keywordDemand: (apiData) => ({ /* search trend analysis */ }),
+  opportunityIndex: (demographics, businessData, searchData) => ({ /* scoring */ })
+};
+```
+
+**Transforms:**
+- Census API responses to frontend format
+- Business data to competitor analysis
+- Search trends to keyword demand metrics
+- Multi-source data to opportunity scoring
+
+#### **Heatmap Data Generation**
+```typescript
+generateBusinessHeatmap(businesses) // Business intensity mapping
+generateCompetitionHeatmap(businesses) // Competition density
+generateOpportunityHeatmap(businesses) // Market opportunity
+generatePopulationHeatmap(demographics) // Population density
+```
+
+**Generates:**
+- Intensity-based heatmap points
+- Competition density calculations
+- Opportunity scoring visualization
+- Population distribution mapping
+
+---
+
+## 📊 **Data Sources & APIs**
+
+### **🇺🇸 US Census Bureau API**
+**Base URL:** `https://api.census.gov/data/2021/acs/acs5`
+
+**Available Variables:**
+- **Population:** B01003_001E (Total population)
+- **Income:** B19013_001E (Median household income)
+- **Age:** B01002_001E (Median age)
+- **Employment:** B23025_004E, B23025_005E (Employment/unemployment)
+- **Housing:** B25077_001E, B25064_001E (Home value, rent)
+- **Age Groups:** B01001_003E through B01001_049E (47 variables)
+- **Gender:** B01001_002E, B01001_026E (Male/female populations)
+- **Poverty:** B17001_002E, B17001_001E (Poverty rates)
+- **Transportation:** B08134_001E through B08134_021E (Commute times)
+- **Education:** B15003_022E through B15003_025E (Educational attainment)
+- **Health Insurance:** B27001_002E, B27001_001E (Coverage rates)
+- **Disability:** B18101_002E, B18101_001E (Disability status)
+- **Veterans:** B21001_002E, B21001_001E (Veteran population)
+
+### **🏢 Google Places API**
+**Base URL:** `https://maps.googleapis.com/maps/api/place`
+
+**Services Used:**
+- **Text Search:** `/textsearch/json` - Business search by query
+- **Geocoding:** `/geocode/json` - Address to coordinates conversion
+- **Nearby Search:** `/nearbysearch/json` - Location-based business search
+
+**Data Retrieved:**
+- Business name, rating, review count
+- Exact coordinates and vicinity
+- Business types and price levels
+- Photos, hours, contact information
+- Place IDs for detailed information
+
+### **🔍 SerpAPI**
+**Base URL:** `https://serpapi.com/search.json`
+
+**Services Used:**
+- **Google Search:** Real search results and trends
+- **Local Search:** Location-specific search data
+- **Related Searches:** Keyword expansion and analysis
+
+**Data Retrieved:**
+- Real search volume and trends
+- Related search keywords
+- Competition level analysis
+- Geographic search patterns
+- CPC (Cost Per Click) estimates
+
+### **🗺️ Mapbox API**
+**Base URL:** `https://api.mapbox.com`
+
+**Services Used:**
+- **Isochrone API:** Travel time polygon generation
+- **Geocoding:** Coordinate to address conversion
+- **Directions:** Route planning and optimization
+- **Tiles:** Map rendering and visualization
+
+**Data Retrieved:**
+- Travel time polygons for multiple modes
+- Route optimization and directions
+- Geocoding and reverse geocoding
+- Map tiles and satellite imagery
 
 ---
 
