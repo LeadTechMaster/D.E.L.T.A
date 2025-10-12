@@ -14,6 +14,19 @@
 
 ---
 
+## IP & Use Notice — D.E.L.T.A
+
+© 2025–present AliceSolutionsGroup Inc. and SmartStart Hub. All rights reserved.
+
+D.E.L.T.A and all assets in this repository (code, designs, documentation, data models, and prompts) are proprietary intellectual property of AliceSolutionsGroup Inc. and SmartStart Hub, together with the individual IP owner(s) within our group. Unauthorized copying, distribution, sublicensing, or derivative use is prohibited without prior written permission.
+
+Access and use are restricted to authorized team members, contractors, and partners under a written agreement. Third-party components remain the property of their respective owners and are used under their original licenses.
+
+**No warranty.** This software and related materials are provided "as is" without warranties of any kind.  
+Permissions & inquiries: support@alicesolutionsgroup.com
+
+---
+
 ## 🌟 **What is D.E.L.T.A 2?**
 
 D.E.L.T.A 2 is a **next-generation location intelligence platform** that provides comprehensive market analysis using **100% real-time data** from authoritative sources. Every piece of information comes directly from live APIs - no mock data, no placeholders, no fallbacks.
