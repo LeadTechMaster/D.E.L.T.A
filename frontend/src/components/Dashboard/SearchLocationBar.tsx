@@ -78,7 +78,7 @@ export default function SearchLocationBar({ onLocationSelect, onZipcodeSelect }:
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [loading, setLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const timeoutRef = useRef<number>();
+  const timeoutRef = useRef<number | undefined>(undefined);
 
   const searchLocation = async (searchQuery: string) => {
     if (!searchQuery.trim()) {

@@ -67,6 +67,34 @@ export interface DemographicsData {
   education_levels: Record<string, number>;
 }
 
+export interface AgeDistributionData {
+  name: string;
+  age_groups: Record<string, number>;
+}
+
+export interface BusinessData {
+  query: string;
+  location: string;
+  radius: number;
+  total_results: number;
+  results: Array<{
+    place_id: string;
+    name: string;
+    rating: number;
+    user_ratings_total: number;
+    vicinity: string;
+    types: string[];
+    geometry: {
+      location: {
+        lat: number;
+        lng: number;
+      };
+    };
+    price_level?: number;
+  }>;
+  data_source: string;
+}
+
 export interface KeywordDemandData {
   top_keywords: KeywordMetric[];
   trend_data: TrendDataPoint[];

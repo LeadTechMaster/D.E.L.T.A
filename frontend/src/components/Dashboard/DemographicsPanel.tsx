@@ -139,7 +139,7 @@ export default function DemographicsPanel({ data }: DemographicsPanelProps) {
                   Ownership Rate
                 </Typography>
                 <Typography variant="body1" sx={{ fontWeight: 600 }}>
-                  {formatPercentage(data.ownership_rate)}
+                  {formatPercentage(data.ownership_rate || 0)}
                 </Typography>
               </Stack>
             </Stack>

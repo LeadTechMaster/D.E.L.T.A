@@ -7,6 +7,7 @@ import { generateMapboxHeatmapGeoJSON, generateBusinessHeatmap, generateCompetit
 import { fetchHeatmapData, type HeatmapDataType as ApiHeatmapDataType } from '../../services/heatmapApiService';
 import { getIsochrone, getZipCodeFromCoordinates } from '../../services/mapboxService';
 import { useZipcodeData } from '../../hooks/useZipcodeData';
+import { useAreaData } from '../../hooks/useAreaData';
 import MapStyleSwitcher, { type MapStyle } from './MapStyleSwitcher';
 import SearchLocationBar from './SearchLocationBar';
 import DistanceMeasurementPanel, { type TravelMode, type DistanceUnit } from './DistanceMeasurementPanel';
@@ -14,8 +15,22 @@ import HeatmapPanel, { type HeatmapDataType } from './HeatmapPanel';
 import DrawingToolsToolbar, { type DrawingTool } from './DrawingToolsToolbar';
 import MapLayersToggle from './MapLayersToggle';
 import ZipcodeInfoPanel from './ZipcodeInfoPanel';
+import AreaDataPanel from './AreaDataPanel';
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+
+// Helper function to calculate distance between two coordinates
+function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371; // Radius of the Earth in kilometers
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R * c; // Distance in kilometers
+}
 
 // Map style URLs
 const MAP_STYLES: Record<MapStyle, string> = {
@@ -59,9 +74,17 @@ export default function MapView({ center, zoom, businesses, onMapLoad }: MapView
     currentZipcode, 
     zipcodeData, 
     setCurrentZipcode, 
-    generateIsochrone,
-    clearZipcodeData 
+    generateIsochrone
   } = useZipcodeData();
+
+  // Area data integration
+  const { 
+    areaData, 
+    loading: areaLoading, 
+    error: areaError, 
+    fetchAreaData, 
+    clearAreaData 
+  } = useAreaData();
   const [currentMode, setCurrentMode] = useState<TravelMode>('cycling');
   const [currentDistance, setCurrentDistance] = useState(1);
   const [currentUnit, setCurrentUnit] = useState<DistanceUnit>('km');
@@ -192,6 +215,34 @@ export default function MapView({ center, zoom, businesses, onMapLoad }: MapView
       }
     };
   }, [activeTool, currentMode, currentDistance, currentUnit]);
+
+  // Handle general map clicks for area data (when no specific tool is active)
+  useEffect(() => {
+    if (!map.current || activeTool !== null) return;
+
+    const handleAreaClick = (e: mapboxgl.MapMouseEvent) => {
+      const { lng, lat } = e.lngLat;
+      
+      // Don't fetch area data if clicking on business markers or other interactive elements
+      const features = map.current?.queryRenderedFeatures(e.point);
+      const isClickingOnBusiness = features?.some(feature => 
+        feature.layer?.id === 'business-points' || 
+        feature.layer?.id === 'business-labels'
+      );
+      
+      if (!isClickingOnBusiness) {
+        fetchAreaData({ lat, lng });
+      }
+    };
+
+    map.current.on('click', handleAreaClick);
+
+    return () => {
+      if (map.current) {
+        map.current.off('click', handleAreaClick);
+      }
+    };
+  }, [activeTool, fetchAreaData]);
 
   // Handle ZIP code isochrone visualization
   useEffect(() => {
@@ -682,7 +733,7 @@ export default function MapView({ center, zoom, businesses, onMapLoad }: MapView
       }
     });
     
-    // Add click handler for business points
+    // Add click handler for business points with enhanced details
     map.on('click', 'business-points', (e) => {
       if (e.features && e.features[0]) {
         const feature = e.features[0];
@@ -690,13 +741,43 @@ export default function MapView({ center, zoom, businesses, onMapLoad }: MapView
         const geometry = feature.geometry;
         
         if (properties && geometry.type === 'Point') {
-          new mapboxgl.Popup()
+          // Calculate distance from center point
+          const distance = calculateDistance(
+            center.lat, center.lng,
+            geometry.coordinates[1], geometry.coordinates[0]
+          );
+          
+          new mapboxgl.Popup({
+            maxWidth: '300px',
+            className: 'business-popup'
+          })
             .setLngLat([geometry.coordinates[0], geometry.coordinates[1]])
             .setHTML(`
-              <div style="padding: 10px;">
-                <h3 style="margin: 0 0 5px 0;">${properties.name || 'Unknown'}</h3>
-                <p style="margin: 0;"><strong>Rating:</strong> ${properties.rating || 0}/5 (${properties.reviews || 0} reviews)</p>
-                <p style="margin: 0;"><strong>Intensity:</strong> ${Math.round((properties.intensity || 0) * 100)}%</p>
+              <div style="padding: 15px; color: #333; font-family: 'Roboto', sans-serif;">
+                <h3 style="margin: 0 0 10px 0; color: #1976d2; font-size: 16px;">${properties.name || 'Unknown Business'}</h3>
+                <div style="margin-bottom: 8px;">
+                  <span style="display: inline-block; width: 80px; font-weight: bold;">Rating:</span>
+                  <span style="color: #f57c00;">${properties.rating || 0}/5</span>
+                  <span style="color: #666; margin-left: 10px;">(${properties.reviews || 0} reviews)</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                  <span style="display: inline-block; width: 80px; font-weight: bold;">Distance:</span>
+                  <span style="color: #388e3c;">${distance.toFixed(1)} km</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                  <span style="display: inline-block; width: 80px; font-weight: bold;">Type:</span>
+                  <span style="color: #666;">${properties.types ? properties.types.slice(0, 2).join(', ') : 'Motor Boat Business'}</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                  <span style="display: inline-block; width: 80px; font-weight: bold;">Price:</span>
+                  <span style="color: #388e3c;">${'$'.repeat(properties.price_level || 1)}</span>
+                </div>
+                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                  <button onclick="fetchCompetitorDetails('${properties.name}', ${geometry.coordinates[1]}, ${geometry.coordinates[0]})" 
+                          style="background: #1976d2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px;">
+                    View Full Details
+                  </button>
+                </div>
               </div>
             `)
             .addTo(map);
@@ -797,6 +878,14 @@ export default function MapView({ center, zoom, businesses, onMapLoad }: MapView
       {currentZipcode && (
         <ZipcodeInfoPanel onClose={() => {}} />
       )}
+
+      {/* Area Data Panel - shows data for clicked areas */}
+      <AreaDataPanel 
+        data={areaData}
+        loading={areaLoading}
+        error={areaError}
+        onClose={clearAreaData}
+      />
     </Paper>
   );
 }

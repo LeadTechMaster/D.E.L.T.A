@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { api } from '../services/api';
-import type { DemographicsData, AgeDistributionData, BusinessData } from '../types/schema';
+import type { DemographicsData, AgeDistributionData, BusinessData } from '../services/api';
 
 interface ZipcodeData {
   demographics: DemographicsData | null;
@@ -88,10 +88,10 @@ export function useZipcodeData() {
       setState(prev => ({
         ...prev,
         zipcodeData: {
-          demographics,
-          ageDistribution,
-          businesses,
-          coordinates,
+          demographics: demographics || null,
+          ageDistribution: ageDistribution || null,
+          businesses: businesses || null,
+          coordinates: coordinates || null,
           isochrone: prev.zipcodeData.isochrone, // Keep existing isochrone
           loading: false,
           error: null

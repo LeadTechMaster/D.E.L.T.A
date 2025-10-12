@@ -2,7 +2,6 @@ import { createTheme } from '@mui/material/styles';
 
 // D.E.L.T.A Dashboard Theme - Modern Dark Mode with Vibrant Accents
 const theme = createTheme({
-  colorScheme: 'dark',
   colorSchemes: {
     dark: {
       palette: {

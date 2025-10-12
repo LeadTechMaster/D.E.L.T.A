@@ -5,6 +5,7 @@ import SplitscreenOutlinedIcon from '@mui/icons-material/SplitscreenOutlined';
 import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { ViewMode } from '../../types/enums';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { setViewMode } from '../../store/mapSlice';
@@ -16,9 +17,10 @@ interface DashboardHeaderProps {
   userName: string;
   onSave: () => void;
   onShare: () => void;
+  onShowCapabilities: () => void;
 }
 
-export default function DashboardHeader({ projectName, lastSaved, userName, onSave, onShare }: DashboardHeaderProps) {
+export default function DashboardHeader({ projectName, lastSaved, userName, onSave, onShare, onShowCapabilities }: DashboardHeaderProps) {
   const dispatch = useAppDispatch();
   const activeViewMode = useAppSelector((state) => state.map.activeViewMode);
 
@@ -59,6 +61,24 @@ export default function DashboardHeader({ projectName, lastSaved, userName, onSa
             Split
           </Button>
         </Stack>
+
+        <Button
+          variant="outlined"
+          startIcon={<InfoOutlinedIcon />}
+          onClick={onShowCapabilities}
+          size="small"
+          sx={{ 
+            ml: 4,
+            borderColor: '#3B82F6',
+            color: '#3B82F6',
+            '&:hover': {
+              borderColor: '#2563EB',
+              backgroundColor: 'rgba(59, 130, 246, 0.1)'
+            }
+          }}
+        >
+          Capabilities
+        </Button>
 
         <Stack direction="row" spacing={1} alignItems="center" sx={{ ml: 'auto' }}>
           <Stack direction="column" alignItems="flex-end" spacing={0.5}>

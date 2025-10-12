@@ -1,4 +1,5 @@
 import { Box, Stack, Alert, Button, CircularProgress } from '@mui/material';
+import { useState } from 'react';
 import { useAppSelector } from '../../store/hooks';
 import { ViewMode } from '../../types/enums';
 import DashboardHeader from './DashboardHeader';
@@ -7,6 +8,7 @@ import DemographicsPanel from './DemographicsPanel';
 import DemandPanel from './DemandPanel';
 import CompetitorPanel from './CompetitorPanel';
 import OpportunityPanel from './OpportunityPanel';
+import CapabilitiesPage from '../CapabilitiesPage';
 import { useDataWithFallback } from '../../hooks/useRealData';
 
 interface DashboardProps {
@@ -16,6 +18,7 @@ interface DashboardProps {
 }
 
 export default function Dashboard({ projectName, lastSaved, userName }: DashboardProps) {
+  const [showCapabilities, setShowCapabilities] = useState(false);
   const activeViewMode = useAppSelector((state) => state.map.activeViewMode);
   const mapCenter = useAppSelector((state) => state.map.mapCenter);
   const mapZoom = useAppSelector((state) => state.map.mapZoom);
@@ -40,6 +43,14 @@ export default function Dashboard({ projectName, lastSaved, userName }: Dashboar
   const handleShare = () => {
     console.log('Sharing project...');
     // TODO: Implement share functionality
+  };
+
+  const handleShowCapabilities = () => {
+    setShowCapabilities(true);
+  };
+
+  const handleCloseCapabilities = () => {
+    setShowCapabilities(false);
   };
 
   const renderMapView = () => (
@@ -165,10 +176,17 @@ export default function Dashboard({ projectName, lastSaved, userName }: Dashboar
         userName={userName}
         onSave={handleSave}
         onShare={handleShare}
+        onShowCapabilities={handleShowCapabilities}
       />
       <Box sx={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
         {renderContent()}
       </Box>
+      
+      {/* Capabilities Modal */}
+      <CapabilitiesPage 
+        open={showCapabilities} 
+        onClose={handleCloseCapabilities} 
+      />
     </Stack>
   );
 }

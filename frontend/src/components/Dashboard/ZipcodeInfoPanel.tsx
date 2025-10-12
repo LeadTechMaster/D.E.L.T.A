@@ -107,7 +107,7 @@ export default function ZipcodeInfoPanel({ onClose }: ZipcodeInfoPanelProps) {
                       {age.replace('_', '-')}:
                     </Typography>
                     <Typography variant="caption" sx={{ color: '#00D9FF' }}>
-                      {percentage}%
+                      {String(percentage)}%
                     </Typography>
                   </Stack>
                 ))}
@@ -123,7 +123,7 @@ export default function ZipcodeInfoPanel({ onClose }: ZipcodeInfoPanelProps) {
               </Typography>
               <Stack direction="row" spacing={1} alignItems="center">
                 <Chip 
-                  label={`${zipcodeData.businesses.total_results} found`}
+                  label={`${(zipcodeData.businesses as any)?.total_results || 0} found`}
                   size="small"
                   sx={{ 
                     backgroundColor: 'rgba(0, 217, 255, 0.2)',

@@ -100,8 +100,8 @@ export function useRealData(location: string = 'Seattle, WA', businessType: stri
         if (housingData && demographics) {
           demographics.median_home_value = housingData.median_home_value;
           demographics.median_gross_rent = housingData.median_gross_rent;
-          demographics.occupancy_rate = housingData.occupancy_rate;
-          demographics.ownership_rate = housingData.ownership_rate;
+          demographics.occupancy_rate = parseFloat(housingData.occupancy_rate) || 0;
+          demographics.ownership_rate = parseFloat(housingData.ownership_rate) || 0;
         }
       }
 
