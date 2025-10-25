@@ -1,0 +1,27 @@
+services:
+  # Backend API Service
+  - type: web
+    name: delta-backend-api
+    env: python
+    plan: free
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && python real_api_server.py --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: MAPBOX_ACCESS_TOKEN
+        sync: false
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
+      - key: SERPAPI_API_KEY
+        sync: false
+      - key: CENSUS_API_KEY
+        sync: false
+      - key: META_ADS_ACCESS_TOKEN
+        sync: false
+      - key: META_ADS_APP_TOKEN
+        sync: false
+      - key: BRIGHTLOCAL_API_KEY
+        sync: false
+    healthCheckPath: /api/v1/status
+    autoDeploy: true

@@ -1,0 +1,31 @@
+User opens project or new session. → Blank interactive map loads, centered on their detected or selected country.
+User zooms and pans freely. → All map layers (population, income, competitors, search demand) dynamically refresh at every zoom level — no forced input.
+User can draw freely (circle, polygon, drive-time, ZIP selection) using toolbar. → As soon as a shape closes, sidebar displays live metrics (population, median income, search volume, business count).
+User may layer multiple shapes or overlapping territories. → System assigns color codes and computes overlap statistics for comparison (shared area %, combined population, etc.).
+User toggles on/off map overlays:
+Demographics (population, income, home ownership, density)
+Keyword demand (search volume heatmap by city or postal code)
+Competitors (pins from GMB/Places API with rating and category)
+Boundaries (ZIPs, cities, counties)
+→ Each overlay acts independently; user can combine any two or three.
+User clicks any visible zone (ZIP, city, custom shape). → Tooltip displays instant snapshot: population, median income, keyword demand score, competitor count.
+User right-clicks or uses contextual menu. → Options: “Analyze in Dashboard,” “Add to Comparison,” “Rename Zone,” or “Export Shape.”
+User switches to Dashboard mode. → Map compresses; full analytics open showing:
+Demographics: population, household income brackets, education, property value.
+Demand: top keywords with monthly searches, CPC, competition, keyword trend chart.
+Competitor landscape: top 20 listings, rating average, review distribution, ad presence.
+Opportunity Index: system-scored balance of demand vs. competition vs. spending power.
+User selects multiple territories in dashboard. → Comparison table builds automatically: demand, competition, and income per region with bar and radar charts.
+User adjusts filters inside dashboard (income range, min search volume, radius). → Data recalculates live; “Hotspot” indicator shows best zone.
+User toggles back to Map view. → All dashboard filters remain applied; the map recolors based on the current metric (e.g., opportunity index).
+User can import external data (CSV or GMB links). → System pins these entries on the map with tags and merges them into dashboard stats.
+User can click “Measure Distance” or “Estimate Travel Time.” → Map draws routes and estimates logistics relevance (important for franchise/service planning).
+User can drag borders of drawn shapes manually. → Recalculation runs instantly without refreshing — maintaining Smappen-like real-time freedom.
+User opens “Reports” menu. → Can generate:
+One-page summary (for pitch deck or franchise proposal)
+Full report (demographics, keywords, competitors, graphs)
+Export to CSV, PDF, or shared dashboard link.
+User can toggle between Map / Dashboard / Split-Screen. → Split view allows simultaneous geography on left and metrics on right.
+User saves project. → Stored with timestamp, tags, and notes (e.g., “Dallas 20-min Drive Test”).
+User duplicates or branches project. → Creates variant versions with different filters or industries.
+User shares project link or downloads static image. → Map snapshot and dashboard summary embed automatically in the file.
