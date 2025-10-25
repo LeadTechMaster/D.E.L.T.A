@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { DemoPage } from './pages/DemoPage'
+import { AppV2 } from './AppV2'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <DemoPage />
+    <AppV2 />
   </React.StrictMode>,
 )
 
