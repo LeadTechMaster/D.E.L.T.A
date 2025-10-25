@@ -1,6 +1,7 @@
 # API Keys and Secrets
 API_KEYS.txt
 API_KEY_DO_NOT_TOUCH.txt
+API_KEYS_BACKUP.txt
 *.key
 *.pem
 .env
