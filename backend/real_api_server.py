@@ -38,7 +38,7 @@ GOOGLE_PLACES_API_KEY = "AIzaSyAzyKYxbA7HWHTU9UV9Z-ELGRQTTeN9dkw"
 BRIGHTLOCAL_API_KEY = "2efdc9f13ec8a5b8fc0d83cddba7f5cc671ca3ec"
 
 # Database setup
-DB_PATH = "/Users/udishkolnik/Downloads/D.E.L.T.A 2/backend/real_data.db"
+DB_PATH = "/Users/udishkolnik/543/D.E.L.T.A/DB/real_data.db"
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -1483,6 +1483,197 @@ async def test_all_apis():
         "data_policy": "REAL_DATA_ONLY",
         "timestamp": datetime.now().isoformat()
     }
+
+@app.get("/api/v1/keywords/suggestions")
+async def keyword_suggestions(keyword: str):
+    """Get keyword suggestions using SerpApi - REAL DATA ONLY"""
+    logger.info(f"🔍 Getting keyword suggestions for: {keyword}")
+    
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.get(
+                "https://serpapi.com/search",
+                params={
+                    "engine": "google_autocomplete",
+                    "q": keyword,
+                    "api_key": SERPAPI_API_KEY
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            suggestions = data.get("suggestions", [])
+            
+            result = {
+                "status": "success",
+                "keyword": keyword,
+                "total_suggestions": len(suggestions),
+                "suggestions": [s.get("value") for s in suggestions],
+                "data_source": "SerpApi - Google Autocomplete",
+                "data_policy": "REAL_DATA_ONLY",
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            logger.info(f"✅ Got {len(suggestions)} keyword suggestions")
+            return result
+            
+    except Exception as e:
+        logger.error(f"Keyword suggestions error: {e}")
+        raise HTTPException(status_code=500, detail=f"Keyword suggestions request failed: {str(e)}")
+
+@app.get("/api/v1/keywords/local-pack")
+async def local_pack_results(keyword: str, location: str):
+    """Get local pack (3-pack) results - REAL DATA ONLY"""
+    logger.info(f"🏪 Getting local pack for: {keyword} in {location}")
+    
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.get(
+                "https://serpapi.com/search",
+                params={
+                    "engine": "google",
+                    "q": keyword,
+                    "location": location,
+                    "api_key": SERPAPI_API_KEY
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            local_results = data.get("local_results", [])
+            
+            businesses = []
+            for item in local_results:
+                businesses.append({
+                    "position": item.get("position", 0),
+                    "title": item.get("title", ""),
+                    "address": item.get("address", ""),
+                    "phone": item.get("phone", ""),
+                    "rating": item.get("rating", 0),
+                    "reviews": item.get("reviews", 0),
+                    "type": item.get("type", ""),
+                    "place_id": item.get("place_id", ""),
+                    "hours": item.get("hours", "")
+                })
+            
+            result = {
+                "status": "success",
+                "keyword": keyword,
+                "location": location,
+                "total_results": len(businesses),
+                "local_pack": businesses,
+                "data_source": "SerpApi - Google Local Pack",
+                "data_policy": "REAL_DATA_ONLY",
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            logger.info(f"✅ Got {len(businesses)} local pack results")
+            return result
+            
+    except Exception as e:
+        logger.error(f"Local pack error: {e}")
+        raise HTTPException(status_code=500, detail=f"Local pack request failed: {str(e)}")
+
+@app.get("/api/v1/keywords/people-also-ask")
+async def people_also_ask(keyword: str):
+    """Get People Also Ask questions - REAL DATA ONLY"""
+    logger.info(f"❓ Getting People Also Ask for: {keyword}")
+    
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.get(
+                "https://serpapi.com/search",
+                params={
+                    "engine": "google",
+                    "q": keyword,
+                    "api_key": SERPAPI_API_KEY,
+                    "num": 10
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            paa = data.get("related_questions", [])
+            
+            questions = []
+            for item in paa:
+                questions.append({
+                    "question": item.get("question", ""),
+                    "answer": item.get("snippet", ""),
+                    "title": item.get("title", ""),
+                    "link": item.get("link", "")
+                })
+            
+            result = {
+                "status": "success",
+                "keyword": keyword,
+                "total_questions": len(questions),
+                "questions": questions,
+                "data_source": "SerpApi - People Also Ask",
+                "data_policy": "REAL_DATA_ONLY",
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            logger.info(f"✅ Got {len(questions)} PAA questions")
+            return result
+            
+    except Exception as e:
+        logger.error(f"People Also Ask error: {e}")
+        raise HTTPException(status_code=500, detail=f"People Also Ask request failed: {str(e)}")
+
+@app.get("/api/v1/gmb/place-details")
+async def gmb_place_details(place_id: str):
+    """Get Google My Business place details - REAL DATA ONLY"""
+    logger.info(f"🏢 Getting GMB details for place: {place_id}")
+    
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.get(
+                "https://maps.googleapis.com/maps/api/place/details/json",
+                params={
+                    "place_id": place_id,
+                    "fields": "name,formatted_address,formatted_phone_number,international_phone_number,website,url,rating,user_ratings_total,price_level,opening_hours,geometry,photos,types,business_status,reviews",
+                    "key": GOOGLE_PLACES_API_KEY
+                }
+            )
+            response.raise_for_status()
+            data = response.json()
+            
+            if data.get("status") != "OK":
+                raise HTTPException(status_code=400, detail=f"Google API error: {data.get('status')}")
+            
+            result_data = data.get("result", {})
+            
+            result = {
+                "status": "success",
+                "place_id": place_id,
+                "name": result_data.get("name", ""),
+                "address": result_data.get("formatted_address", ""),
+                "phone": result_data.get("formatted_phone_number", ""),
+                "website": result_data.get("website", ""),
+                "google_maps_url": result_data.get("url", ""),
+                "rating": result_data.get("rating", 0),
+                "total_ratings": result_data.get("user_ratings_total", 0),
+                "price_level": result_data.get("price_level", 0),
+                "business_status": result_data.get("business_status", ""),
+                "types": result_data.get("types", []),
+                "location": result_data.get("geometry", {}).get("location", {}),
+                "opening_hours": result_data.get("opening_hours", {}),
+                "photos_count": len(result_data.get("photos", [])),
+                "reviews_count": len(result_data.get("reviews", [])),
+                "data_source": "Google Places API",
+                "data_policy": "REAL_DATA_ONLY",
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            logger.info(f"✅ Got GMB details for: {result['name']}")
+            return result
+            
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        logger.error(f"GMB place details error: {e}")
+        raise HTTPException(status_code=500, detail=f"GMB place details request failed: {str(e)}")
 
 if __name__ == "__main__":
     logger.info("🚀 Starting D.E.L.T.A Real Data API Server")

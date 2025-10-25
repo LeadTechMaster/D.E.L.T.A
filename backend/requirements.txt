@@ -3,7 +3,7 @@ uvicorn==0.24.0
 httpx==0.25.2
 pydantic==2.5.0
 python-multipart==0.0.6
-sqlite3
+# sqlite3 is built into Python
 asyncio
 logging
 json

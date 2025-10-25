@@ -1,0 +1,51 @@
+# API Abilities System - Python Dependencies
+
+# Core Dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Database
+sqlite3  # Built-in with Python
+
+# API-Specific Libraries
+# Mapbox
+mapbox>=0.18.1
+
+# Google APIs
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+googlemaps>=4.10.0
+
+# SerpApi
+google-search-results>=2.4.2
+
+# Meta/Facebook
+facebook-sdk>=3.1.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Date/Time
+python-dateutil>=2.8.2
+
+# Caching
+diskcache>=5.6.3
+
+# Rate Limiting
+ratelimit>=2.2.1
+
+# Logging
+colorlog>=6.7.0
+
+# Testing (optional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+responses>=0.23.0
+
+# Development (optional)
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.5.0
+

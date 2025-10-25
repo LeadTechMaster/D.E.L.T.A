@@ -5,7 +5,7 @@
 // 3. Replace 'YOUR_MAPBOX_TOKEN_HERE' below with your actual token
 // 4. Or set it as an environment variable VITE_MAPBOX_TOKEN
 
-export const MAPBOX_ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || 'YOUR_MAPBOX_TOKEN_HERE';
+export const MAPBOX_ACCESS_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || 'pk.eyJ1Ijoic3VwcG9ydG1vdmVkaW4iLCJhIjoiY21kZmdxdHh6MGQ2aDJqcHE2YTIwbTFrMiJ9.I1xkq82JXLMlgB02xT8LMw';
 
 // Default map configuration
 export const DEFAULT_MAP_STYLE = 'mapbox://styles/mapbox/dark-v11';

@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Database path
-DB_PATH = "/Users/udishkolnik/Downloads/D.E.L.T.A/DB/real_data.db"
+DB_PATH = "/Users/udishkolnik/543/D.E.L.T.A/DB/real_data.db"
 
 def init_database():
     """Initialize the real data database with all necessary tables"""

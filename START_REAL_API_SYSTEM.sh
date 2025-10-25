@@ -17,14 +17,14 @@ lsof -ti:5175 | xargs kill -9 2>/dev/null || true
 sleep 2
 
 echo "📡 Starting REAL API Backend Server (Port 8001)..."
-cd "/Users/udishkolnik/Downloads/D.E.L.T.A 2/backend"
+cd "/Users/udishkolnik/543/D.E.L.T.A/backend"
 node real_api_server_final.js &
 BACKEND_PID=$!
 echo "   Backend PID: $BACKEND_PID"
 sleep 3
 
 echo "🎨 Starting Frontend Dev Server..."
-cd "/Users/udishkolnik/Downloads/D.E.L.T.A 2/frontend"
+cd "/Users/udishkolnik/543/D.E.L.T.A/frontend"
 npm run dev &
 FRONTEND_PID=$!
 echo "   Frontend PID: $FRONTEND_PID"
