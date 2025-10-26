@@ -1,0 +1,174 @@
+[1mdiff --git a/frontend/src/components/new/SimplifiedMapView.tsx b/frontend/src/components/new/SimplifiedMapView.tsx[m
+[1mindex ffec0c9..bbef0ee 100644[m
+[1m--- a/frontend/src/components/new/SimplifiedMapView.tsx[m
+[1m+++ b/frontend/src/components/new/SimplifiedMapView.tsx[m
+[36m@@ -1,37 +1,201 @@[m
+[31m-import { useEffect, useRef } from 'react';[m
+[32m+[m[32mimport { useEffect, useRef, useState } from 'react';[m
+ import mapboxgl from 'mapbox-gl';[m
+[31m-import 'mapbox-gl/dist/mapbox-gl.css';[m
+ import { MAPBOX_ACCESS_TOKEN } from '@/config/mapbox';[m
+[32m+[m[32mimport { MapCoordinateService } from '@/services/mapCoordinateService';[m
+[32m+[m
+[32m+[m[32m// Load Mapbox CSS - using local node_modules version to avoid CDN timeout[m
+[32m+[m[32mimport 'mapbox-gl/dist/mapbox-gl.css';[m
+ [m
+ mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;[m
+ [m
+[32m+[m[32m// Add network error detection[m
+[32m+[m[32mconst MAPBOX_TIMEOUT = 15000; // Increased to 15 seconds for slower connections[m
+[32m+[m
+ interface SimplifiedMapViewProps {[m
+   center?: { lat: number; lng: number };[m
+   zoom?: number;[m
+[32m+[m[32m  mapStyle?: 'default' | 'satellite' | 'terrain';[m
+[32m+[m[32m  showZipBoundaries?: boolean;[m
+[32m+[m[32m  selectedZipCodes?: string[];[m
+[32m+[m[32m  onZipCodeClick?: (zipCode: string) => void;[m
+ }[m
+ [m
+[31m-export function SimplifiedMapView({ center = { lat: 37.7749, lng: -122.4194 }, zoom = 12 }: SimplifiedMapViewProps) {[m
+[32m+[m[32m// Real Mapbox style URLs[m
+[32m+[m[32mconst MAPBOX_STYLES = {[m
+[32m+[m[32m  default: 'mapbox://styles/mapbox/streets-v12',[m
+[32m+[m[32m  satellite: 'mapbox://styles/mapbox/satellite-streets-v12',[m
+[32m+[m[32m  terrain: 'mapbox://styles/mapbox/outdoors-v12'[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32mexport function SimplifiedMapView({[m[41m [m
+[32m+[m[32m  center = { lat: 37.7749, lng: -122.4194 },[m[41m [m
+[32m+[m[32m  zoom = 12,[m
+[32m+[m[32m  mapStyle = 'default',[m
+[32m+[m[32m  showZipBoundaries = false,[m
+[32m+[m[32m  selectedZipCodes = [],[m
+[32m+[m[32m  onZipCodeClick[m
+[32m+[m[32m}: SimplifiedMapViewProps) {[m
+   const mapContainer = useRef<HTMLDivElement>(null);[m
+   const map = useRef<mapboxgl.Map | null>(null);[m
+[32m+[m[32m  const [networkError, setNetworkError] = useState(false);[m
+[32m+[m[32m  const [isLoading, setIsLoading] = useState(true);[m
+[32m+[m
+[32m+[m[32m  // Helper function to add ZIP boundaries[m
+[32m+[m[32m  const addZipBoundaries = () => {[m
+[32m+[m[32m    if (!map.current) return;[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Check if source already exists[m
+[32m+[m[32m    if (map.current.getSource('zip-boundaries')) {[m
+[32m+[m[32m      console.log("ZIP boundaries source already exists");[m
+[32m+[m[32m      return;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    console.log("🔧 Adding ZIP boundaries from OpenData");[m
+[32m+[m[41m    [m
+[32m+[m[32m    // Use public OpenDataSoft ZCTA GeoJSON (simpler & works!)[m
+[32m+[m[32m    map.current.addSource('zip-boundaries', {[m
+[32m+[m[32m      type: 'geojson',[m
+[32m+[m[32m      data: 'https://raw.githubusercontent.com/OpenDataDE/State-zip-code-GeoJSON/master/ca_california_zip_codes_geo.min.json'[m
+[32m+[m[32m    });[m
+[32m+[m
+[32m+[m[32m    // Add fill layer[m
+[32m+[m[32m    map.current.addLayer({[m
+[32m+[m[32m      id: 'zip-fill',[m
+[32m+[m[32m      type: 'fill',[m
+[32m+[m[32m      source: 'zip-boundaries',[m
+[32m+[m[32m      paint: {[m
+[32m+[m[32m        'fill-color': '#00bcd4',[m
+[32m+[m[32m        'fill-opacity': 0.15[m
+[32m+[m[32m      },[m
+[32m+[m[32m      layout: {[m
+[32m+[m[32m        visibility: showZipBoundaries ? 'visible' : 'none'[m
+[32m+[m[32m      }[m
+[32m+[m[32m    });[m
+[32m+[m
+[32m+[m[32m    // Add outline layer[m
+[32m+[m[32m    map.current.addLayer({[m
+[32m+[m[32m      id: 'zip-outline',[m
+[32m+[m[32m      type: 'line',[m
+[32m+[m[32m      source: 'zip-boundaries',[m
+[32m+[m[32m      paint: {[m
+[32m+[m[32m        'line-color': '#00bcd4',[m
+[32m+[m[32m        'line-width': 2,[m
+[32m+[m[32m        'line-opacity': 0.8[m
+[32m+[m[32m      },[m
+[32m+[m[32m      layout: {[m
+[32m+[m[32m        visibility: showZipBoundaries ? 'visible' : 'none'[m
+[32m+[m[32m      }[m
+[32m+[m[32m    });[m
+[32m+[m
+[32m+[m[32m    // Add click handler with GeoJSON property names[m
+[32m+[m[32m    map.current.on('click', 'zip-fill', (e) => {[m
+[32m+[m[32m      console.log("🔧 ZIP boundary clicked - Full event:", e);[m
+[32m+[m[41m      [m
+[32m+[m[32m      if (e.features && e.features.length > 0) {[m
+[32m+[m[32m        const feature = e.features[0];[m
+[32m+[m[32m        console.log("🔧 Feature properties:", feature.properties);[m
+[32m+[m[41m        [m
+[32m+[m[32m        // GeoJSON property names (varies by source)[m
+[32m+[m[32m        const zipCode = feature.properties?.ZCTA5CE10 ||[m[41m [m
+[32m+[m[32m                        feature.properties?.GEOID10 ||[m
+[32m+[m[32m                        feature.properties?.zipcode ||[m
+[32m+[m[32m                        feature.properties?.ZIP ||[m
+[32m+[m[32m                        feature.properties?.zip;[m
+[32m+[m[41m        [m
+[32m+[m[32m        console.log("🔧 Extracted ZIP code:", zipCode);[m
+[32m+[m[41m        [m
+[32m+[m[32m        if (zipCode && onZipCodeClick) {[m
+[32m+[m[32m          onZipCodeClick(String(zipCode));[m
+[32m+[m[32m        } else {[m
+[32m+[m[32m          console.error("🔧 Could not extract ZIP - Available properties:", Object.keys(feature.properties || {}));[m
+[32m+[m[32m        }[m
+[32m+[m[32m      } else {[m
+[32m+[m[32m        console.warn("🔧 No features found at click location");[m
+[32m+[m[32m      }[m
+[32m+[m[32m    });[m
+[32m+[m
+[32m+[m[32m    // Cursor style[m
+[32m+[m[32m    map.current.on('mouseenter', 'zip-fill', () => {[m
+[32m+[m[32m      if (map.current) {[m
+[32m+[m[32m        map.current.getCanvas().style.cursor = 'pointer';[m
+[32m+[m[32m        console.log("🔧 Mouse entered ZIP boundary");[m
+[32m+[m[32m      }[m
+[32m+[m[32m    });[m
+[32m+[m[41m    [m
+[32m+[m[32m    map.current.on('mouseleave', 'zip-fill', () => {[m
+[32m+[m[32m      if (map.current) {[m
+[32m+[m[32m        map.current.getCanvas().style.cursor = '';[m
+[32m+[m[32m      }[m
+[32m+[m[32m    });[m
+[32m+[m[41m    [m
+[32m+[m[32m    console.log("✅ ZIP boundaries added (GeoJSON source)");[m
+[32m+[m[32m  };[m
+ [m
+   useEffect(() => {[m
+     if (!mapContainer.current || map.current) return;[m
+ [m
+[31m-    map.current = new mapboxgl.Map({[m
+[31m-      container: mapContainer.current,[m
+[31m-      style: 'mapbox://styles/mapbox/satellite-streets-v12',[m
+[31m-      center: [center.lng, center.lat],[m
+[31m-      zoom: zoom[m
+[31m-    });[m
+[32m+[m[32m    console.log("🗺️ Initializing Mapbox map...");[m
+[32m+[m[32m    setIsLoading(true);[m
+[32m+[m
+[32m+[m[32m    // Set timeout for network errors[m
+[32m+[m[32m    const timeout = setTimeout(() => {[m
+[32m+[m[32m      if (isLoading) {[m
+[32m+[m[32m        console.error("❌ Mapbox failed to load (network timeout)");[m
+[32m+[m[32m        console.error("🔴 Setting networkError to TRUE");[m
+[32m+[m[32m        setNetworkError(true);[m
+[32m+[m[32m        setIsLoading(false);[m
+[32m+[m[32m        console.error("🔴 Network error overlay should now be visible!");[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }, MAPBOX_TIMEOUT);[m
+[32m+[m
+[32m+[m[32m    try {[m
+[32m+[m[32m      map.current = new mapboxgl.Map({[m
+[32m+[m[32m        container: mapContainer.current,[m
+[32m+[m[32m        style: MAPBOX_STYLES[mapStyle],[m
+[32m+[m[32m        center: [center.lng, center.lat],[m
+[32m+[m[32m        zoom: zoom[m
+[32m+[m[32m      });[m
+[32m+[m
+[32m+[m[32m      map.current.on('error', (e) => {[m
+[32m+[m[32m   
